@@ -1,0 +1,19 @@
+.card .card-header {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+@media (min-width: 992px) {
+    .w-lg-33 {
+        width: 33% !important;
+    }
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    background-color: #f1faff;
+    border-color: #5867dd #5867dd #fff;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #5867dd;
+}

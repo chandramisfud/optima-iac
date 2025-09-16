@@ -1,0 +1,106 @@
+table.dataTable thead tr th.text-end {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+@media (min-width: 992px) {
+    .col-form-label-right {
+        padding-left: 0;
+        padding-top: calc(.75rem + 1px);
+        padding-bottom: calc(.75rem + 1px);
+    }
+
+    .col-form-label-over-space {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1367px) {
+    .col-form-label {
+        padding-top: calc(.75rem + 1px);
+        padding-bottom: calc(.75rem + 1px);
+    }
+
+    .col-form-label-over-space {
+        padding-top: calc(.75rem + 1px);
+        padding-bottom: calc(.75rem + 1px);
+    }
+}
+
+/* Sticky */
+@media (min-width: 992px) {
+    .sticky-top-header-mechanism {
+        position: sticky;
+        top: 90px;
+        z-index: 99;
+    }
+}
+/* End of Sticky*/
+
+#dt_mechanism tr td {
+    padding-right: 5px !important;
+}
+
+#dt_mechanism_input tr td {
+    padding-right: 5px !important;
+}
+
+#info_details_header {
+    padding: .5rem 1rem !important;
+    min-height: 45px !important
+}
+
+#info_details_header_input {
+    padding: .5rem 1rem !important;
+    min-height: 45px !important
+}
+
+.h-286px {
+    height: 286px;
+}
+
+.border-bg-optima {
+    border-color: #5867dd !important;
+}
+
+.form-control-solid-bg {
+    background-color: #f5f8fa !important;
+}
+
+.text-black {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+}
+
+#kt_body {
+    overflow: auto !important;
+}
+
+.modal.modal-sticky-bottom-right {
+    padding: 0 !important;
+    max-width: 500px;
+    height: auto;
+    position: fixed;
+    left: auto;
+    top: auto;
+    bottom: 40px;
+    right: 20px;
+    margin: 0;
+    box-shadow: 0px 0px 60px -15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal.modal-sticky-bottom-right .modal-dialog .modal-content {
+    border: 0;
+    border-radius: 4px;
+}
+
+.modal.modal-sticky-bottom-right .modal-dialog {
+    position: static;
+    max-width: 500px;
+    width: auto;
+    margin: 0;
+    border-radius: 4px;
+}

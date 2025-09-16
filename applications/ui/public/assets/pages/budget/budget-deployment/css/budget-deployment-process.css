@@ -1,0 +1,49 @@
+@media screen{
+    @font-face {
+        font-family: 'Calibri';
+    }
+}
+body {
+    font-family: "Calibri";
+    font-size: 12px;
+    font-weight: 300;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+.spinner-border {
+    color: #5867dd !important;
+    width: 5rem;
+    height: 5rem;
+}
+
+.process_success {
+    color: #5867dd !important;
+    font-size: 5rem;
+}
+
+.fs-1-5rem {
+    font-size: 1.5rem !important;
+}
+
+.info_sending_email:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+    animation: ellipsis steps(4, end) 900ms infinite;
+    content: "\2026";
+    /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 10px;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 10px;
+    }
+}

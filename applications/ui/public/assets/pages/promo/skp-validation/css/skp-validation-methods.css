@@ -1,0 +1,13 @@
+.table-sm td {
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem !important;
+}
+
+.table {
+    table-layout: fixed;
+}
+
+.table th, .table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,22 @@
+2024-01-22 17:06:38.2049 INFO REQUEST: GET /api/promo/workflow
+2024-01-22 17:06:40.1306 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Promo not found","values":null}
+2024-01-22 17:06:58.4853 INFO REQUEST: GET /api/promo/workflow
+2024-01-22 17:06:58.7407 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-22 17:08:30.1962 INFO REQUEST: GET /api/promo/workflow
+2024-01-22 17:08:30.2394 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Promo not found","values":null}
+2024-01-22 17:08:36.5674 INFO REQUEST: GET /api/promo/workflow
+2024-01-22 17:08:36.7035 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-22 17:10:27.9019 INFO REQUEST: GET /api/promo/workflow
+2024-01-22 17:10:28.0294 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-22 17:30:53.0068 INFO REQUEST: GET /api/promo/workflow
+2024-01-22 17:30:55.0545 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

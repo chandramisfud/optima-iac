@@ -1,0 +1,47 @@
+/* Sticky */
+@media (min-width: 992px) {
+    .sticky-top-header-mechanism {
+        position: sticky;
+        top: 90px;
+        z-index: 99;
+    }
+}
+/* End of Sticky*/
+
+.review_file_label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 100%;
+}
+
+#kt_body {
+    overflow: auto !important;
+}
+
+.modal.modal-sticky-bottom-right {
+    padding: 0 !important;
+    max-width: 500px;
+    height: auto;
+    position: fixed;
+    left: auto;
+    top: auto;
+    bottom: 40px;
+    right: 20px;
+    margin: 0;
+    box-shadow: 0px 0px 60px -15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal.modal-sticky-bottom-right .modal-dialog .modal-content {
+    border: 0;
+    border-radius: 4px;
+}
+
+.modal.modal-sticky-bottom-right .modal-dialog {
+    position: static;
+    max-width: 500px;
+    width: auto;
+    margin: 0;
+    border-radius: 4px;
+}

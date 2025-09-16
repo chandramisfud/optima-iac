@@ -1,0 +1,298 @@
+@font-face {
+    font-family:BlogScriptW00-Regular;
+    src: url("/assets/fonts/Blog Script W00 Regular.ttf") format('truetype');
+}
+
+body {
+    background-color: #032974;
+    font-size: 12px !important;
+}
+
+.grecaptcha-badge {
+    visibility: hidden !important;
+}
+
+.bg_custom {
+    position: relative;
+    width: 100%;
+    background-color: #032974;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.logo_blue {
+    display: none;
+}
+
+.logo_optima {
+    position: absolute;
+}
+
+.bg_custom {
+    position: relative;
+    background-image: url("/assets/media/custom/bgleft42.png");
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+}
+
+.bg_custom_right {
+    background-color: #032974;
+}
+
+.welcome {
+    font-family:BlogScriptW00-Regular !important;
+    font-size: 2.5rem !important;
+    font-weight: 500 !important;
+    color:#032974;
+}
+
+.form-check.form-check-custom .form-check-input {
+    border: 2px solid #032974 !important;
+}
+
+.form-check-input:checked[type=checkbox]{
+    background-color: #fff;
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 11' width='13' height='11' fill='none'%3e%3cpath d='M11.0426 1.02893C11.3258 0.695792 11.8254 0.655283 12.1585 0.938451C12.4917 1.22162 12.5322 1.72124 12.249 2.05437L5.51985 9.97104C5.23224 10.3094 4.72261 10.3451 4.3907 10.05L0.828197 6.88335C0.50141 6.59288 0.471975 6.09249 0.762452 5.7657C1.05293 5.43891 1.55332 5.40948 1.88011 5.69995L4.83765 8.32889L11.0426 1.02893Z' fill='%23032974'/%3e%3c/svg%3e")
+}
+
+#btn_signin {
+    background-color: #032974;
+    color: #fff;
+    border-radius: 30px !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#btn_signin:hover {
+    background-color: #032974 !important;
+    color: #fff;
+    opacity: 0.8;
+}
+
+#btn_signin:focus {
+    background-color: #032974 !important;
+    color: #fff;
+    border-radius: 30px !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-login {
+    background-color: #032974;
+    color: #fff;
+    border-radius: 30px !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-login:hover {
+    background-color: #032974 !important;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.profile-login:focus {
+    background-color: #032974 !important;
+    color: #fff;
+    border-radius: 30px !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.forgot_pass {
+    color: #032974;
+}
+
+.form-check-label {
+    color: #032974;
+}
+
+@media (min-width: 1200px) {
+    .bg_custom {
+        width: 60% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .ps-1200-10 {
+        padding-left: 10px !important;
+    }
+}
+
+@media (min-width: 1441px) {
+    .bg_custom {
+        width: 60% !important;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .bg_custom_right {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .bg_custom {
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .logo_blue {
+        display: block;
+    }
+}
+
+.form-control {
+    font-size: 1rem;
+    font-weight: 400 !important;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+/* style glyph */
+.inner-addon .fa {
+    position: absolute;
+    padding: 10px;
+}
+
+.inner-addon .fa-eye {
+    cursor: pointer;
+}
+
+.inner-addon .fa-eye-slash {
+    cursor: pointer;
+}
+
+.left-addon .fa-envelope  {
+    left:  5px;
+    color: rgba(0,0,0,.54);
+}
+.left-addon .fa-lock  {
+    left:  5px;
+    color: rgba(0,0,0,.54);
+}
+.right-addon .fa-eye  {
+    right:  5px;
+    margin-top: -38px;
+    color: rgba(0,0,0,.54);
+}
+.right-addon .fa-eye-slash  {
+    right:  5px;
+    margin-top: -38px;
+    color: rgba(0,0,0,.54);
+}
+
+/* add padding  */
+.left-addon input  {
+    padding-left:  50px;
+    border-radius: 30px !important;
+    border: none !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid #032974 !important;
+    height: 40px !important;
+}
+.right-addon input {
+    padding-right: 30px;
+    border-radius: 30px !important;
+    border: none !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid #032974 !important;
+    height: 40px !important;
+}
+
+.select2-container--bootstrap5.select2-container--focus .form-select:not(.form-select-solid):not(.form-select-transparent), .select2-container--bootstrap5.select2-container--open .form-select:not(.form-select-solid):not(.form-select-transparent) {
+    border-color: #032974;
+    border-radius: 18px;
+}
+
+.select2-container--bootstrap5 .form-select {
+    border: 1px solid #032974;
+    border-radius: 18px;
+}
+
+.select2-container--bootstrap5 .select2-dropdown .select2-search {
+    padding:.5rem 1.25rem;
+    margin:0 0 .5rem 0;
+    border-radius: 20px;
+}
+
+.select2-container--bootstrap5 .select2-dropdown .select2-results__options {
+    max-height: 175px !important;
+}
+
+.select2-container--bootstrap5 .select2-dropdown {
+    border:1px darkblue solid;
+    box-shadow:0 0 50px 0 rgba(82,63,105,.15);
+    border-radius:20px;
+    padding:1rem 0;
+    background-color:#fff
+}
+
+.select2-container--bootstrap5 .select2-selection--single .select2-selection__placeholder {
+    color:#6c7293;
+}
+
+.form-select-sm {
+    padding-top:0.6rem;
+    padding-bottom:.6rem;
+    padding-left:1.25rem;
+    font-size:.900rem;
+    font-weight: normal;
+    border-radius:.325rem;
+    color: #000;
+}
+
+.modal-header {
+    padding:1rem 1.75rem;
+}
+
+.modal-footer {
+    padding: 1rem 1.5rem;
+}
+
+.mb-50px {
+    margin-bottom: 50px;
+}
+
+.mt-11rem {
+    margin-top: 11rem;
+}
+
+.mt-comma-15 {
+    margin-top: .15rem !important;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: #5867dd !important;
+    color: #fff;
+}
+
+.swal2-styled.swal2-confirm:hover {
+    background-color: #5d78ff !important;
+    color: #fff;
+}
+
+.select2-container--bootstrap5 .select2-dropdown .select2-results__option.select2-results__option--selected {
+    background-color: #5867dd !important;
+}
+
+.select2-container--bootstrap5 .select2-dropdown .select2-results__option.select2-results__option--selected.select2-results__option--highlighted {
+    color: #fff !important;
+    transition: color .2s ease,background-color .2s ease;
+}
+
+.select2-container--bootstrap5 .select2-dropdown .select2-results__option.select2-results__option--highlighted {
+    background-color: #f3f1ff;
+    color: #5867dd;
+    transition: color .2s ease,background-color .2s ease;
+}
+
+.btn_alert_close {
+    top: -10px !important;
+}

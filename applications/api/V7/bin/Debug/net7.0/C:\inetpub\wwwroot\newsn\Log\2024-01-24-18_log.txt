@@ -1,0 +1,32 @@
+2024-01-24 18:18:52.2666 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-24 18:18:53.2671 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-24 18:19:12.2425 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:19:12.3070 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:21:39.1478 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:21:39.1947 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:22:54.7871 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:22:55.6045 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:24:26.1637 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:24:27.3292 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:24:29.2630 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:24:29.3274 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:29:33.6077 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:29:34.8158 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:31:27.9800 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:31:32.0301 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:49:16.8517 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:49:17.6243 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-01-24 18:59:23.4930 INFO REQUEST: GET /api/config/promoitem
+2024-01-24 18:59:25.5110 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}

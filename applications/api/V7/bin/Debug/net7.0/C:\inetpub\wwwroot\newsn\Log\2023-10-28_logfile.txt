@@ -1,0 +1,31 @@
+2023-10-28 19:40:57.2499 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-28 19:40:58.6202 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-28 19:41:29.4669 INFO REQUEST: GET /api/promo/activity/subactivity/subcategoryid
+2023-10-28 19:41:29.5326 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-28 19:42:36.2343 INFO REQUEST: GET /api/promo/activity/subactivity/subcategoryid
+2023-10-28 19:42:41.7219 INFO RESPONSE:
+ {"code":"500","error":"True","message":"The multi-part identifier "ts.IsDelete" could not be bound."}
+
+2023-10-28 19:43:32.2580 INFO REQUEST: GET /api/promo/activity/subactivity/subcategoryid
+2023-10-28 19:44:51.1993 INFO REQUEST: GET /api/promo/activity/subactivity/subcategoryid
+2023-10-28 19:44:53.0285 INFO RESPONSE:
+ {"code":"500","error":"True","message":"Invalid column name 'IsDelete'.
+Invalid column name 'IsDelete'."}
+
+2023-10-28 19:45:42.0713 INFO REQUEST: GET /api/promo/activity/subactivity/subcategoryid
+2023-10-28 19:45:43.2582 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-28 19:45:58.5225 INFO REQUEST: GET /api/promo/activity/subactivity/subcategoryid
+2023-10-28 19:45:58.5812 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-28 19:50:49.7679 INFO REQUEST: GET /api/promo/activity/subactivity/subcategoryid
+2023-10-28 19:50:49.8591 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

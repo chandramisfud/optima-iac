@@ -1,0 +1,4 @@
+.sticky-lg-top {
+    top: calc(var(--kt-toolbar-height) + 45px + 0.0375rem) !important;
+    z-index: 999;
+}

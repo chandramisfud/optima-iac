@@ -1,0 +1,107 @@
+@media (max-width: 576px) {
+    col-sm-1{
+        flex:0 0 auto;
+        width:8.33333333%;
+    }
+}
+
+.btn.btn-icon {
+    padding: 0px 0px 0px 0px;
+    width: calc(1.5em + 1.2rem) !important;
+}
+
+#card_region .card-header, #card_brand .card-header, #card_sku .card-header {
+    min-height: unset !important;
+    background-color: rgba(88, 103, 221, 0.1);
+    padding: 0 1rem;
+    border-radius: calc(.625rem - 1px);
+}
+
+#card_region .card-body, #card_brand .card-body, #card_sku .card-body  {
+    padding: .5rem .5rem !important;
+}
+
+.input-group {
+    min-width: 250px;
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+.review_file_label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 991px) {
+    .review_file_label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .input-group {
+        min-width: 150px;
+    }
+
+}
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+    .review_file_label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px !important;
+    }
+
+    .input-group {
+        min-width: 230px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1099px) {
+    .review_file_label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px !important;
+    }
+
+    .input-group {
+        min-width: 150px;
+    }
+
+}
+
+#kt_body {
+    overflow: auto !important;
+}
+
+.modal.modal-sticky-bottom-right {
+    padding: 0 !important;
+    max-width: 500px;
+    height: auto;
+    position: fixed;
+    left: auto;
+    top: auto;
+    bottom: 40px;
+    right: 20px;
+    margin: 0;
+    box-shadow: 0px 0px 60px -15px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal.modal-sticky-bottom-right .modal-dialog .modal-content {
+    border: 0;
+    border-radius: 4px;
+}
+
+.modal.modal-sticky-bottom-right .modal-dialog {
+    position: static;
+    max-width: 500px;
+    width: auto;
+    margin: 0;
+    border-radius: 4px;
+}

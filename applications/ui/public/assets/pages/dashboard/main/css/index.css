@@ -1,0 +1,253 @@
+/* Layout Content */
+:root {
+    --width-card-chart: 150px;
+}
+
+body {
+    --kt-toolbar-height-dashboard: 62px !important;
+    background-color: #f2f3f8;
+}
+
+.content {
+    padding: 0 0 10px !important;
+}
+
+.header-fixed.toolbar-fixed .wrapper {
+    padding-top: calc(20px + var(--kt-toolbar-height-dashboard)) !important;
+}
+
+.header-fixed .header {
+    height: calc(var(--kt-toolbar-height-dashboard)) !important;
+    border-top: 17px solid #f2f3f8;;
+}
+
+#kt_aside {
+    border-left: 17px solid #f2f3f8;
+    border-top: 17px solid #f2f3f8;
+    border-right: 10px solid #f2f3f8;
+}
+
+#kt_content_container {
+    padding: 0 10px 0 0 !important;
+}
+
+.aside {
+    box-shadow: 0 0 28px 0 rgba(255, 255, 255, 0.56);
+}
+
+@media (min-width: 992px) {
+    .aside-enabled.aside-fixed.header-fixed .header {
+        left: 265px;
+        transition: left .3s ease;
+    }
+
+    .aside {
+        width: 258px;
+        transition: width .3s ease;
+    }
+
+    .aside .aside-menu {
+        width: 235px;
+    }
+}
+
+#header-dashboard {
+    background-color: #f1f2f7;
+}
+
+.row_notif:hover .text_header_notif, .row_notif:hover .fa-chevron-right {
+    color: #3b4dd9 !important;
+}
+/* End of Layout Content */
+
+/* Sticky */
+@media (min-width: 992px) {
+    .sticky-top-header-dashboard {
+        position: sticky;
+        top: 62px;
+        z-index: 99;
+    }
+}
+/* End of Sticky*/
+
+/* Text */
+.text-dark-blue {
+    color: darkblue;
+}
+
+.text-light-blue {
+    color: #00c9ea;
+}
+
+.text-gear-color {
+    color: #535784;
+}
+
+.fs-optima-12 {
+    font-size: 12px;
+}
+
+.fs-2rem {
+    font-size: 2rem !important;
+}
+
+.text-hover-primary:hover {
+    color: #5867dd !important;
+}
+
+a:hover {
+    color: darkblue;
+}
+/* End of Text*/
+
+/* Button */
+.btn.btn-text-optima:hover {
+    color: #5867dd;
+}
+
+.btn.btn-active-icon-optima:hover:not(.btn-active) i {
+    color: #5867dd;
+}
+/* End of Button */
+
+/* Card */
+.card .card-header {
+    min-height: 1px !important;
+}
+
+.card .card-body.card-body-top-data {
+    padding: 0.5rem 0 !important;
+}
+
+.line-card {
+    background-color: #f5f8fa !important;
+}
+/* End of Card */
+
+/* Vertical Line */
+.vr {
+    background-color: #bdbdbd !important;
+}
+/* End of Vertical Line */
+
+/* Padding */
+.ps-auto-card {
+    padding-left: calc(var(--width-card-chart) - 10px);
+}
+/* End of Padding */
+
+/* All about width */
+.w-20 {
+    width: 20%;
+}
+
+.w-60{
+    width: 58%;
+}
+
+@media (min-width: 992px) {
+    .w-lg-10 {
+        width: 10% !important;
+    }
+    .w-lg-17 {
+        width: 17% !important;
+    }
+
+    .w-lg-20 {
+        width: 20% !important;
+    }
+
+    .w-lg-55 {
+        width: 55% !important;
+    }
+
+    .w-lg-60 {
+        width: 60% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-33 {
+        flex: 0 0 auto;
+        width: 33.333334% !important;
+    }
+
+    .col-lg-38 {
+        flex: 0 0 auto;
+        width: 38% !important;;
+    }
+
+    .col-lg-62 {
+        flex: 0 0 auto;
+        width: 62% !important;;
+    }
+
+    .col-main-6 {
+        flex: 0 0 40%;
+        max-width: 38%;
+    }
+
+    .col-main-2 {
+        flex: 0 0 20.66667%;
+        max-width: 20.66667%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-33 {
+        flex: 0 0 auto;
+        width: 33.333334% !important;
+    }
+
+    .col-md-38 {
+        flex: 0 0 auto;
+        width: 38% !important;;
+    }
+
+    .col-md-62 {
+        flex: 0 0 auto;
+        width: 62% !important;;
+    }
+}
+/* End of All about width */
+
+/* Task To Do */
+.flex-stack:hover {
+    background-color: rgba(88, 103, 221, 0.1);
+    border-radius: .625rem;
+    cursor: pointer;
+}
+
+/* Multi Select2 */
+.multi-checkboxes_wrap:before{
+    font-family:fontAwesome;
+    color:#999;
+    content:"\f096";
+    width:25px;
+    height:25px;
+    padding-right: 10px;
+
+}
+.multi-checkboxes_wrap[aria-selected=true]:before{
+    content:"\f14a";
+}
+/* End of Multi Select2 */
+
+
+/* Chart */
+#legenddivdn, #legenddivtrend {
+    height: 50px;
+    width: 100%;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+#chartdiv_promo_creation_trend, #chartdiv_outstanding {
+    width: 100%;
+    height: 300px;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+
+.amcharts-AmChartsLogo-group {
+    display: none;
+}
+/* End of Chart */

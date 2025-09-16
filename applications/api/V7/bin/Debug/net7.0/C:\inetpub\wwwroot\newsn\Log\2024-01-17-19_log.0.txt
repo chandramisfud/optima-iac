@@ -1,0 +1,24 @@
+2024-01-17 19:55:42.6505 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-17 19:55:43.5704 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-17 19:56:49.0634 INFO REQUEST: PUT /api/config/promoItem
+2024-01-17 19:56:49.1411 INFO RESPONSE:
+ {"code":500,"error":true,"message":"The procedure \u0022ip_conf_roi_cr_ins\u0022 has no parameter named \u0022@configPromoItems\u0022.","values":null}
+2024-01-17 19:58:30.5571 INFO REQUEST: PUT /api/config/promoItem
+2024-01-17 19:58:31.3032 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2024-01-17 19:58:48.0838 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 19:58:48.1501 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 19:59:44.3795 INFO REQUEST: PUT /api/config/promoItem
+2024-01-17 19:59:44.4390 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2024-01-17 19:59:49.0769 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 19:59:49.1191 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

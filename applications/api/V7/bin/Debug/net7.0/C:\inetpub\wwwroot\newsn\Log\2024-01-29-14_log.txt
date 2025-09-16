@@ -1,0 +1,15 @@
+2024-01-29 14:03:47.6242 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-29 14:03:48.5642 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-29 14:04:58.0561 INFO REQUEST: GET /api/dn/create-invoice/invoice/id
+2024-01-29 14:04:58.1981 INFO RESPONSE:
+ {"code":404,"error":true,"message":"Email token failed"}
+2024-01-29 14:05:25.8545 INFO REQUEST: GET /api/dn/create-invoice/invoice/id
+2024-01-29 14:05:25.9721 INFO RESPONSE:
+ {"code":404,"error":true,"message":"Email token failed"}
+2024-01-29 14:07:11.3708 INFO REQUEST: GET /api/dn/create-invoice/invoice/id
+2024-01-29 14:07:11.4759 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

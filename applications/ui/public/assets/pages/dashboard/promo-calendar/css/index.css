@@ -1,0 +1,114 @@
+@media (min-width: 992px) {
+    #kt_content {
+        padding: 0 0 40px;
+    }
+}
+@media (min-width: 992px) {
+    .header-fixed.toolbar-fixed .wrapper {
+        padding-top: calc(5px + var(--kt-toolbar-height));
+    }
+}
+
+@media (min-width: 992px) {
+    .w-lg-14-2-perc {
+        width: 14.2% !important;
+    }
+}
+
+/* Filter Dashboard */
+.card_dashboard_header .card-body {
+    padding: 0.5rem 0.5rem !important;
+}
+/* End of Filter Dashboard */
+
+/* Promo Calendar Dashboard */
+@media only screen and (min-width: 768px) {
+    .box {
+        display: flex;
+    }
+}
+
+.col-form-label {
+    padding-bottom: calc(.75rem + 1px);
+}
+
+#lbl_promo_plan {
+    width: 14.2%;
+    color: #000;
+    background-color: #DDDDDD;
+}
+
+#lbl_approval {
+    width: 14.2%;
+    color: #212529;
+    background-color: #C5D9F1;
+}
+
+#lbl_approved {
+    width: 14.2%;
+    color: #212529;
+    background-color: #538DD5;
+}
+
+#lbl_claimed {
+    width: 14.2%;
+    color: #fff;
+    background-color: #000099;
+}
+
+.text-yellow {
+    color: yellow;
+}
+
+.text-red {
+    color: red;
+}
+/* End of Promo Calendar Dashboard */
+
+/* Calendar */
+.fc-button-primary {
+    background-color: rgba(88, 103, 221, 0.1);
+}
+
+.fc-button-primary:hover {
+    background-color: rgba(88, 103, 221, 0.1);
+}
+
+.fc-resourceTimelineMonth-button {
+    color: #3f4254;
+}
+
+.fc-resourceTimelineYear-button {
+    color: #3f4254;
+}
+
+.fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled).fc-button-active {
+    background-color: #5d78ff;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+    color: #ffffff;
+}
+
+.fc-license-message {
+    display: none;
+}
+
+.ftitle{
+    font-size : 1rem;
+    font-family : Poppins;
+}
+
+
+/*.fc-icon {*/
+/*    font-family: "Font Awesome 5 Free" !important;*/
+/*    display: inline-block !important;*/
+/*    font-style: normal !important;*/
+/*    font-variant: normal !important;*/
+/*    text-rendering: auto !important;*/
+/*    line-height: 1 !important;*/
+/*}*/
+
+/*.fc-icon-chevron-left::before {*/
+/*    content: "\f053" !important;*/
+/*}*/

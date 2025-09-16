@@ -1,0 +1,25 @@
+2023-11-30 11:53:24.2544 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-30 11:53:26.7552 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-30 11:56:47.1932 INFO REQUEST: GET /api/tools/scheduler/reminder
+2023-11-30 11:56:47.4231 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-30 11:56:53.5609 INFO REQUEST: GET /api/tools/scheduler/promo/autoclosing
+2023-11-30 11:56:53.6437 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-30 11:56:58.5315 INFO REQUEST: GET /api/tools/scheduler/reminder/pendingapproval
+2023-11-30 11:56:58.9074 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-30 11:57:05.2897 INFO REQUEST: GET /api/tools/scheduler/blitznotif
+2023-11-30 11:57:06.5539 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-30 11:57:23.4926 INFO LOGING REQUEST ERROR: Sequence contains no elements
+2023-11-30 11:57:23.6448 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+

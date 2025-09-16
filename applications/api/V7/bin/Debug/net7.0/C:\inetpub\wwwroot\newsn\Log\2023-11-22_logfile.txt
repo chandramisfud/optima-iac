@@ -1,0 +1,14 @@
+2023-11-22 16:20:36.4369 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-22 16:20:37.6518 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-22 16:21:29.8159 INFO REQUEST: POST /api/promo/approvalbyemail/sendback
+BODY:{"PromoSKPHeader":{"SKPDraftAvail":true,"SKPDraftAvailBfrAct60":true,"PeriodMatch":true,"InvestmentMatch":true,"MechanismMatch":true,"SKPSign7":true,"EntityDraft":true,"BrandDraft":true,"PeriodDraft":true,"ActivityDescDraft":true,"MechanismDraft":true,"InvestmentDraft":true,"Entity":true,"Brand":true,"ActivityDesc":true,"DistributorDraft":true,"Distributor":true,"ChannelDraft":true,"Channel":true,"StoreNameDraft":true,"StoreName":true,"skpstatus":1,"skp_notes":""},"promoId":3430,"notes":"sendback via email","profileId":"cmmmka"}
+2023-11-22 16:21:29.9187 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-11-22 16:26:39.0348 INFO REQUEST: POST /api/promo/approvalbyemail/sendback
+BODY:{"PromoSKPHeader":{"SKPDraftAvail":true,"SKPDraftAvailBfrAct60":true,"PeriodMatch":true,"InvestmentMatch":true,"MechanismMatch":true,"SKPSign7":true,"EntityDraft":true,"BrandDraft":true,"PeriodDraft":true,"ActivityDescDraft":true,"MechanismDraft":true,"InvestmentDraft":true,"Entity":true,"Brand":true,"ActivityDesc":true,"DistributorDraft":true,"Distributor":true,"ChannelDraft":true,"Channel":true,"StoreNameDraft":true,"StoreName":true,"skpstatus":1,"skp_notes":""},"promoId":3430,"notes":"sendback via email","profileId":"cmmmka"}
+2023-11-22 16:26:40.1382 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Promo Already send back ","values":null}

@@ -1,0 +1,52 @@
+2023-09-24 12:24:18.8735 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":3186}
+2023-09-24 12:24:19.5911 INFO RESPONSE:
+ {"code":"200","error":"False","message":""}
+
+2023-09-24 13:24:13.0280 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-24 13:24:14.2089 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-24 13:25:21.8933 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":3186}
+2023-09-24 13:25:21.9546 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-09-24 13:29:42.4498 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":1525}
+2023-09-24 13:29:42.4913 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-09-24 13:29:48.1578 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":1525}
+2023-09-24 13:29:48.1945 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-09-24 13:29:49.4500 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":1525}
+2023-09-24 13:29:49.4846 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-09-24 13:32:59.6331 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":285}
+2023-09-24 13:32:59.6783 INFO RESPONSE:
+ {"code":"500","error":"True","message":"Failed to save data"}
+
+2023-09-24 13:36:03.7125 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":3209}
+2023-09-24 13:36:03.7504 INFO RESPONSE:
+ {"code":"500","error":"True","message":"Failed to save data"}
+
+2023-09-24 13:39:46.6327 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":3209}
+2023-09-24 13:41:33.5691 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":3209}
+2023-09-24 13:41:34.7694 INFO RESPONSE:
+ {"code":"500","error":"True","message":"Cancel promo failed, you have Debet Note to be process "}
+
+2023-09-24 13:44:26.3249 INFO REQUEST: POST /api/promo/cancel/request/approve
+BODY:{"promoId":3258}
+2023-09-24 13:44:28.2793 INFO RESPONSE:
+ {"code":"500","error":"True","message":"Cancel promo failed, you have Debet Note to be process "}
+

@@ -1,0 +1,13 @@
+.btn.btn_download span.fa {
+    font-size: 14px !important;
+}
+
+.btn.btn_download:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(.border-active):not(.btn-flush):not(.btn-icon).btn-sm {
+    padding: calc(.35rem + 1px) calc(0.8rem + 1px) !important;
+}
+
+@media (min-width: 992px){
+    .w-lg-85 {
+        width: 85%;
+    }
+}

@@ -1,0 +1,13 @@
+2023-10-31 18:13:57.5480 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-31 18:13:58.5595 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-31 18:14:38.6626 INFO REQUEST: GET /api/finance-report/investment
+2023-10-31 18:14:39.0678 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-31 18:15:21.3084 INFO REQUEST: GET /api/report/investment
+2023-10-31 18:15:21.7929 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

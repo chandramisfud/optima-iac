@@ -1,0 +1,29 @@
+2024-01-25 11:24:03.5676 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:24:48.9844 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:24:49.6402 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-25 11:24:54.9291 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:24:55.6495 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-25 11:26:46.0376 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:26:46.7664 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-25 11:27:17.3955 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:27:17.4429 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-25 11:27:21.1979 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:27:21.2754 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-25 11:27:53.8469 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:27:53.9330 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-25 11:31:59.4805 INFO REQUEST: GET /api/dn/create-invoice/invoice
+2024-01-25 11:32:00.2384 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

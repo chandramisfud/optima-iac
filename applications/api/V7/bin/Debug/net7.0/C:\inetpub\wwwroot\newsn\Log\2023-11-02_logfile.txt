@@ -1,0 +1,47 @@
+2023-11-02 09:47:20.2290 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-02 09:47:21.4652 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-02 09:48:08.0122 INFO REQUEST: GET /api/promo/approval/category
+2023-11-02 09:48:08.0586 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-02 09:48:22.6514 INFO REQUEST: GET /api/promo/approvalrecon/category
+2023-11-02 09:48:22.6988 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-02 09:49:51.1536 INFO REQUEST: GET /api/promo/category
+2023-11-02 09:49:51.2003 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-02 09:50:14.4871 INFO REQUEST: GET /api/promo/sendback/category
+2023-11-02 09:50:14.5271 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-02 09:50:33.2419 INFO REQUEST: GET /api/promo/sendbackrecon/category
+2023-11-02 09:50:33.2917 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-02 09:59:41.3186 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-02 09:59:42.1901 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-02 10:00:30.8272 INFO REQUEST: GET /api/promo/approval/category
+2023-11-02 10:00:30.8722 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-02 10:00:39.3988 INFO REQUEST: GET /api/promo/approval
+2023-11-02 10:00:41.7234 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-02 10:02:04.1023 INFO REQUEST: POST /api/auth/token/changeprofile
+BODY:"scsh2"
+2023-11-02 10:02:04.1758 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-11-02 10:02:18.8457 INFO REQUEST: GET /api/promo/approval
+2023-11-02 10:02:21.1471 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

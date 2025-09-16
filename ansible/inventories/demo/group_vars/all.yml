@@ -1,0 +1,27 @@
+---
+# Global variables for demo environment
+country_code: jp
+env_name: demo
+
+# Domain configuration
+domain_base: xva-rnd.com
+ui_subdomain: optima-jp
+api_subdomain: api-optima-jp
+
+# Database configuration (from Terraform outputs)
+db_host: optima-jp-demo.cf8sm6y8kqw0.ap-northeast-1.rds.amazonaws.com
+db_port: 1433
+db_username: optima_admin
+db_password: "{{ vault_db_password }}"
+
+# SSH configuration
+ssh_key_file: "../terraform/optima-jp-demo.pem"
+
+# Timezone
+timezone: Asia/Tokyo
+
+# Application versions
+php_version: "8.0"
+dotnet_version: "7.0"
+node_version: "18"
+vault_windows_password: ".P69MG%pniZ3xon?RmF6XN2sFIzoV"

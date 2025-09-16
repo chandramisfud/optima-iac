@@ -1,0 +1,8 @@
+---
+# Main deployment playbook for Optima
+- name: Configure all Optima servers
+  import_playbook: configure-servers.yml
+
+- name: Set up SSL certificates
+  import_playbook: setup-ssl.yml
+  when: enable_ssl | default(false)

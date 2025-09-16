@@ -1,0 +1,433 @@
+2023-11-09 12:15:32.5936 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-09 12:15:33.4846 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-09 12:15:35.7523 INFO REQUEST: POST /api/auth/token/changeprofile
+BODY:"admin"
+2023-11-09 12:15:35.8356 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-11-09 12:15:35.8587 INFO REQUEST: PUT /api/auth/islogin
+2023-11-09 12:15:35.8996 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully update data"}
+
+2023-11-09 12:15:35.9464 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:35.9931 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:35.9978 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:15:36.1168 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:36.1556 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:36.1893 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:36.2069 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:15:36.2786 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:36.9292 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:36.9826 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:36.9869 INFO REQUEST: GET /api/dashboard/main/channel
+2023-11-09 12:15:37.0389 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.0532 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:37.1008 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.1087 INFO REQUEST: GET /api/dashboard/main/account
+2023-11-09 12:15:37.2039 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.2294 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:37.2619 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.2716 INFO REQUEST: GET /api/dashboard/main/dropdown
+2023-11-09 12:15:37.3908 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.4043 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:37.4600 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.4642 INFO REQUEST: GET /api/dashboard/main/notifications
+2023-11-09 12:15:37.5169 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.5342 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:37.5702 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.6131 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:37.6730 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.6998 INFO REQUEST: GET /api/dashboard/main
+2023-11-09 12:15:37.9182 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.9465 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:37.9838 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:37.9888 INFO REQUEST: GET /api/dashboard/main/trend
+2023-11-09 12:15:38.2999 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:38.3145 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:38.3474 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:38.3551 INFO REQUEST: GET /api/dashboard/main/dnmonitoring
+2023-11-09 12:15:38.4889 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:42.1348 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:42.1780 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:42.1823 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:15:42.4080 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:42.6731 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:42.7313 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:42.7379 INFO REQUEST: GET /api/promo/entity
+2023-11-09 12:15:42.9715 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:42.9844 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:43.0168 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:43.0331 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:15:44.7358 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:50.4126 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:50.4775 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:50.4810 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:15:50.6874 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:50.9384 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:51.0511 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:51.0558 INFO REQUEST: GET /api/promo/entity
+2023-11-09 12:15:51.0895 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:51.1186 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:15:51.2130 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:15:51.2145 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:15:52.8641 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:36.6713 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:36.7052 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:36.7205 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:16:36.8551 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:37.1432 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:37.1773 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:37.1862 INFO REQUEST: GET /api/promo/entity
+2023-11-09 12:16:37.2275 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:37.2427 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:37.2788 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:37.2829 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:16:38.9948 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:41.4101 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:41.4465 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:41.4563 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:16:41.5972 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:41.8898 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:41.9229 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:41.9242 INFO REQUEST: GET /api/promo/entity
+2023-11-09 12:16:41.9571 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:41.9705 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:42.0104 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:42.0183 INFO REQUEST: GET /api/promo/cancel
+2023-11-09 12:16:44.3482 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:45.7855 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:45.8292 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:45.8343 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:16:45.9703 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:46.2547 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:46.3005 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:46.3038 INFO REQUEST: GET /api/promo/entity
+2023-11-09 12:16:46.3392 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:46.3735 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:16:46.4070 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:16:46.4113 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:16:48.0305 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:17:35.6502 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-09 12:17:35.7956 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-09 12:18:10.1460 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:18:11.8453 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:18:23.8979 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:18:25.6339 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:18.9674 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:20.9381 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:20.9706 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:21.0028 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:23.4135 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-09 12:37:23.5901 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-09 12:37:26.3533 INFO REQUEST: POST /api/auth/token/changeprofile
+BODY:"admin"
+2023-11-09 12:37:26.5260 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-11-09 12:37:26.5429 INFO REQUEST: PUT /api/auth/islogin
+2023-11-09 12:37:26.5948 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully update data"}
+
+2023-11-09 12:37:26.6581 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:26.7104 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:26.7171 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:37:26.8475 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:26.8736 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:26.9062 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:26.9117 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:37:26.9991 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.0445 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:28.0806 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.0959 INFO REQUEST: GET /api/dashboard/main/channel
+2023-11-09 12:37:28.1507 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.1640 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:28.1960 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.2038 INFO REQUEST: GET /api/dashboard/main/account
+2023-11-09 12:37:28.2832 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.2975 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:28.3299 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.3344 INFO REQUEST: GET /api/dashboard/main/dropdown
+2023-11-09 12:37:28.4203 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.4354 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:28.4781 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.4820 INFO REQUEST: GET /api/dashboard/main/notifications
+2023-11-09 12:37:28.5483 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.5678 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:28.6103 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.6446 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:28.6782 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.6971 INFO REQUEST: GET /api/dashboard/main
+2023-11-09 12:37:28.9081 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:28.9273 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:30.0654 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:30.0784 INFO REQUEST: GET /api/dashboard/main/trend
+2023-11-09 12:37:30.1557 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:30.1824 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:30.2232 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:30.2321 INFO REQUEST: GET /api/dashboard/main/dnmonitoring
+2023-11-09 12:37:30.4118 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:32.7248 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:32.7580 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:32.7655 INFO REQUEST: GET /api/auth/menu
+2023-11-09 12:37:32.8948 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:33.1833 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:33.2247 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:33.2302 INFO REQUEST: GET /api/promo/entity
+2023-11-09 12:37:33.2679 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:33.2823 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:33.3139 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:33.3362 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:37:34.6068 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:38.5348 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:38.5675 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:38.5723 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:37:39.8206 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:43.5778 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:37:43.6148 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:37:43.6191 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:37:44.8676 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:00.9017 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:00.9524 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:00.9572 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:02.2091 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:05.8709 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:05.9147 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:05.9209 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:07.1609 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:08.8362 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:08.8667 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:08.8698 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:10.1094 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:12.1974 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:12.2297 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:12.2333 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:13.4817 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:23.9554 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:23.9890 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:23.9934 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:25.2480 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:32.1859 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:32.2317 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:32.2361 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:33.5208 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:36.6255 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:36.6715 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:36.6911 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:37.9636 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:42.7829 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:42.8267 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:42.8323 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:44.1845 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:49.1003 INFO REQUEST: GET /api/auth/islogin
+2023-11-09 12:38:49.1387 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-09 12:38:49.1449 INFO REQUEST: GET /api/promo/display
+2023-11-09 12:38:50.3887 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

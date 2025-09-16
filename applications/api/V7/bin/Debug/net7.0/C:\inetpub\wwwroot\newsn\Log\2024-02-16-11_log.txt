@@ -1,0 +1,74 @@
+2024-02-16 11:12:10.1059 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"\u0060misfud@xvautomation.com","Password":"A#nd007."}
+2024-02-16 11:13:09.6136 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"\u0060misfud@xvautomation.com","Password":"A#nd007."}
+2024-02-16 11:13:11.5787 INFO RESPONSE:
+ {"code":401,"error":true,"message":"Login Failed","values":{"ErrCode":1,"ErrMessage":"Incorrect username. Please try again.","LoginFailedCount":0,"LoginFailedlastTime":"2024-01-07T21:10:38.867","LoginFreezeTime":57003}}
+2024-02-16 11:13:59.8061 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-02-16 11:14:00.0758 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-02-16 11:15:12.3452 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:15:12.8110 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:18:01.7387 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:18:02.0791 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:21:04.7486 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:22:24.9959 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:22:27.0568 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:23:05.8745 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:23:06.0631 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:25:29.6342 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:26:30.4313 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:26:32.8916 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:28:03.0329 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:28:04.5004 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:40:39.6802 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:40:41.8356 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Incorrect syntax near the keyword \u0027WHERE\u0027.","values":null}
+2024-02-16 11:41:58.8322 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:41:59.6211 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Incorrect syntax near the keyword \u0027SELECT\u0027.\nIncorrect syntax near \u0027)\u0027.","values":null}
+2024-02-16 11:43:27.4019 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:43:29.4746 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Incorrect syntax near the keyword \u0027SELECT\u0027.\nIncorrect syntax near \u0027)\u0027.","values":null}
+2024-02-16 11:45:10.0425 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:45:10.8588 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:50:06.5109 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:50:07.4163 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:51:41.4656 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:51:43.5918 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:52:22.0450 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:52:25.5323 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:52:56.4222 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:52:57.7290 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:53:22.8769 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:53:23.0218 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-02-16 11:53:29.6968 INFO REQUEST: GET /api/dn/validation-bysales/promo/id
+2024-02-16 11:53:29.9091 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

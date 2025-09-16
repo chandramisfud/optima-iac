@@ -1,0 +1,186 @@
+@extends('layouts/layoutMaster')
+
+@section('title', 'Transfer To SAP - Accrual')
+
+@section('vendor-style')
+    <link href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css"/>
+@endsection
+
+@section('page-style')
+    <link href="{{ asset('assets/pages/tools/sap-payment/css/sap-payment-upload.css') }}" rel="stylesheet" type="text/css"/>
+@endsection
+
+@section('breadcrumb')
+    <span class="d-flex align-items-center fs-3 my-1">@yield('title')
+        <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span>
+        <small class="text-muted fs-7 fw-bold my-1 ms-1" id="txt_info_method"></small>
+    </span>
+@endsection
+
+@section('button-toolbar-right')
+    @include('toolbars.btn-back')
+@endsection
+
+@section('toolbar')
+    @include('toolbars.toolbar')
+@endsection
+
+@section('content')
+    <div class="row mb-3">
+        <div class="col-md-12 col-12">
+            <div class="card shadow-sm card_form">
+                <div class="card-body">
+                    <form id="form_sap_accrual" class="form" autocomplete="off">
+                        @csrf
+                        <div class="row fv-row">
+                            <div class="input-group mb-3">
+                                <input class="form-control field_upload" id="file" name="file" type="file" data-stripe="file" placeholder="Choose File"/>
+                                <span class="input-group-text">Upload File</span>
+                            </div>
+                        </div>
+                        <div class="separator my-2 border-2 mb-3"></div>
+                        <div class="row">
+                            <div class="text-end">
+                                <div class="col-lg-12 col-lg-12 col-12">
+                                    <button type="button" class="btn btn-sm btn-optima fw-bolder" id="btn_upload">
+                                    <span class="indicator-label">
+                                        <span class="fa fa-cloud-upload-alt"></span> Upload
+                                    </span>
+                                        <span class="indicator-progress">Uploading...
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                    </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-12 col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <span class="text-gray-700 fs-4 mb-3">File <small class="text-muted fs-7 fw-bold my-1 ms-1" id="txt_info_method">List</small></span>
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <div class="inner-addon left-addon right-addon">
+                                    <span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute translate-middle ms-6" style="padding-top: 32px">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+                                            <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                <input type="text" class="form-control form-control-sm ps-10" name="search" value="" placeholder="Search" id="dt_file_search" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2-5 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <div class="row">
+                                <label class="col-lg-3 text-lg-end px-lg-0 pt-lg-2">Period</label>
+                                <div class="col-lg-9">
+                                    <div class="input-group input-group-sm" id="dialer_period">
+                                        <button class="btn btn-sm btn-icon btn-outline btn-outline-secondary btn-active-color-primary" type="button" data-kt-dialer-control="decrease">
+                                            <i class="fa fa-minus fs-2"></i>
+                                        </button>
+
+                                        <input type="text" class="form-control form-control-sm text-end" data-kt-dialer-control="input" name="filter_period" id="filter_period" value="{{ @date('Y') }}" autocomplete="off"/>
+
+                                        <button class="btn btn-sm btn-icon btn-outline btn-outline-secondary btn-active-color-primary" type="button" data-kt-dialer-control="increase">
+                                            <i class="fa fa-plus fs-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2-5 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <select class="form-select form-select-sm" data-control="select2" name="filter_entity" id="filter_entity" data-placeholder="Select an Entity"  data-allow-clear="true">
+                                <option></option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2-5 col-md-12 col-sm-12 px-lg-1 mb-lg-0 mb-2">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text px-2 fs-12px">Closing Date</span>
+                                <input type="text" class="form-control form-control-sm" name="filter_closing_date" id="filter_closing_date" value="{{ @date('Y-m-d') }}" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2-75 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <div class="text-end">
+                                <div class="col-lg-12 col-lg-12 col-12">
+                                    <button type="button" class="btn btn-sm btn-optima fw-bolder" id="dt_file_view">
+                                    <span class="indicator-label">
+                                        <span class="la la-refresh"></span> View
+                                    </span>
+                                        <span class="indicator-progress">View...
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                    </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <table id="dt_file" class="table table-striped table-row-bordered table-responsive table-sm table-hover"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="row">
+                        <span class="text-gray-700 fs-4 mb-3">Upload history <small class="text-muted fs-7 fw-bold my-1 ms-1" id="txt_info_method"></small></span>
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <div class="inner-addon left-addon right-addon">
+                                    <span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute translate-middle ms-6" style="padding-top: 32px">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+                                            <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                <input type="text" class="form-control form-control-sm ps-10" name="search" value="" placeholder="Search" id="dt_upload_history_search" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-10 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <div class="text-end">
+                                <div class="col-lg-12 col-lg-12 col-12">
+                                    <button type="button" class="btn btn-sm btn-optima fw-bolder" id="dt_upload_history_view">
+                                    <span class="indicator-label">
+                                        <span class="la la-refresh"></span> View
+                                    </span>
+                                        <span class="indicator-progress">View...
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                    </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <table id="dt_upload_history" class="table table-striped table-row-bordered table-responsive table-sm table-hover"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('vendor-script')
+    <script src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+@endsection
+
+@section('page-script')
+    <script src="{{ asset('assets/js/format.js?v=' . microtime()) }}"></script>
+    <script src="{{ asset('assets/pages/tools/sap-accrual/js/sap-accrual-upload.js?v=5') }}"></script>
+@endsection

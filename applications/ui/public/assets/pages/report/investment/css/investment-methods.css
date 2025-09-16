@@ -1,0 +1,17 @@
+#dt_budget_allocation_list_wrapper tbody tr {
+    cursor: pointer;
+}
+
+.table-sm td {
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem !important;
+}
+
+.table {
+    table-layout: fixed;
+}
+
+.table th, .table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

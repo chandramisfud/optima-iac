@@ -1,0 +1,12 @@
+2023-09-28 13:15:05.0554 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-28 13:15:06.3902 INFO RESPONSE:
+ {"code":401,"error":true,"message":"Login Failed","values":{"ErrCode":1,"ErrMessage":"Incorrect password. Please try again.","LoginFailedCount":1,"LoginFailedlastTime":"2023-09-28T13:15:06.473","LoginFreezeTime":0}}
+2023-09-28 13:15:18.8766 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"Optima2.0"}
+2023-09-28 13:15:19.0365 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Value cannot be null. (Parameter \u0027source\u0027)","values":null}
+2023-09-28 13:15:30.5967 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"Optima2.0"}
+2023-09-28 13:15:30.7210 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Value cannot be null. (Parameter \u0027source\u0027)","values":null}

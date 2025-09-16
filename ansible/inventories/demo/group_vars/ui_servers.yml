@@ -1,0 +1,16 @@
+---
+# UI Server specific variables
+php_version: "8.0"
+web_server: nginx
+app_framework: laravel
+laravel_version: "10"
+
+# PHP configuration
+php_memory_limit: "256M"
+php_upload_max_filesize: "50M"
+php_post_max_size: "50M"
+php_max_execution_time: 300
+
+# Nginx configuration
+nginx_worker_processes: auto
+nginx_worker_connections: 1024

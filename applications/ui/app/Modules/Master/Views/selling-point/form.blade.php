@@ -1,0 +1,92 @@
+@extends('layouts/layoutMaster')
+
+@section('title', 'Form Selling Point')
+
+@section('vendor-style')
+
+@endsection
+
+@section('page-style')
+
+@endsection
+
+@section('breadcrumb')
+    <span class="d-flex align-items-center fs-3 my-1">@yield('title')
+        <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span>
+        <small class="text-muted fs-7 fw-bold my-1 ms-1" id="txt_info_method">Add New</small>
+    </span>
+@endsection
+
+@section('button-toolbar-right')
+    @if(isset($_GET['method']) && $_GET['method'] === 'update')
+        @include('toolbars.btn-save-back')
+    @else
+        @include('toolbars.btn-back-save-exit-add-new')
+    @endif
+@endsection
+
+@section('toolbar')
+    @include('toolbars.toolbar')
+@endsection
+
+@section('content')
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <div class="card shadow-sm card_form">
+                <div class="card-body">
+                    <form id="form_sellingpoint" class="form" autocomplete="off">
+                        @csrf
+                        <div class="row fv-row">
+                            <label class="col-lg-3 col-form-label required">Ref ID</label>
+                            <div class="col-lg-6">
+                                <input class="form-control form-control-sm" type="text" name="refId" id="refId"/>
+                            </div>
+                        </div>
+                        <div class="row fv-row">
+                            <label class="col-lg-3 col-form-label required">Region</label>
+                            <div class="col-lg-6">
+                                <select class="form-select form-select-sm" data-control="select2" name="region" id="region" data-placeholder="Select a Region"  data-allow-clear="true" tabindex="1">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row fv-row">
+                            <label class="col-lg-3 col-form-label">Area Code</label>
+                            <div class="col-lg-6">
+                                <input class="form-control form-control-sm" type="text" name="areaCode" id="areaCode" autocomplete="off" tabindex="2" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-lg-3 col-form-label">Profit Center</label>
+                            <div class="col-lg-6">
+                                <select class="form-select form-select-sm" data-control="select2" name="profitcenter" id="profitcenter" data-placeholder="Select a Profit Center"  data-allow-clear="true" tabindex="3">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row fv-row">
+                            <label class="col-lg-3 col-form-label">Short Desc</label>
+                            <div class="col-lg-6">
+                                <input class="form-control form-control-sm" type="text" name="shortDesc" id="shortDesc" autocomplete="off" tabindex="4" />
+                            </div>
+                        </div>
+                        <div class="row fv-row">
+                            <label class="col-lg-3 col-form-label required">Long Desc</label>
+                            <div class="col-lg-6">
+                                <input class="form-control form-control-sm" type="text" name="longDesc" id="longDesc" autocomplete="off" tabindex="5" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('vendor-script')
+
+@endsection
+
+@section('page-script')
+    <script src="{{ asset('assets/pages/master/selling-point/js/selling-point-form.js?v=4') }}"></script>
+@endsection

@@ -1,0 +1,14 @@
+2023-12-19 09:09:38.3662 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-12-19 09:09:38.7274 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-12-19 09:09:48.6918 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007.x"}
+2023-12-19 09:09:48.7532 INFO RESPONSE:
+ {"code":401,"error":true,"message":"Login Failed","values":{"ErrCode":1,"ErrMessage":"Incorrect password. Please try again.","LoginFailedCount":1,"LoginFailedlastTime":"2023-12-19T09:09:00","LoginFreezeTime":0}}
+2023-12-19 09:09:57.7388 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-12-19 09:09:58.1047 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+

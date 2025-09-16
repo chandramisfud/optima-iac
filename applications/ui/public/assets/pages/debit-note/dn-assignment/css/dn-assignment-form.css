@@ -1,0 +1,64 @@
+.btn.btn_download span.fa {
+    font-size: 14px !important;
+}
+
+.btn.btn_download:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(.border-active):not(.btn-flush):not(.btn-icon).btn-sm {
+    padding: calc(.35rem + 1px) calc(0.8rem + 1px) !important;
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+.review_file_label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*max-width: 200px !important;*/
+}
+
+
+element {
+}
+@media (min-width: 992px) {
+    span:hover, ol:hover, ul:hover, pre:hover, div:hover {
+        scrollbar-color: #5867dd transparent;
+
+    }
+}
+@media (min-width: 992px) {
+    div:hover, main:hover, ol:hover, pre:hover, span:hover, ul:hover {
+        scrollbar-color: #e9edf1 transparent;
+
+    }
+}
+@media (min-width: 992px) {
+    span, ol, ul, pre, div {
+        scrollbar-width: thin;
+
+        scrollbar-color: #5867dd transparent;
+
+    }
+}
+div, ol, pre, span, ul {
+    scrollbar-width: thin;
+
+    scrollbar-color: #5867dd transparent;
+
+}
+@media (min-width: 992px) {
+    div, main, ol, pre, span, ul {
+        scrollbar-width: thin;
+
+        scrollbar-color: #eff2f5 transparent;
+
+    }
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+
+}
+#forwardApprover {
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif !important;
+    font-weight: 900;
+}

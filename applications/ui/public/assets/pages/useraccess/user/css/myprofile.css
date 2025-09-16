@@ -1,0 +1,6 @@
+.form-control.is-valid, .was-validated .form-control:valid {
+    background-position: right calc(.375em + 3.375rem) center;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    background-position: right calc(.375em + 3.375rem) center;
+}  

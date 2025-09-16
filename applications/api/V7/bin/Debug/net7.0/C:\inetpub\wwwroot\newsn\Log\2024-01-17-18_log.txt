@@ -1,0 +1,48 @@
+2024-01-17 18:20:11.5013 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-17 18:21:33.4505 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-17 18:21:34.3248 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-17 18:22:41.3983 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 18:22:43.3009 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Procedure or function \u0027ip_config_promo_items_get\u0027 expects parameter \u0027@category\u0027, which was not supplied.","values":null}
+2024-01-17 18:28:12.9899 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 18:29:06.0796 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 18:29:08.0011 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 18:29:11.5804 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 18:29:11.6268 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 18:29:13.3385 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 18:29:13.3756 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 18:29:16.4950 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 18:29:16.5310 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 18:30:47.4200 INFO REQUEST: GET /api/config/promoitemhistory
+2024-01-17 18:30:47.4707 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 18:30:52.0957 INFO REQUEST: GET /api/config/promoitemhistory
+2024-01-17 18:30:52.1319 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 18:30:55.6835 INFO REQUEST: GET /api/config/promoitemhistory
+2024-01-17 18:30:55.7237 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-17 18:32:38.0246 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-17 18:32:38.9787 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-17 18:32:58.7772 INFO REQUEST: GET /api/config/promoitem
+2024-01-17 18:32:58.8202 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

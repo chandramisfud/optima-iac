@@ -1,0 +1,70 @@
+2023-09-21 08:52:49.3440 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-21 08:52:50.5997 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-21 08:53:13.0155 INFO REQUEST: GET /api/budget/allocation/id
+2023-09-21 08:53:13.6748 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-09-21 08:55:49.8521 INFO REQUEST: GET /api/budget/allocation/source/id
+2023-09-21 08:55:52.1007 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-09-21 17:28:46.9719 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-21 17:28:47.8182 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-21 17:29:54.6286 INFO REQUEST: GET /api/master/mechanism/product
+2023-09-21 17:29:54.6872 INFO RESPONSE:
+ {"code":403,"error":true,"message":"Invalid column name \u0027Id\u0027.","values":null}
+2023-09-21 17:30:07.7982 INFO REQUEST: GET /api/master/mechanism/subactivity
+2023-09-21 17:30:07.8469 INFO RESPONSE:
+ {"code":403,"error":true,"message":"Invalid column name \u0027Id\u0027.","values":null}
+2023-09-21 17:30:19.6989 INFO REQUEST: GET /api/master/mechanism/subaccount
+2023-09-21 17:30:19.7561 INFO RESPONSE:
+ {"code":403,"error":true,"message":"Invalid column name \u0027Id\u0027.","values":null}
+2023-09-21 17:30:30.1418 INFO REQUEST: GET /api/master/mechanism
+2023-09-21 17:30:30.2445 INFO RESPONSE:
+ {"code":"200","error":"False","Message":"Successfully get data","Values":"Repositories.Entities.Models.BaseLP"}
+
+2023-09-21 17:35:14.6286 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-21 17:35:15.8881 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-21 17:35:54.4660 INFO REQUEST: GET /api/master/subactivity
+2023-09-21 17:35:54.6024 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-09-21 17:36:39.9446 INFO REQUEST: GET /api/master/mechanism/product
+2023-09-21 17:36:40.0229 INFO RESPONSE:
+ {"code":403,"error":true,"message":"Invalid column name \u0027Id\u0027.","values":null}
+2023-09-21 17:36:54.3929 INFO REQUEST: GET /api/master/mechanism/subaccount
+2023-09-21 17:36:54.4523 INFO RESPONSE:
+ {"code":403,"error":true,"message":"Invalid column name \u0027Id\u0027.","values":null}
+2023-09-21 17:37:11.1640 INFO REQUEST: GET /api/master/mechanism/subactivity
+2023-09-21 17:37:11.2151 INFO RESPONSE:
+ {"code":403,"error":true,"message":"Invalid column name \u0027Id\u0027.","values":null}
+2023-09-21 17:41:39.4016 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-21 17:41:40.6522 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-21 17:42:03.7240 INFO REQUEST: GET /api/master/mechanism/product
+2023-09-21 17:42:03.8389 INFO RESPONSE:
+ {"code":"200","error":"False","Message":"Successfully get data","Values":"Repositories.Entities.Models.BaseLP"}
+
+2023-09-21 17:42:16.2501 INFO REQUEST: GET /api/master/mechanism/subactivity
+2023-09-21 17:42:16.4003 INFO RESPONSE:
+ {"code":"200","error":"False","Message":"Successfully get data","Values":"Repositories.Entities.Models.BaseLP"}
+
+2023-09-21 17:42:26.8531 INFO REQUEST: GET /api/master/mechanism/subaccount
+2023-09-21 17:42:26.9695 INFO RESPONSE:
+ {"code":"200","error":"False","Message":"Successfully get data","Values":"Repositories.Entities.Models.BaseLP"}
+
+2023-09-21 18:02:14.4642 INFO REQUEST: GET /api/dn/overbudget
+2023-09-21 18:02:15.6096 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

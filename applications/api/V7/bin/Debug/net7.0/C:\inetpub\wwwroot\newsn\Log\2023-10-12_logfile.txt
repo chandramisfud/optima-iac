@@ -1,0 +1,36 @@
+2023-10-12 22:51:27.6057 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-12 22:51:30.7038 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-12 23:07:36.1532 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"edy.jumantoro@xvautomation.com","Password":"Optima2.0"}
+2023-10-12 23:07:37.3840 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-12 23:08:14.3197 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC.xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC.xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9823,"Name":"formFile","FileName":"Template Budget DC.xlsx"}
+2023-10-12 23:08:14.7319 INFO RESPONSE:
+ {"error":"False","code":"200","message":"Successfully upload","value":"System.Collections.Generic.List`1[Repositories.Entities.Models.ImportBudgetResponse]"}
+
+2023-10-12 23:10:13.2770 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-12 23:10:14.5063 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-12 23:10:41.6822 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-12 23:11:37.9313 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-12 23:11:46.0194 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-12 23:12:09.5661 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-12 23:12:09.6837 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-12 23:41:02.8570 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-12 23:42:05.4053 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}

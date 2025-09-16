@@ -1,0 +1,21 @@
+2023-11-07 20:43:57.5887 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-07 20:43:59.9347 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-07 20:44:47.7403 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-07 20:44:47.8101 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-07 20:47:25.4655 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-07 20:47:25.8198 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-07 20:48:02.3267 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-07 20:48:02.4147 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-07 20:48:31.0354 INFO REQUEST: GET /api/mapping/promorecon-subactivity
+2023-11-07 20:48:32.0574 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

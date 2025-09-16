@@ -1,0 +1,12 @@
+2024-01-31 11:32:53.8502 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-31 11:32:55.0618 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-31 11:33:41.9910 INFO REQUEST: GET /api/finance-report/accrual
+2024-01-31 11:33:42.1121 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-31 11:36:52.6840 INFO REQUEST: GET /api/finance-report/accrual
+2024-01-31 11:36:52.8285 INFO RESPONSE:
+ {"code":500,"error":true,"message":"String or binary data would be truncated.\nThe statement has been terminated.","values":null}

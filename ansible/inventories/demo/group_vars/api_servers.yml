@@ -1,0 +1,14 @@
+---
+# API Server specific variables
+dotnet_version: "7.0"
+web_server: iis
+app_framework: dotnet
+
+# IIS configuration
+iis_app_pool_name: "OptimaAPI"
+iis_site_name: "OptimaAPI"
+iis_port: 80
+
+# .NET configuration
+dotnet_environment: "Production"
+dotnet_urls: "http://*:80"

@@ -1,0 +1,88 @@
+2023-10-22 00:17:55.1404 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-22 00:18:53.9888 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-22 00:20:13.3371 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-22 00:22:43.4300 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:22:44.0725 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload"}
+
+2023-10-22 00:24:30.1031 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:26:16.0048 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:26:20.3967 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload"}
+
+2023-10-22 00:33:43.4985 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:33:45.8795 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload"}
+
+2023-10-22 00:37:25.6672 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:37:26.7895 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload"}
+
+2023-10-22 00:39:34.2489 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:44:17.9499 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:44:20.3559 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload"}
+
+2023-10-22 00:45:50.5702 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:48:26.2007 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 00:48:27.8941 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload"}
+
+2023-10-22 01:38:29.1686 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 01:38:29.3361 INFO RESPONSE:
+ {"code":"500","error":"True","message":"Column 'SubActivity' does not belong to table DCBudgetUploadType."}
+
+2023-10-22 01:39:20.7924 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 01:39:22.3169 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload"}
+
+2023-10-22 22:23:26.9465 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-22 22:23:27.7705 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-22 22:23:55.6866 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 22:23:56.1928 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload","xlsRowValues":"System.Collections.Generic.List`1[V7.Model.Tools.UploadBudgetDCModel]","tableTempValues":"System.Collections.Generic.List`1[Entities.Tools.DCImportTableTemp]"}
+
+2023-10-22 22:27:33.9342 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (2).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9918,"Name":"formFile","FileName":"Template Budget DC (2).xlsx"}
+2023-10-22 22:27:35.1396 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload","xlsRowValues":"System.Collections.Generic.List`1[V7.Model.Tools.UploadBudgetDCModel]","tableTempValues":"System.Collections.Generic.List`1[Entities.Tools.DCImportTableTemp]"}
+
+2023-10-22 22:27:49.8519 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (1).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget DC (1).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9920,"Name":"formFile","FileName":"Template Budget DC (1).xlsx"}
+2023-10-22 22:27:49.8700 INFO RESPONSE:
+ {"code":"500","error":"True","message":"The input string 'Distribution Cost' was not in a correct format.Couldn't store <Distribution Cost> in Budget Amount Column.  Expected type is Decimal."}
+
+2023-10-22 22:28:04.0258 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022test_upload_dc.xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022test_upload_dc.xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9625,"Name":"formFile","FileName":"test_upload_dc.xlsx"}
+2023-10-22 22:28:04.3925 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload","xlsRowValues":"System.Collections.Generic.List`1[V7.Model.Tools.UploadBudgetDCModel]","tableTempValues":"System.Collections.Generic.List`1[Entities.Tools.DCImportTableTemp]"}
+
+2023-10-22 22:28:31.2971 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template_Matrix_Promo.xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template_Matrix_Promo.xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":1852493,"Name":"formFile","FileName":"Template_Matrix_Promo.xlsx"}
+2023-10-22 22:28:32.7142 INFO RESPONSE:
+ {"code":"500","error":"True","message":"The input string 'PROVISION' was not in a correct format.Couldn't store <PROVISION> in Budget Amount Column.  Expected type is Decimal."}
+
+2023-10-22 22:38:26.9356 INFO REQUEST: POST /api/tools/upload/budgetdc
+BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022test_upload_dc.xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022test_upload_dc.xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9857,"Name":"formFile","FileName":"test_upload_dc.xlsx"}
+2023-10-22 22:38:31.3626 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully upload","xlsRowValues":"System.Collections.Generic.List`1[V7.Model.Tools.UploadBudgetDCModel]","tableTempValues":"System.Collections.Generic.List`1[Entities.Tools.DCImportTableTemp]"}
+

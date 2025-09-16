@@ -1,0 +1,140 @@
+2023-11-08 12:00:07.7780 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:00:08.4469 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 12:01:48.3493 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:01:48.3949 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 12:20:40.3936 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-08 12:20:41.6257 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-08 12:21:13.6267 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:21:13.6893 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 12:21:47.7541 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:21:47.7990 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 12:21:49.6509 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:21:49.7038 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 12:21:55.3611 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:21:55.4040 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 12:29:01.6600 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-08 12:29:02.8739 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-08 12:29:25.7780 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:29:25.8358 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 12:29:39.0762 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 12:29:39.1158 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 15:03:01.9495 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 15:03:30.8561 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-08 15:07:27.4313 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-08 15:07:29.5487 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-08 15:07:55.6272 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 15:07:55.7580 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 15:10:21.5974 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 15:10:22.8395 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 19:24:49.0891 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-08 19:24:50.3781 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-08 19:25:12.3336 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid/all
+2023-11-08 19:25:12.4023 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 19:25:23.7164 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 19:25:23.7826 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 20:00:09.9768 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 20:00:11.1766 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 20:00:15.0081 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid/all
+2023-11-08 20:00:15.4018 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 20:42:41.9676 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-08 20:42:47.7942 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-08 20:43:56.1215 INFO REQUEST: GET /api/promo/recon/mapping/subactivity/activityid
+2023-11-08 20:43:56.2659 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:01:28.6244 INFO REQUEST: GET /api/finance-report/promodisplay
+2023-11-08 23:01:30.6336 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:01:52.8345 INFO REQUEST: GET /api/finance-report/promodisplay
+2023-11-08 23:01:54.0927 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:03:20.6348 INFO REQUEST: GET /api/finance-report/dndisplay
+2023-11-08 23:03:20.7387 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:03:41.6201 INFO REQUEST: GET /api/finance-report/dndisplay
+2023-11-08 23:03:41.6816 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:03:56.6781 INFO REQUEST: GET /api/finance-report/dndisplay
+2023-11-08 23:03:56.7425 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:04:05.9970 INFO REQUEST: GET /api/finance-report/dndisplay
+2023-11-08 23:04:06.0662 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:04:13.5699 INFO REQUEST: GET /api/finance-report/dndisplay
+2023-11-08 23:04:13.7135 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:04:19.1873 INFO REQUEST: GET /api/finance-report/dndisplay
+2023-11-08 23:04:19.3086 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:04:31.1484 INFO REQUEST: GET /api/finance-report/dndisplay
+2023-11-08 23:04:31.6501 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:05:24.7814 INFO REQUEST: GET /api/finance-report/promodisplay
+2023-11-08 23:05:26.0080 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:07:41.6966 INFO REQUEST: GET /api/finance-report/promodisplay
+2023-11-08 23:07:42.9217 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:16:47.4457 INFO REQUEST: GET /api/finance-report/promodisplay
+2023-11-08 23:16:48.8775 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-08 23:16:56.1153 INFO REQUEST: GET /api/finance-report/promodisplay
+2023-11-08 23:16:57.4484 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

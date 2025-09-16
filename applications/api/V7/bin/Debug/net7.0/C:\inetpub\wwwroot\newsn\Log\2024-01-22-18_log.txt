@@ -1,0 +1,4 @@
+2024-01-22 18:14:57.1657 INFO REQUEST: GET /api/promo/workflow
+2024-01-22 18:15:06.1136 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

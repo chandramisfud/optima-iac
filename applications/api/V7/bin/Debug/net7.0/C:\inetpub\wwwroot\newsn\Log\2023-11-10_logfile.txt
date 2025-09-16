@@ -1,0 +1,21 @@
+2023-11-10 09:48:58.6088 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud","Password":"A#nd007."}
+2023-11-10 09:48:59.3137 INFO RESPONSE:
+ {"code":401,"error":true,"message":"Login Failed","values":{"ErrCode":1,"ErrMessage":"Incorrect username. Please try again.","LoginFailedCount":0,"LoginFailedlastTime":"2023-10-20T14:39:08.347","LoginFreezeTime":29949}}
+2023-11-10 09:49:06.8905 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-10 09:49:07.1450 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-10 09:49:33.5832 INFO REQUEST: GET /api/promo/display
+2023-11-10 09:49:34.9197 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-10 09:50:02.3721 INFO REQUEST: GET /api/promo/display
+2023-11-10 09:50:03.6705 INFO RESPONSE:
+ {"code":"500","error":"True","message":"Error parsing column 11 (SubAccountId=24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 207, 208, 209, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 211, 212, 213, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 214, 215, 216, 217, 114, 115, 116, 117, 118, 206, 218, 219, 220, 221, 222, 223, 224, 342, 360, 361 - String)"}
+
+2023-11-10 09:50:33.2305 INFO REQUEST: GET /api/promo/display
+2023-11-10 09:50:37.0778 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

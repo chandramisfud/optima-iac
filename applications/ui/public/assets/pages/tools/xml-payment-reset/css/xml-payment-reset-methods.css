@@ -1,0 +1,31 @@
+td.details-control {
+    background: url("/assets/media/misc/details_open.png") no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url("/assets/media/misc/details_close.png") no-repeat center center;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+.inner-addon .la {
+    position: absolute;
+    padding: 10px;
+}
+
+.inner-addon .la-close {
+    cursor: pointer;
+}
+
+.right-addon .la-close  {
+    right:  5px;
+    margin-top: -34px;
+    color: rgba(0,0,0,.54);
+}
+
+.right-addon input {
+    background-color: #fff !important;
+}

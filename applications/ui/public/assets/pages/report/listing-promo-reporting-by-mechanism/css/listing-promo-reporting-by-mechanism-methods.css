@@ -1,0 +1,12 @@
+.table-sm td {
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem !important;
+}
+
+.table {
+    table-layout: fixed;
+}
+
+.form-control:disabled, .form-control[readonly] {
+     background-color: #fff;
+}
+

@@ -1,0 +1,103 @@
+2023-12-17 11:06:22.4024 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-12-17 11:06:23.6630 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-12-17 11:06:59.9183 INFO REQUEST: PUT /api/auth/islogin
+2023-12-17 11:06:59.9900 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully update data"}
+
+2023-12-17 11:07:13.1553 INFO REQUEST: GET /api/auth/islogin
+2023-12-17 11:07:13.1978 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 12:59:26.0224 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-12-17 12:59:27.9669 INFO RESPONSE:
+ {"code":401,"error":true,"message":"Login Failed","values":{"ErrCode":1,"ErrMessage":"Your password has expired because it hasn\u0027t changed for 60 days, Please contact IT to reset your password","LoginFailedCount":1,"LoginFailedlastTime":"2023-12-05T09:06:00","LoginFreezeTime":17513}}
+2023-12-17 13:00:20.4677 INFO REQUEST: POST /api/auth/changepassword
+BODY:{"email":"chandra.misfud@xvautomation.com","password":"A#nd007."}
+2023-12-17 13:00:20.5411 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully Change Password"}
+
+2023-12-17 13:03:44.0980 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-12-17 13:03:44.4104 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-12-17 13:04:08.8002 INFO REQUEST: POST /api/auth/changepassword
+BODY:{"email":"chandra.misfud@xvautomation.com","password":"A#nd007.XVA"}
+2023-12-17 13:04:08.8422 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully Change Password"}
+
+2023-12-17 16:18:53.3853 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-12-17 16:18:54.6073 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-12-17 16:20:01.6320 INFO REQUEST: GET /api/mapping/pic-dnmanual/channel
+2023-12-17 16:20:01.7013 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:20:13.8264 INFO REQUEST: GET /api/mapping/pic-dnmanual
+2023-12-17 16:20:13.9028 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:20:53.5477 INFO REQUEST: POST /api/mapping/pic-dnmanual
+BODY:{"channelId":2,"subChannelId":2,"accountId":3,"subAccountId":2,"pic1":"kamsat","pic2":"admin"}
+2023-12-17 16:20:53.6489 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Mapping PIC to DN Manual Sub Account = ACOMMERCE B2B is already exist","values":null}
+2023-12-17 16:21:19.9034 INFO REQUEST: POST /api/mapping/pic-dnmanual
+BODY:{"channelId":33,"subChannelId":2,"accountId":3,"subAccountId":2,"pic1":"kamsat","pic2":"admin"}
+2023-12-17 16:21:19.9795 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Mapping PIC to DN Manual Sub Account = ACOMMERCE B2B is already exist","values":null}
+2023-12-17 16:21:29.2812 INFO REQUEST: GET /api/mapping/pic-dnmanual/subchannel
+2023-12-17 16:21:29.3317 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:21:39.2292 INFO REQUEST: POST /api/mapping/pic-dnmanual
+BODY:{"channelId":33,"subChannelId":38,"accountId":3,"subAccountId":2,"pic1":"kamsat","pic2":"admin"}
+2023-12-17 16:21:39.2815 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Mapping PIC to DN Manual Sub Account = ACOMMERCE B2B is already exist","values":null}
+2023-12-17 16:21:51.2129 INFO REQUEST: GET /api/mapping/pic-dnmanual/account
+2023-12-17 16:21:51.2822 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:22:11.8059 INFO REQUEST: GET /api/mapping/pic-dnmanual/subaccount
+2023-12-17 16:22:11.8752 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:22:19.5568 INFO REQUEST: POST /api/mapping/pic-dnmanual
+BODY:{"channelId":33,"subChannelId":38,"accountId":136,"subAccountId":392,"pic1":"kamsat","pic2":"admin"}
+2023-12-17 16:22:19.6151 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-12-17 16:23:51.5204 INFO REQUEST: GET /api/mapping/distributor-subaccount
+2023-12-17 16:23:51.6016 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:24:08.3528 INFO REQUEST: GET /api/mapping/distributor-subaccount
+2023-12-17 16:24:08.4245 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:25:54.7555 INFO REQUEST: POST /api/mapping/distributor-subaccount
+BODY:{"id":0,"distributorId":5,"channelId":33,"subChannelId":38,"accountId":136,"subAccountId":392}
+2023-12-17 16:25:54.8304 INFO RESPONSE:
+ {"code":400,"error":true,"message":"Must declare the scalar variable \u0022@DistributorId\u0022.\nMust declare the scalar variable \u0022@DistributorId\u0022.\nIncorrect syntax near the keyword \u0027ELSE\u0027.\nMust declare the scalar variable \u0022@DistributorId\u0022.\nMust declare the scalar variable \u0022@DistributorId\u0022.","values":null}
+2023-12-17 16:29:09.8165 INFO REQUEST: POST /api/mapping/distributor-subaccount
+BODY:{"id":0,"distributorId":5,"channelId":33,"subChannelId":38,"accountId":136,"subAccountId":392}
+2023-12-17 16:29:10.5599 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-12-17 16:33:23.1812 INFO REQUEST: GET /api/auth/user/email
+2023-12-17 16:33:23.2634 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:33:29.9047 INFO REQUEST: GET /api/auth/user/email
+2023-12-17 16:33:29.9446 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-12-17 16:34:35.3256 INFO REQUEST: GET /api/auth/user/email
+2023-12-17 16:34:35.6012 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

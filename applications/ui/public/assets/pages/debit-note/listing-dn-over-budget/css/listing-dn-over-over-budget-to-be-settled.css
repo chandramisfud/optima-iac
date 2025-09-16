@@ -1,0 +1,13 @@
+.table {
+    table-layout: fixed;
+}
+
+.table th, .table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.form-check.form-check-solid .form-check-input {
+    background-color: #d1d1d1;
+}

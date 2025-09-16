@@ -1,0 +1,9 @@
+2024-01-18 01:30:00.2870 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-18 01:30:01.1348 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-18 01:30:49.6161 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-01-18 01:30:49.7400 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

@@ -1,0 +1,30 @@
+2023-10-26 16:40:25.3832 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-26 16:40:26.6326 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-26 16:40:58.2375 INFO REQUEST: GET /api/master/matrixpromoapproval/subactivitytype/categoryid
+2023-10-26 16:40:58.2863 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-26 16:41:02.9231 INFO REQUEST: GET /api/master/matrixpromoapproval/subactivitytype/categoryid
+2023-10-26 16:41:02.9812 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-26 16:41:06.0829 INFO REQUEST: GET /api/master/matrixpromoapproval/subactivitytype/categoryid
+2023-10-26 16:41:06.1412 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-26 21:58:57.2825 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-26 21:58:58.7651 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-26 21:59:42.6384 INFO REQUEST: GET /api/master/category/shortdesc
+2023-10-26 21:59:42.6852 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-26 22:02:54.4874 INFO REQUEST: GET /api/master/category/shortdesc
+2023-10-26 22:02:57.4292 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

@@ -1,0 +1,29 @@
+2023-11-15 10:55:02.9464 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-15 10:55:03.8138 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-15 10:55:28.4737 INFO REQUEST: GET /api/promo/workflow/id
+2023-11-15 10:55:28.6148 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-15 10:59:49.5152 INFO REQUEST: GET /api/promo/workflow/id
+2023-11-15 10:59:49.8423 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-15 13:59:03.2135 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-15 13:59:04.4395 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-15 13:59:26.4889 INFO REQUEST: GET /api/dn/promodisplay/id
+2023-11-15 13:59:33.7069 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Error parsing column 93 (sendback_notes_date=27-10-2023 - String)","values":null}
+2023-11-15 13:59:40.0144 INFO REQUEST: GET /api/dn/promodisplay/export-pdf
+2023-11-15 13:59:44.2740 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-15 14:00:46.4181 INFO REQUEST: GET /api/dn/promodisplay/id
+2023-11-15 14:00:47.6200 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

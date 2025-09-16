@@ -1,0 +1,76 @@
+2023-10-03 20:41:35.2897 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-03 20:41:37.9272 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-03 20:42:20.3656 INFO REQUEST: GET /api/mapping/taxlevel
+2023-10-03 20:42:20.7718 INFO RESPONSE:
+ {"error":"False","code":"200","Message":"Successfully get data"}
+
+2023-10-03 20:42:29.8152 INFO REQUEST: GET /api/mapping/taxlevel
+2023-10-03 20:42:30.0187 INFO RESPONSE:
+ {"error":"False","code":"200","Message":"Successfully get data"}
+
+2023-10-03 20:47:21.0030 INFO REQUEST: POST /api/useraccess/userprofile
+BODY:{"id":"testrcdc","username":"testprofile","email":"yogy.rachmad@xvautomation.com","department":"test departement","jobtitle":"test job title","usergroupid":"999.999","userlevel":"999","distributorlist":[{"userId":"testrcdc","distributorId":"2"}],"CategoryId":[3,22]}
+2023-10-03 20:47:29.3572 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2023-10-03 20:49:07.0243 INFO REQUEST: GET /api/mapping/taxlevel/download
+2023-10-03 20:49:11.9856 INFO RESPONSE:
+ {"error":"False","code":"200","Message":"Successfully get data"}
+
+2023-10-03 21:32:39.9711 INFO REQUEST: GET /api/mapping/promorecon-subactivity/download
+2023-10-03 21:32:43.5581 INFO RESPONSE:
+ {"error":"False","code":"200","Message":"Successfully get data"}
+
+2023-10-03 21:43:27.6699 INFO REQUEST: POST /api/useraccess/userprofile
+BODY:{"id":"tito","username":"titotititoto","email":"tito@xvautomation.com","department":"nangis","jobtitle":"cekmakan","usergroupid":"999","userlevel":"999","distributorlist":[{"userId":"tito","distributorId":"2"}],"CategoryId":[2,22]}
+2023-10-03 21:43:31.5349 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2023-10-03 21:53:07.0478 INFO REQUEST: POST /api/useraccess/userprofile
+BODY:{"id":"tito","username":"titotititoto","email":"tito@xvautomation.com","department":"nangis","jobtitle":"cekmakan","usergroupid":"999","userlevel":999,"distributorlist":[{"userId":"tito","distributorId":"2"}],"CategoryId":[2,22]}
+2023-10-03 21:53:14.2782 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2023-10-03 21:53:41.5821 INFO REQUEST: POST /api/useraccess/userprofile
+BODY:{"id":"tito","username":"titotititoto","email":"tito@xvautomation.com","department":"nangis","jobtitle":"cekmakan","usergroupid":"999","userlevel":999,"distributorlist":[{"userId":"tito","distributorId":"2"}],"CategoryId":[2]}
+2023-10-03 21:53:42.8447 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2023-10-03 23:10:54.4153 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-03 23:10:55.1385 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-03 23:11:38.4850 INFO REQUEST: POST /api/useraccess/userprofile
+BODY:{"id":"tito","username":"titotititoto","email":"tito@xvautomation.com","department":"nangis","jobtitle":"cekmakan","usergroupid":"999","userlevel":999,"distributorlist":[{"userId":"tito","distributorId":"2"}],"CategoryId":[2]}
+2023-10-03 23:11:39.1112 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-10-03 23:11:53.5512 INFO REQUEST: GET /api/useraccess/userprofile/id
+2023-10-03 23:12:14.7849 INFO REQUEST: GET /api/useraccess/userprofile/id
+2023-10-03 23:12:14.9599 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-03 23:12:31.6910 INFO REQUEST: GET /api/useraccess/userprofile/id
+2023-10-03 23:18:03.8498 INFO REQUEST: POST /api/useraccess/userprofile
+BODY:{"id":"titi","username":"tititititoto","email":"tito@xvautomation.com","department":"nangis","jobtitle":"cekmakan","usergroupid":"999","userlevel":999,"distributorlist":[{"userId":"tito","distributorId":"2"}],"CategoryId":[2,22]}
+2023-10-03 23:18:05.4376 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-10-03 23:18:30.5112 INFO REQUEST: GET /api/useraccess/userprofile/id
+2023-10-03 23:21:47.2873 INFO REQUEST: POST /api/useraccess/userprofile
+BODY:{"id":"testrcdc","username":"testprofile","email":"yogy.rachmad@xvautomation.com","department":"test departement","jobtitle":"test job title","usergroupid":"999.999","userlevel":999,"distributorlist":[{"userId":"testrcdc","distributorId":"2"}],"CategoryId":[3,22]}
+2023-10-03 23:21:49.4249 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-10-03 23:21:56.4865 INFO REQUEST: GET /api/useraccess/userprofile/id
+2023-10-03 23:21:56.6593 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-03 23:23:07.6056 INFO REQUEST: DELETE /api/useraccess/userprofile
+2023-10-03 23:23:07.7482 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully Delete"}
+
+2023-10-03 23:23:12.1768 INFO REQUEST: DELETE /api/useraccess/userprofile
+2023-10-03 23:23:12.3045 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully Delete"}
+

@@ -1,0 +1,116 @@
+@extends('layouts/layoutMaster')
+
+@section('title', @$title)
+
+@section('vendor-style')
+    <link href="{{ asset('assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css"/>
+@endsection
+
+@section('page-style')
+    <link href="{{ asset('assets/pages/finance-report/matrix-approval-listing/css/matrix-approval-listing-methods.css') }}" rel="stylesheet" type="text/css"/>
+@endsection
+
+@section('breadcrumb')
+    <span class="d-flex align-items-center fs-3 my-1">@yield('title')
+        <span class="h-20px border-gray-200 border-start ms-3 mx-2"></span>
+        <small class="text-muted fs-6 fw-bold mt-1 ms-1" id="txt_info_method"></small>
+    </span>
+@endsection
+
+@section('button-toolbar-right')
+    <div>
+        <button type="button" class="btn btn-sm btn-outline-optima text-hover-white" id="btn_export_multi" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="30px, 0px">
+            <span class="bi bi-download"></span>
+        </button>
+        <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-150px" data-kt-menu="true">
+            <div class="menu-item px-3 mt-3">
+                <a href="javascript:void(0)" class="menu-link px-3 fw-bold text-gray-700" id="btn_export_current">
+                    Current
+                </a>
+            </div>
+            <div class="menu-item px-3 mb-3">
+                <a href="javascript:void(0)" class="menu-link px-3 fw-bold text-gray-700" id="btn_export_historical">
+                    Historical
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-sm btn-clean me-2" id="btn_back">
+        <span class="fa fa-arrow-left"></span> Back
+    </button>
+@endsection
+
+@section('toolbar')
+    @include('toolbars.toolbar')
+@endsection
+
+@section('content')
+    <div class="row">
+        <div class="col-md-12 col-12">
+            <div class="card shadow-sm card_form">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <div class="inner-addon left-addon right-addon">
+                                    <span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute translate-middle ms-6" style="padding-top: 32px">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+                                            <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor"></path>
+                                        </svg>
+                                    </span>
+                                <input type="text" class="form-control form-control-sm ps-10" name="search" value="" placeholder="Search" id="dt_matrix_approval_listing_search" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-lg-0 mb-2 px-lg-1">
+                            <select class="form-select form-select-sm" data-control="select2" name="filter_category" id="filter_category" data-placeholder="Select a Category"  data-allow-clear="true">
+                                <option></option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-lg-0 mb-2 px-lg-1">
+                            <select class="form-select form-select-sm" data-control="select2" name="filter_entity" id="filter_entity" data-placeholder="Select an Entity"  data-allow-clear="true">
+                                <option></option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-lg-0 mb-2 px-lg-1">
+                            <select class="form-select form-select-sm" data-control="select2" name="filter_distributor" id="filter_distributor" data-placeholder="Select a Distributor"  data-allow-clear="true">
+                                <option></option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-4 col-md-12 col-sm-12 mb-lg-0 mb-2">
+                            <div class="text-end">
+                                <button type="button" class="btn btn-sm btn-outline-optima w-lg-auto w-100" id="dt_matrix_approval_listing_view">
+                                <span class="indicator-label">
+                                    <span class="fa fa-search"></span> View
+                                    </span>
+                                    <span class="indicator-progress">
+                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                            <table id="dt_matrix_approval_listing" class="table table-striped table-row-bordered table-responsive table-sm table-hover"></table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('vendor-script')
+    <script src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+@endsection
+
+@section('page-script')
+    <script src="{{ asset('assets/js/format.js') }}"></script>
+    <script src="{{ asset('assets/pages/finance-report/matrix-approval-listing/js/matrix-approval-listing-methods.js?v=11') }}"></script>
+@endsection

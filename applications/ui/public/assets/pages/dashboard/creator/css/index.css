@@ -1,0 +1,270 @@
+/* Filter Dashboard */
+@media (min-width: 992px) {
+    .sticky-top-header-dashboard {
+        position: sticky;
+        top: 46px;
+        z-index: 99;
+    }
+}
+
+@media (min-width: 992px) {
+    #kt_content {
+        padding: 0 0 40px;
+    }
+}
+@media (min-width: 992px) {
+    .header-fixed.toolbar-fixed .wrapper {
+        padding-top: calc(5px + var(--kt-toolbar-height));
+    }
+}
+
+@media (min-width: 992px) {
+    .w-lg-14-2-perc {
+        width: 14.2% !important;
+    }
+}
+
+.card_dashboard_header .card-body {
+    padding: 0.5rem 0.5rem !important;
+}
+
+.ps-3rem {
+    padding-left: 3rem;
+}
+
+@media (min-width: 1341px) {
+    .mt-1340px-2 {
+        margin-top: .5rem;
+    }
+}
+
+@media (min-width: 1161px) {
+    .mt-1161px-2 {
+        margin-top: .5rem;
+    }
+}
+/* End of Filter Dashboard */
+
+/* Header Summary */
+#header-summary .card-body {
+    padding: 2px 4px !important;
+}
+
+.bg-ff5a5a {
+    background-color: #ff5a5a;
+}
+
+.bg-ffb822 {
+    background-color: #ffb822;
+}
+/* End of Header Summary */
+
+
+/* Body Dashboard row 1 */
+.bg-D4DDFAFF {
+    background-color: rgb(212, 221, 250) !important;
+}
+
+.text-5578eb {
+    color: #5578eb;
+}
+
+.bg-58DD913F {
+    background-color: rgba(88, 221, 145, 0.25) !important;
+}
+
+.text-58dd91 {
+    color: #58dd91;
+}
+
+.bg-ebedf2 {
+    background-color: #ebedf2 !important;
+}
+
+.bg-FEBC313F {
+    background-color: rgba(254, 188, 49, 0.25) !important;
+}
+
+.text-febc31 {
+    color: #febc31;
+}
+
+.card_value {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+.val_promo_plan {
+    background-image: url("/assets/media/bg/book.png");
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    background-position-x: right;
+}
+
+.bg-58dd91 {
+    background-color: #58dd91;
+}
+
+#approval_request {
+    border-left: 15px solid #5578eb;
+}
+
+.val_approval_request {
+    height: 80px;
+    background-image: url("/assets/media/bg/list.png");
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+}
+
+#approval_request_response_time {
+    border-left: 15px solid #febc31;
+}
+
+.val_approval_request_response_time {
+    height: 80px;
+    background-image: url("/assets/media/bg/timer.png");
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+}
+
+@media (min-width: 1726px) {
+    .mt-1726-4 {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1726px) {
+    .mt-1726-4 {
+        margin-top: -10px;
+    }
+}
+/* End of Body Dashboard row 1 */
+
+
+/* Body Dashboard row 2 */
+#promo_plan_submitted {
+    border-bottom: 10px solid #ff98f4;
+}
+
+.text-ff1616 {
+    color: #ff1616;
+}
+
+.btn-clin {
+    border-color: transparent;
+    background-color: transparent !important;
+    color: #535784;
+}
+
+.btn-clin:hover {
+    color: #5d78ff;
+    background-color: transparent !important;
+}
+
+#accuracy_promo_plan {
+    border-bottom: 10px solid #98a9ff;
+}
+
+#accuracy_skp {
+    border-bottom: 10px solid #fff598;
+}
+
+#recon_monitoring {
+    border-bottom: 10px solid #a5ff98;
+}
+
+@media (min-width: 1387px) {
+    .mt-1387-8 {
+        margin-top: 2rem !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1386px) {
+    .mt-max-1386-8 {
+        margin-top: 0.4rem !important;
+    }
+}
+
+#promo_approval {
+    border-left: 15px solid #58dd91;
+}
+
+.bg-00d23b {
+    background-color: #00d23b;
+}
+
+.text-00d23b {
+    color: #00d23b;
+}
+
+.text-ffb822 {
+    color: #ffb822;
+}
+/* End of Body Dashboard row 2 */
+
+/* Body Dashboard Accuracy Hidden */
+@media (min-width: 992px) {
+    .col-lg-40perc {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+
+    .col-lg-20perc {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+.bg-98a9ff {
+    background-color: #98a9ff;
+}
+
+.bg-fff598 {
+    background-color: #fff598;
+}
+
+.accuracy_hidden .card-body {
+    padding: 0 !important;
+}
+
+.fs-5rem {
+    font-size: 5rem;
+}
+
+.fs-3rem {
+    font-size: 3rem;
+}
+
+/* Body Dashboard row 3 */
+.px-10px {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* Body Dashboard row 4 */
+.bg-04ff4b {
+    background-color: #04ff4b;
+}
+
+.bg-ff1515 {
+    background-color: #ff1515;
+}
+
+.bg-ff1616 {
+    background-color: #ff1616 !important;
+}
+
+.text-ff1616 {
+    color: #ff1616;
+}
+
+/* Body Dashboard row 5 */
+.border-04ff4b {
+    border-color: #04ff4b !important;
+}
+
+.border-ff3434 {
+    border-color: #ff3434 !important;
+}

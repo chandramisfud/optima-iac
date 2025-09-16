@@ -1,0 +1,44 @@
+2024-02-16 13:30:22.4969 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-02-16 13:30:23.3825 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-02-16 13:30:48.2661 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:30:48.3150 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:36:55.7266 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:36:55.7554 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Successfully get data"}
+
+2024-02-16 13:38:05.0414 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:38:05.0719 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Successfully get data"}
+
+2024-02-16 13:38:18.0093 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:38:18.6802 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:38:22.1856 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:38:22.2445 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:39:38.8286 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:39:39.5110 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:41:14.5210 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:41:15.2120 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:42:05.4650 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:42:08.3779 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:49:20.4685 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:49:23.3973 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:49:26.7889 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:49:26.8345 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:50:35.9198 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:51:33.7265 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:51:34.3862 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
+2024-02-16 13:52:05.8780 INFO REQUEST: GET /api/dn/validation-byfinance/promo/id
+2024-02-16 13:52:08.8071 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}

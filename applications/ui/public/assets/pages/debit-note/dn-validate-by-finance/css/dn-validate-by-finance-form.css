@@ -1,0 +1,80 @@
+.btn.btn_download span.fa {
+    font-size: 14px !important;
+}
+
+.btn.btn_download:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(.border-active):not(.btn-flush):not(.btn-icon).btn-sm {
+    padding: calc(.35rem + 1px) calc(0.8rem + 1px) !important;
+}
+
+.btn.btn_view:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(.border-active):not(.btn-flush):not(.btn-icon).btn-sm {
+    padding: calc(.35rem + 1px) calc(0.8rem + 1px) !important;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+#card_region .card-header, #card_brand .card-header, #card_sku .card-header {
+    min-height: unset !important;
+    background-color: rgba(88, 103, 221, 0.1);
+    padding: 0rem 1rem;
+    border-radius: calc(.625rem - 1px);
+}
+
+#card_region .card-body, #card_brand .card-body, #card_sku .card-body  {
+    padding: .5rem .5rem !important;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+    font-family: unset !important;
+}
+
+.disabled-select {
+    background-color: #d5d5d5;
+    opacity: 0.5;
+    border-radius: 3px;
+    cursor: not-allowed;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container {
+    pointer-events: none;
+    touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection {
+    background-image: none !important;
+    background-color: #f7f8fa;
+    box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__arrow,
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__clear {
+    display: none;
+}
+
+.tooltip_custom {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip_custom .tooltip_text {
+    visibility: hidden;
+    width: 330px;
+    background-color: #fff19e;
+    color: #363636;
+    text-align: left;
+    border-radius: 3px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -140%;
+    left: 0;
+    margin-left: -300px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}

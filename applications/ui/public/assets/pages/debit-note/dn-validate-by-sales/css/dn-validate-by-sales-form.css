@@ -1,0 +1,100 @@
+.btn.btn_download span.fa {
+    font-size: 14px !important;
+}
+
+.btn.btn_view:not(.btn-outline):not(.btn-dashed):not(.border-hover):not(.border-active):not(.btn-flush):not(.btn-icon).btn-sm {
+    padding: calc(.35rem + 1px) calc(0.8rem + 1px) !important;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.input-group {
+    min-width: 65%;
+}
+
+.review_file_label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 100%;
+}
+
+@media (min-width: 1361px) and (max-width: 1600px) {
+    .review_file_label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 170px !important;
+    }
+
+    .input-group {
+        min-width: 190px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1360px) {
+    .review_file_label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 100px !important;
+        max-width: 140px !important;
+    }
+
+    .input-group {
+        min-width: 190px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .review_file_label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 100px !important;
+        max-width: 140px !important;
+    }
+
+    .input-group {
+        min-width: 190px;
+    }
+}
+
+#card_region .card-header, #card_brand .card-header, #card_sku .card-header {
+    min-height: unset !important;
+    background-color: rgba(88, 103, 221, 0.1);
+    padding: 0rem 1rem;
+    border-radius: calc(.625rem - 1px);
+}
+
+#card_region .card-body, #card_brand .card-body, #card_sku .card-body  {
+    padding: .5rem .5rem !important;
+}
+
+.tooltip_custom {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip_custom .tooltip_text {
+    visibility: hidden;
+    width: 330px;
+    background-color: #fff19e;
+    color: #363636;
+    text-align: left;
+    border-radius: 3px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -140%;
+    left: 0;
+    margin-left: -300px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}

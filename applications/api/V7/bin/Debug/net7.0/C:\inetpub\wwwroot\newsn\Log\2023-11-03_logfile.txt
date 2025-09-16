@@ -1,0 +1,30 @@
+2023-11-03 10:57:45.8377 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-03 10:57:46.6764 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-03 10:58:55.1672 INFO REQUEST: GET /api/promo/recon/subchannel
+2023-11-03 10:58:55.2564 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-03 10:59:23.0809 INFO REQUEST: GET /api/promo/recon/subchannel/promoid
+2023-11-03 10:59:23.1251 INFO RESPONSE:
+ {"code":500,"error":true,"message":"Procedure or function \u0027ip_getattribute_bypromoid\u0027 expects parameter \u0027@promoid\u0027, which was not supplied.","values":null}
+2023-11-03 11:00:46.9093 INFO REQUEST: GET /api/promo/recon/subchannel/promoid
+2023-11-03 11:00:47.6606 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-03 11:28:19.4576 INFO REQUEST: POST /api/promo/sendback
+BODY:{"PromoHeader":{"promoId":3381,"promoPlanId":0,"allocationId":6002,"allocationRefId":"AL22-06002","categoryShortDesc":null,"principalShortDesc":null,"budgetMasterId":6002,"categoryId":22,"subCategoryId":74,"activityId":778,"subActivityId":1475,"activityDesc":"Direct Shipment Jan 2222","startPromo":"2222-01-01T00:00:00","endPromo":"2222-12-31T00:00:00","mechanisme1":"","mechanisme2":"","mechanisme3":"","mechanisme4":"","investment":3000,"normalSales":0,"incrSales":0,"roi":0,"costRatio":0,"statusApproval":"","notes":"","tsCoding":null,"initiator_notes":"Test Edit Dist to Tempo \u0026 Sub Activity Type: change to Logistics","modifReason":"Test Local 03 NOV"},"Regions":[{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10}],"Channels":[{"id":13}],"SubChannels":[{"id":19}],"Accounts":[{"id":65}],"SubAccounts":[{"id":225}],"Brands":[{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10}],"Skus":[{"id":61},{"id":59},{"id":60},{"id":55},{"id":53},{"id":56},{"id":54},{"id":49},{"id":50},{"id":57},{"id":58},{"id":48},{"id":46},{"id":47},{"id":51},{"id":52}],"Mechanisms":[{"id":1,"mechanism":"mecha 231103","notes":"","productId":0,"product":"","brandId":0,"brand":""}],"promoAttachment":[{"docLink":"row1","fileName":"ip_user_login_profile-2.pdf"},{"docLink":"row2","fileName":"api.optima-system.co.id_[4452146] (1).pdf"}],"budgetAmount":20000}
+2023-11-03 11:28:22.3193 INFO RESPONSE:
+ {"code":"500","error":"True","message":" "}
+
+2023-11-03 11:38:07.1999 INFO REQUEST: POST /api/promo/sendback
+BODY:{"PromoHeader":{"promoId":3381,"promoPlanId":0,"allocationId":6002,"allocationRefId":"AL22-06002","categoryShortDesc":null,"principalShortDesc":null,"budgetMasterId":6002,"categoryId":22,"subCategoryId":74,"activityId":778,"subActivityId":1475,"activityDesc":"Direct Shipment Jan 2222","startPromo":"2222-01-01T00:00:00","endPromo":"2222-12-31T00:00:00","mechanisme1":"","mechanisme2":"","mechanisme3":"","mechanisme4":"","investment":3000,"normalSales":0,"incrSales":0,"roi":0,"costRatio":0,"statusApproval":"","notes":"","tsCoding":null,"initiator_notes":"Test Edit Dist to Tempo \u0026 Sub Activity Type: change to Logistics","modifReason":"Test Local 03 NOV"},"Regions":[{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10}],"Channels":[{"id":13}],"SubChannels":[{"id":19}],"Accounts":[{"id":65}],"SubAccounts":[{"id":225}],"Brands":[{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10}],"Skus":[{"id":61},{"id":59},{"id":60},{"id":55},{"id":53},{"id":56},{"id":54},{"id":49},{"id":50},{"id":57},{"id":58},{"id":48},{"id":46},{"id":47},{"id":51},{"id":52}],"Mechanisms":[{"id":1,"mechanism":"mecha 231103","notes":"","productId":0,"product":"","brandId":0,"brand":""}],"promoAttachment":[{"docLink":"row1","fileName":"ip_user_login_profile-2.pdf"},{"docLink":"row2","fileName":"api.optima-system.co.id_[4452146] (1).pdf"}],"budgetAmount":20000}
+2023-11-03 11:38:08.0985 INFO RESPONSE:
+ {"code":"500","error":"True","message":" "}
+
+2023-11-03 11:57:39.3636 INFO REQUEST: POST /api/promo/sendback
+BODY:{"PromoHeader":{"promoId":3381,"promoPlanId":0,"allocationId":6002,"allocationRefId":"AL22-06002","categoryShortDesc":null,"principalShortDesc":null,"budgetMasterId":6002,"categoryId":22,"subCategoryId":74,"activityId":778,"subActivityId":1475,"activityDesc":"Direct Shipment Jan 2222","startPromo":"2222-01-01T00:00:00","endPromo":"2222-12-31T00:00:00","mechanisme1":"","mechanisme2":"","mechanisme3":"","mechanisme4":"","investment":3000,"normalSales":0,"incrSales":0,"roi":0,"costRatio":0,"statusApproval":"","notes":"","tsCoding":null,"initiator_notes":"Test Edit Dist to Tempo \u0026 Sub Activity Type: change to Logistics","modifReason":"Test Local 03 NOV"},"Regions":[{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10}],"Channels":[{"id":13}],"SubChannels":[{"id":19}],"Accounts":[{"id":65}],"SubAccounts":[{"id":225}],"Brands":[{"id":2},{"id":3},{"id":4},{"id":5},{"id":6},{"id":7},{"id":8},{"id":9},{"id":10}],"Skus":[{"id":61},{"id":59},{"id":60},{"id":55},{"id":53},{"id":56},{"id":54},{"id":49},{"id":50},{"id":57},{"id":58},{"id":48},{"id":46},{"id":47},{"id":51},{"id":52}],"Mechanisms":[{"id":1,"mechanism":"mecha 231103","notes":"","productId":0,"product":"","brandId":0,"brand":""}],"promoAttachment":[{"docLink":"row1","fileName":"ip_user_login_profile-2.pdf"},{"docLink":"row2","fileName":"api.optima-system.co.id_[4452146] (1).pdf"}],"budgetAmount":20000}
+2023-11-03 11:57:43.3612 INFO RESPONSE:
+ {"code":500,"error":true,"message":" ","values":null}

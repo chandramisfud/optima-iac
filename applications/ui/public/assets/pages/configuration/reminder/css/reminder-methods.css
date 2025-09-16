@@ -1,0 +1,15 @@
+.text-header {
+    background-color: #5867dd;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.input-dialer-from {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.input-dialer-to {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}

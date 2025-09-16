@@ -1,0 +1,66 @@
+2023-10-17 16:17:19.2502 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-17 16:17:20.3470 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-17 16:17:42.8699 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:17:42.9328 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-17 16:17:56.4250 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:17:56.5108 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-17 16:18:19.4287 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:18:19.4712 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-17 16:18:32.9935 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:18:33.0352 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-17 16:32:53.5909 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-10-17 16:32:57.1291 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-10-17 16:33:17.9027 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:33:17.9857 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-17 16:40:59.1219 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:42:36.8441 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:42:39.9506 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-10-17 16:56:51.8688 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:56:54.0151 INFO RESPONSE:
+ {"code":204,"error":true,"message":"Your email address is not registered","values":null}
+2023-10-17 16:57:51.3470 INFO REQUEST: GET /api/auth/user/email
+2023-10-17 16:57:52.5195 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Your email address is not registered"}
+
+2023-10-17 18:41:54.0215 INFO REQUEST: DELETE /api/auth/user/email
+2023-10-17 18:41:55.6700 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Your email address is not registered"}
+
+2023-10-17 18:43:45.8598 INFO REQUEST: DELETE /api/auth/user/email
+2023-10-17 18:43:46.1768 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Your email address is not registered"}
+
+2023-10-17 18:43:48.9168 INFO REQUEST: DELETE /api/auth/user/email
+2023-10-17 18:43:48.9584 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Your email address is not registered"}
+
+2023-10-17 18:44:49.3806 INFO REQUEST: DELETE /api/auth/user/email
+2023-10-17 18:44:49.5142 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully Delete"}
+
+2023-10-17 22:53:44.0602 INFO REQUEST: DELETE /api/auth/user/email
+2023-10-17 22:53:45.5674 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully Delete"}
+
+2023-10-17 22:53:57.4917 INFO REQUEST: DELETE /api/auth/user/email
+2023-10-17 22:53:57.5449 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Your email address is not registered"}
+

@@ -1,0 +1,58 @@
+.image-input-wrapper {
+    border-radius: 50% !important;
+}
+
+.image-input [data-kt-image-input-action="change"] {
+    left: 90% !important;
+    top: 15% !important;
+}
+
+.image-input.image-input-outline .image-input-wrapper {
+    box-shadow: 0 .1rem 1rem .25rem rgba(0, 0, 0, 0.18) !important;
+}
+
+.btn-circle:hover {
+    background-color: #5d78ff !important;
+    color: #fff;
+}
+
+.btn.btn-icon:hover i {
+    color: #fff !important;
+}
+
+.btn.btn-icon i {
+    color: #5d78ff !important;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+.inner-addon .fa {
+    position: absolute;
+    padding: 10px;
+}
+
+.inner-addon .fa-eye {
+    cursor: pointer;
+}
+
+.inner-addon .fa-eye-slash {
+    cursor: pointer;
+}
+
+.left-addon .fa-lock  {
+    left:  5px;
+    color: rgba(0,0,0,.54);
+}
+
+.right-addon .fa-eye  {
+    right:  5px;
+    margin-top: -34px;
+    color: rgba(0,0,0,.54);
+}
+.right-addon .fa-eye-slash  {
+    right:  5px;
+    margin-top: -34px;
+    color: rgba(0,0,0,.54);
+}

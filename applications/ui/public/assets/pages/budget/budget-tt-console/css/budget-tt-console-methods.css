@@ -1,0 +1,32 @@
+/* Multi Select2 */
+.multi-checkboxes_wrap:before{
+    font-family:fontAwesome;
+    color:#999;
+    content:"\f096";
+    width:25px;
+    height:25px;
+    padding-right: 10px;
+
+}
+.multi-checkboxes_wrap[aria-selected=true]:before{
+    content:"\f14a";
+}
+/* End of Multi Select2 */
+
+.menu-sub-dropdown .menu-item:hover .menu-link {
+    background-color: unset !important;
+    color: unset !important;
+}
+.menu-item:hover {
+    background-color: rgba(88, 103, 221, 0.08) !important;
+    color: black !important;
+}
+.menu-title:hover {
+    color: black;
+}
+
+.drawer {
+    top: 149px !important;
+    bottom: 45px !important;
+    border-radius: 5px;
+}

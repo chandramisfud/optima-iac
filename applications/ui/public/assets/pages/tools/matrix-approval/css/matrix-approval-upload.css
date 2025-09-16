@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+    #dt_upload_history, #btn_download, btn_upload {
+        padding: calc(.55rem + 1px) calc(0.35rem + 1px) !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    #dt_upload_history, #btn_download, btn_upload {
+        padding: calc(.55rem + 1px) calc(0.35rem + 1px) !important;
+    }
+}

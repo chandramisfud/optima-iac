@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Promo Approval</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #000;
+        }
+
+        .container {
+            margin: 10px;
+            max-width: 1200px;
+            overflow-x: auto;
+        }
+
+        .header {
+            margin-bottom: 15px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+        .button {
+            background-color: #5867dd;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            white-space: nowrap;
+            display: inline-block;
+        }
+            table th, table td {
+                border: 1px solid #ccc;
+                padding: 6px 8px;
+                text-align: center;
+            }
+
+            table tr th {
+                background-color: #253d87;
+                color: #fff;
+                white-space: nowrap;
+            }
+
+        .footer {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Dear {{profileName}},</p>
+        <p>This email was sent automatically by Optima System in responses to approve promo</p>
+        <b>List of Promo IDs - Waiting for approval</b>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Action</th>
+                    <th>Promo ID</th>
+                    <th>Distributor</th>
+                    <th>Initiator</th>
+                    <th>Sub Account</th>
+                    <th>Brand</th>
+                    <th>Mechanism</th>
+                    <th>Promo Start</th>
+                    <th>Promo End</th>
+                    <th>Cost Recon</th>
+                    <th>CR</th>
+                    <th>ROI</th>
+                    <th>Attachment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{HTMLRowData}}
+                <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p>Thank you,<br>Optima System</p>
+        </div>
+    </div>
+</body>
+</html>

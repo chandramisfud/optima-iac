@@ -1,0 +1,50 @@
+2023-09-19 12:21:11.8998 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-19 12:21:12.7482 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-19 12:22:12.2200 INFO REQUEST: GET /api/dn/workflow-change
+2023-09-19 12:22:12.2802 INFO RESPONSE:
+ {"code":"204","error":"True","message":"Data not found"}
+
+2023-09-19 12:22:25.5584 INFO REQUEST: GET /api/dn/workflow
+2023-09-19 12:22:25.6393 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-09-19 12:22:47.8006 INFO REQUEST: GET /api/dn/workflow-history
+2023-09-19 12:22:47.8533 INFO RESPONSE:
+ {"code":403,"error":true,"message":"String or binary data would be truncated.\nThe statement has been terminated.","values":null}
+2023-09-19 12:23:46.4683 INFO REQUEST: GET /api/dn/workflow-history
+2023-09-19 12:23:47.1245 INFO RESPONSE:
+ {"code":403,"error":true,"message":"String or binary data would be truncated.\nThe statement has been terminated.","values":null}
+2023-09-19 12:23:49.7243 INFO REQUEST: GET /api/dn/workflow-history
+2023-09-19 12:23:49.7620 INFO RESPONSE:
+ {"code":403,"error":true,"message":"String or binary data would be truncated.\nThe statement has been terminated.","values":null}
+2023-09-19 14:29:35.7067 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-19 14:30:39.8687 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-19 14:32:01.9930 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-19 14:32:08.4707 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-19 14:32:31.1529 INFO REQUEST: GET /api/dn/create-invoice/print-invoice/id
+2023-09-19 14:32:31.2539 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-09-19 14:40:17.7726 INFO REQUEST: GET /api/dn/create-invoice/print-invoice/id
+2023-09-19 14:40:20.8673 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-09-19 18:20:15.4024 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-19 18:21:35.5280 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
+2023-09-19 18:21:38.0211 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-09-19 18:22:03.6845 INFO REQUEST: GET /api/dn/create-invoice/distributor
+2023-09-19 18:22:03.7517 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

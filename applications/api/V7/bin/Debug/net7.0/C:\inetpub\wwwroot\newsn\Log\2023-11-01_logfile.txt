@@ -1,0 +1,22 @@
+2023-11-01 22:54:10.1109 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2023-11-01 22:54:11.7105 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2023-11-01 22:55:02.1700 INFO REQUEST: GET /api/master/category
+2023-11-01 22:55:02.2562 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2023-11-01 22:55:27.8229 INFO REQUEST: GET /api/promo/approvalrecon
+2023-11-01 22:55:30.1146 INFO RESPONSE:
+ {"code":"200","error":"False","message":""}
+
+2023-11-01 22:56:23.1792 INFO REQUEST: POST /api/auth/token/changeprofile
+BODY:"scsh2"
+2023-11-01 22:56:23.3716 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully save data"}
+
+2023-11-01 22:56:51.0271 INFO REQUEST: GET /api/promo/approvalrecon
+2023-11-01 22:56:53.2937 INFO RESPONSE:
+ {"code":"200","error":"False","message":""}
+

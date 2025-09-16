@@ -1,0 +1,43 @@
+---
+- name: Configure Optima UI Server for Laravel
+  hosts: ui_servers
+  become: true
+  
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        
+    - name: Add Ondrej PHP repository
+      apt_repository:
+        repo: "ppa:ondrej/php"
+        state: present
+        
+    - name: Install PHP 8.0 and extensions
+      apt:
+        name:
+          - php8.0
+          - php8.0-fpm
+          - php8.0-mysql
+          - php8.0-curl
+          - php8.0-gd
+          - php8.0-mbstring
+          - php8.0-xml
+          - php8.0-zip
+          - nginx
+        state: present
+        
+    - name: Start and enable services
+      systemd:
+        name: "{{ item }}"
+        state: started
+        enabled: yes
+      loop:
+        - nginx
+        - php8.0-fpm
+        
+    - name: Install Composer
+      shell: |
+        curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+      args:
+        creates: /usr/local/bin/composer

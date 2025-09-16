@@ -1,0 +1,9 @@
+2024-01-25 10:42:22.2115 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-25 10:42:24.3123 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-25 10:43:04.1882 INFO REQUEST: GET /api/dn/create-invoice/category
+2024-01-25 10:43:04.2380 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

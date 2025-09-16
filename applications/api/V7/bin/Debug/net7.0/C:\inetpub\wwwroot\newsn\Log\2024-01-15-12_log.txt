@@ -1,0 +1,21 @@
+2024-01-15 12:10:59.8647 INFO REQUEST: POST /api/auth/login
+BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
+2024-01-15 12:11:00.7345 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Login Successfull"}
+
+2024-01-15 12:11:48.0433 INFO REQUEST: GET /api/mapping/distributor-wht
+2024-01-15 12:11:48.3121 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-15 12:12:23.3905 INFO REQUEST: GET /api/mapping/distributor-wht/id
+2024-01-15 12:12:23.4373 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-15 12:12:27.8222 INFO REQUEST: GET /api/mapping/distributor-wht/id
+2024-01-15 12:12:27.8782 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-15 12:12:39.4737 INFO REQUEST: GET /api/mapping/distributor-wht/id
+2024-01-15 12:12:39.5181 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+

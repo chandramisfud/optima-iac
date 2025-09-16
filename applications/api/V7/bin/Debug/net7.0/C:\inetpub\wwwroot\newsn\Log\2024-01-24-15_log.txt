@@ -1,0 +1,9 @@
+2024-01-24 15:47:19.7765 INFO REQUEST: GET /api/promo/recon/id
+2024-01-24 15:48:23.7875 INFO REQUEST: GET /api/promo/recon/id
+2024-01-24 15:48:24.9916 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
+2024-01-24 15:49:00.2353 INFO REQUEST: GET /api/promo/sendbackrecon/id
+2024-01-24 15:49:00.4639 INFO RESPONSE:
+ {"code":"200","error":"False","message":"Successfully get data"}
+
