@@ -1,9 +1,0 @@
-2023-11-20 15:52:00.5846 INFO REQUEST: POST /api/master/product
-BODY:{"PrincipalId":39,"BrandId":49,"LongDesc":"Susu Segar Yoga","ShortDesc":"SSY","CreateBy":"string","CreatedEmail":"string","SeqNo":0}
-2023-11-20 15:52:01.7714 INFO RESPONSE:
- {"code":400,"error":true,"message":"Product with RefId = SKU-00176 is already exist","values":null}
-2023-11-20 15:52:47.9247 INFO REQUEST: POST /api/master/product
-BODY:{"PrincipalId":39,"BrandId":49,"LongDesc":"Susu Segar Yogi","ShortDesc":"SSY","CreateBy":"string","CreatedEmail":"string","SeqNo":0}
-2023-11-20 15:52:48.0211 INFO RESPONSE:
- {"code":"200","error":"False","message":"Store data SKU-00177 success"}
-

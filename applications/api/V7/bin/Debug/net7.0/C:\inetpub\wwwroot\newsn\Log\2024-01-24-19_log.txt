@@ -1,9 +1,0 @@
-2024-01-24 19:30:57.8449 INFO REQUEST: GET /api/config/promoitem
-2024-01-24 19:31:02.8994 INFO RESPONSE:
- {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
-2024-01-24 19:31:06.7124 INFO REQUEST: GET /api/config/promoitem
-2024-01-24 19:31:06.7695 INFO RESPONSE:
- {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}
-2024-01-24 19:31:08.3649 INFO REQUEST: GET /api/config/promoitem
-2024-01-24 19:31:08.4392 INFO RESPONSE:
- {"code":500,"error":true,"message":"Object reference not set to an instance of an object.","values":null}

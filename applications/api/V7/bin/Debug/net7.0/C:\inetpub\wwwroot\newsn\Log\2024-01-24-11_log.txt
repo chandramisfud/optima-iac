@@ -1,7 +1,0 @@
-2024-01-24 11:52:09.6431 INFO RESPONSE:
- {"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-85486cd72ae20be9a531087c1ecfdd7e-da74704a9e201276-00","errors":{"entity":["The value \u0027\u0027 is invalid."],"invoiceId":["The value \u0027\u0027 is invalid."]}}
-2024-01-24 11:52:57.3782 INFO REQUEST: POST /api/dn/create-invoice/filter
-BODY:{"formFile":{"ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template DN Invoice (1).xlsx\u0022","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template DN Invoice (1).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":9221,"Name":"formFile","FileName":"Template DN Invoice (1).xlsx"},"status":"ready_to_invoice","entity":0,"TaxLevel":null,"invoiceId":55}
-2024-01-24 11:52:58.2843 INFO RESPONSE:
- {"error":"False","code":"200","message":"Successfully upload"}
-

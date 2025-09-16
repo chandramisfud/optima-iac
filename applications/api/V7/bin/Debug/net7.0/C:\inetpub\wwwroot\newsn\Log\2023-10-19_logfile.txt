@@ -1,9 +1,0 @@
-2023-10-19 12:03:04.4821 INFO REQUEST: POST /api/auth/login
-BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
-2023-10-19 12:03:05.7244 INFO RESPONSE:
- {"code":"200","error":"False","message":"Login Successfull"}
-
-2023-10-19 12:04:05.8882 INFO REQUEST: POST /api/tools/upload/budget
-BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget (10).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget (10).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":47363,"Name":"formFile","FileName":"Template Budget (10).xlsx"}
-2023-10-19 12:06:00.5655 INFO REQUEST: POST /api/tools/upload/budget
-BODY:{"ContentDisposition":"form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget (10).xlsx\u0022","ContentType":"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Headers":{"Content-Disposition":["form-data; name=\u0022formFile\u0022; filename=\u0022Template Budget (10).xlsx\u0022"],"Content-Type":["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]},"Length":47363,"Name":"formFile","FileName":"Template Budget (10).xlsx"}

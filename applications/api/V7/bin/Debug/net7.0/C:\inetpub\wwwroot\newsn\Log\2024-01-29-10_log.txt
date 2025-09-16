@@ -1,9 +1,0 @@
-2024-01-29 10:41:54.2511 INFO REQUEST: POST /api/auth/login
-BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
-2024-01-29 10:41:55.2507 INFO RESPONSE:
- {"code":"200","error":"False","message":"Login Successfull"}
-
-2024-01-29 10:42:15.9771 INFO REQUEST: GET /api/promo/approvalrecon/id
-2024-01-29 10:42:16.1950 INFO RESPONSE:
- {"code":"200","error":"False","message":"Successfully get data"}
-

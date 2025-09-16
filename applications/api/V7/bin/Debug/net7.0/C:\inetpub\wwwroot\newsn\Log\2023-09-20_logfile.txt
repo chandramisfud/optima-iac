@@ -1,9 +1,0 @@
-2023-09-20 14:16:53.3791 INFO REQUEST: POST /api/auth/login
-BODY:{"Id":"chandra.misfud@xvautomation.com","Password":"A#nd007."}
-2023-09-20 14:16:54.6149 INFO RESPONSE:
- {"code":"200","error":"False","message":"Login Successfull"}
-
-2023-09-20 14:17:32.7348 INFO REQUEST: GET /api/dn/suratjalan-tandaterima-todanone/id
-2023-09-20 14:17:32.8030 INFO RESPONSE:
- {"code":"200","error":"False","message":"Successfully get data"}
-

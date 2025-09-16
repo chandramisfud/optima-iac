@@ -1,4 +1,0 @@
-2024-03-06 21:29:19.6555 INFO REQUEST: POST /api/auth/login
-BODY:{"Id":"misfud@xvautomation.com","Password":"A#nd007."}
-2024-03-06 21:29:22.6173 INFO RESPONSE:
- {"code":500,"error":true,"message":"Invalid column name \u0027pictureprofilefile\u0027.","values":null}

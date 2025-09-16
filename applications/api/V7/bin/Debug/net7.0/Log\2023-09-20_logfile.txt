@@ -1,4 +1,0 @@
-2023-09-20 14:24:17.6287 INFO REQUEST: GET /api/dn/send-to-ho
-2023-09-20 14:24:18.4269 INFO RESPONSE:
- {"code":"200","error":"False","message":"Successfully get data"}
-
