@@ -1,1 +1,39 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars.backup
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+crash.log
+
+# Ansible
+*.retry
+vault-password.txt
+encrypted_password.txt
+
+# Application specific
+applications/ui/.env
+applications/api/appsettings.json
+applications/ui/vendor/
+applications/ui/node_modules/
+applications/api/bin/
+applications/api/obj/
+
+# SSH Keys
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+
+
