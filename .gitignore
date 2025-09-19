@@ -6,7 +6,6 @@
 *.tfvars.json
 *.tfplan
 *.tfvars.backup
-.terraform.lock.hcl # <-- CHANGE: Remove this line to commit the lock file
 crash.log
 override.tf
 override.tf.json
@@ -18,7 +17,7 @@ vault-password.txt
 encrypted_password.txt
 
 # Application specific
-# Use a more generic pattern to ignore these files
+# Use generic patterns to ignore these files
 **/.env
 **/appsettings.json
 **/vendor/
@@ -26,14 +25,12 @@ encrypted_password.txt
 **/bin/
 **/obj/
 **/publish/
+
 # SSH Keys
 *.pem
 *.key
 
 # IDE
-.vscode/
-.idea/
-# You can use a generic pattern for IDE files too
 **/.vscode/
 **/.idea/
 
@@ -43,8 +40,3 @@ Thumbs.db
 
 # Logs
 *.log
-*applications/api/Repositories/obj/Debug/net7.0/Repositories.AssemblyInfo.cs
-*applications/api/Repositories/obj/Debug/net7.0/Repositories.AssemblyInfoInputs.cache
-*applications/api/V7/obj/Debug/net7.0/V7.AssemblyInfo.cs
-*applications/api/V7/obj/Debug/net7.0/V7.AssemblyInfoInputs.cache
-*applications/api/V7/obj/Debug/net7.0/V7.csproj.AssemblyReference.cache
