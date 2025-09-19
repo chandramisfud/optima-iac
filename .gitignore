@@ -1,11 +1,16 @@
 # Terraform
+.terraform/
 *.tfstate
 *.tfstate.*
-*.tfvars.backup
+*.tfvars
+*.tfvars.json
 *.tfplan
-*.terraform/
-.terraform.lock.hcl
+*.tfvars.backup
+.terraform.lock.hcl # <-- CHANGE: Remove this line to commit the lock file
 crash.log
+override.tf
+override.tf.json
+terraform.rc
 
 # Ansible
 *.retry
@@ -13,13 +18,14 @@ vault-password.txt
 encrypted_password.txt
 
 # Application specific
-applications/ui/.env
-applications/api/appsettings.json
-applications/ui/vendor/
-applications/ui/node_modules/
-applications/api/bin/
-applications/api/obj/
-
+# Use a more generic pattern to ignore these files
+**/.env
+**/appsettings.json
+**/vendor/
+**/node_modules/
+**/bin/
+**/obj/
+**/publish/
 # SSH Keys
 *.pem
 *.key
@@ -27,6 +33,9 @@ applications/api/obj/
 # IDE
 .vscode/
 .idea/
+# You can use a generic pattern for IDE files too
+**/.vscode/
+**/.idea/
 
 # OS
 .DS_Store
@@ -34,6 +43,8 @@ Thumbs.db
 
 # Logs
 *.log
-
-
-
+*applications/api/Repositories/obj/Debug/net7.0/Repositories.AssemblyInfo.cs
+*applications/api/Repositories/obj/Debug/net7.0/Repositories.AssemblyInfoInputs.cache
+*applications/api/V7/obj/Debug/net7.0/V7.AssemblyInfo.cs
+*applications/api/V7/obj/Debug/net7.0/V7.AssemblyInfoInputs.cache
+*applications/api/V7/obj/Debug/net7.0/V7.csproj.AssemblyReference.cache

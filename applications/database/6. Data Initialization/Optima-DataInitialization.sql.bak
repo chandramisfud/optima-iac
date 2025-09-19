@@ -1,0 +1,630 @@
+/* NOTE :
+	1. Tentukan web URL untuk init data app
+	2. Tentukan email untuk init data email submit cancel
+*****************************/
+
+USE [dboptimasystem]
+GO
+/* Init data app */
+INSERT INTO [dbo].[appsetting]
+           ([setname]
+           ,[setvalue])
+     VALUES
+           ('tokenage', 900)
+           , ('isAccountFreeze', 'true')
+		   , ('utcSet',	'+07:00')
+		   , ('utcConversion', '+07:00')
+		   , ('webUrl', 'https://optima-system.co.id')
+		   , ('budgetApprovalSummaryEmail', NULL)
+		   , ('budgetApprovalSummaryEmailCC', 'lukman.handrianto@xvautomation.com,andrie.isharyono@xvautomation.com,yogy.rachmad@xvautomation.com')
+		   , ('budgetApprovalSummaryEmailBCC', NULL)
+GO
+
+DECLARE @utcDate123 DATETIME
+SET @utcDate123 = dbo.getUTCDateConversion()
+
+/* Init data Menu */
+INSERT INTO [dbo].[tbset_menu_v4]
+           ([id]
+           ,[parent]
+           ,[name]
+           ,[icon]
+           ,[url]
+           ,[slug]
+           ,[number]
+           ,[flag]
+           ,[crud]
+           ,[approve])
+     VALUES
+		('11','1','Main Dashboard','bi bi-dot','/dashboard/main','dashboard-main',1,'0',0,0)
+		,('12','1','Summary Dashboard','bi bi-dot','/dashboard/summary','dashboard-summary',2,'0',0,0)
+		,('13','1','Approver Dashboard','bi bi-dot','/dashboard/approver','dashboard-approver',3,'0',0,0)
+		,('14','1','Creator Dashboard','bi bi-dot','/dashboard/creator','dashboard-creator',4,'0',0,0)
+		,('1','0','Dashboard','fa fa-home','/home','dashboard',0,'0',0,0)
+		,('10','0','User Access','fa fa-user-cog','','useraccess',2,'0',0,0)
+		,('1002','10','User Group Menu','fa fa-bezier-curve','/useraccess/group-menu','useraccess-groupmenu',1,'1',1,0)
+		,('1003','10','User Group Rights','fa fa-users-cog','/useraccess/group-rights','useraccess-rights',2,'1',1,0)
+		,('1004','10','User Management','fa fa-users','/useraccess/user','useraccess-users',3,'1',1,0)
+		,('1006','10','User Admin Report','fa fa-file-archive','/useraccess/user-admin-report','useraccess-user-admin-report',6,'0',0,0)
+		,('1007','10','User Profile','fa fa-users','/useraccess/profile','useraccess-profile',4,'1',1,0)
+		,('11','0','Configuration','fa fa-cog','','configuration',1,'0',0,0)
+		,('1101','11','Reminder','fa fa-bell','/configuration/reminder','configuration-reminder',1,'1',1,0)
+		,('1102','11','ROI & CR','fa fa-arrows-alt-v','/configuration/roi-cr','configuration-roi-cr',2,'1',1,0)
+		,('1103','11','Editable Promo Items','fa fa-pencil-alt','/configuration/editable-promo-items','configuration-editable-promo-items',3,'0',0,0)
+		,('1104','11','Late Promo Creation','far fa-calendar-alt','/configuration/late-promo-creation','configuration-late-promo-creation',4,'1',1,0)
+		,('1105','11','Major Changes','fa fa-edit','/configuration/major-changes','configuration-major-changes',5,'0',0,0)
+		,('1107','11','Promo Calculator','fa fa-calculator','/configuration/promo-calculator','configuration-promo-calculator',7,'1',1,0)
+		,('1108','11','Promo Mechanism Input Method','bi bi-dot','/configuration/mechanism-input-method ','configuration-mechanism-input-method',8,'0',0,0)
+		,('13','0','Mapping','fa fa-code-branch','','mapping',12,'0',0,0)
+		,('1301','13','Distributor to Sub Account','bi bi-dot','/mapping/distributor-to-sub-account','mapping-distributor-to-sub-account',0,'1',1,0)
+		,('1302','13','User ID to Sub Account','bi bi-dot','/mapping/user-profile-to-sub-account','mapping-user-profile-to-sub-account',1,'1',1,0)
+		,('1303','13','SKU Blitz','bi bi-dot','/mapping/sku-blitz','mapping-sku-blitz',2,'1',1,0)
+		,('1304','13','Sub Account Blitz','bi bi-dot','/mapping/sub-account-blitz','mapping-sub-account-blitz',3,'1',1,0)
+		,('1305','13','Tax Level','bi bi-dot','/mapping/tax-level','mapping-tax-level',4,'1',1,0)
+		,('1314','13','PIC DN Manual','bi bi-dot','/mapping/pic-dn-manual','mapping-pic-dn-manual',13,'1',1,0)
+		,('1315','13','WHT Type','bi bi-dot','/mapping/wht-type','mapping-wht-type',14,'1',1,0)
+		,('1319','13','Channel - Head','bi bi-dot','mapping/channel-head','map-channel-head',18,'1',1,0)
+		,('14','0','A&P Sales','fa fa-diagnoses','','a&p-sales',12,'0',0,0)
+		,('1401','14','NAV Access','bi bi-dot','/tools/nav','tools-nav',0,'0',0,0)
+		,('2','0','Master','fa fa-database','','mst',3,'0',0,0)
+		,('201','2','Manage Sales & Distribution Company','bi bi-dot','/master/distributor','mst-distributor',1,'1',1,0)
+		,('202','2','Manage Entity','bi bi-dot','/master/entity','mst-entity',2,'1',1,0)
+		,('203','2','Manage Channel','bi bi-dot','/master/channel','mst-channel',3,'1',1,0)
+		,('204','2','Manage Sub Channel','bi bi-dot','/master/sub-channel','mst-sub-channel',4,'1',1,0)
+		,('205','2','Manage Account','bi bi-dot','/master/account','mst-account',5,'1',1,0)
+		,('206','2','Manage Sub Account','bi bi-dot','/master/sub-account','mst-sub-account',6,'1',1,0)
+		,('207','2','Manage Sub Brand','bi bi-dot','/master/brand','mst-brand',7,'1',1,0)
+		,('208','2','Manage SKU','bi bi-dot','/master/sku','mst-sku',8,'1',1,0)
+		,('209','2','Manage Category Promo','bi bi-dot','/master/category','mst-category',9,'1',1,0)
+		,('210','2','Manage Sub Category Promo','bi bi-dot','/master/sub-category','mst-sub-category',10,'1',1,0)
+		,('211','2','Manage Activity Promo','bi bi-dot','/master/activity','mst-activity',11,'1',1,0)
+		,('212','2','Manage Sub Activity Promo','bi bi-dot','/master/sub-activity','mst-sub-activity',12,'1',1,0)
+		,('213','2','Manage Sub Activity Type','bi bi-dot','/master/sub-activity-type','mst-type-sub-activity',13,'1',1,0)
+		,('214','2','Manage Selling Point','bi bi-dot','/master/selling-point','mst-selling-point',14,'1',1,0)
+		,('215','2','Manage Region','bi bi-dot','/master/region','mst-region',15,'1',1,0)
+		,('216','2','Manage Profit Center','bi bi-dot','/master/profit-center','mst-profit-center',16,'1',1,0)
+		,('217','2','Master Promo Cancellation Reason','bi bi-dot','/master/promo-cancel-reason','mst-promo-cancel-reason',18,'1',1,0)
+		,('218','2','Manage Investment Type','bi bi-dot','/master/investment-type','mst-investment-type',19,'1',1,0)
+		,('219','2','Manage Mechanism Promo','bi bi-dot','/master/promo-mechanism','mst-promo-mechanism',20,'1',1,0)
+		,('220','2','Manage Matrix Promo Approval','bi bi-dot','/master/matrix/promoapproval','mst-approval-promo',21,'1',1,0)
+		,('3','0','Budget','fa fa-tasks','','budget',4,'0',0,0)
+		,('301','3','Budget Master','bi bi-dot','/budget/master','budget-master',1,'1',1,0)
+		,('302','3','Budget Allocation','bi bi-dot','/budget/allocation','budget-allocation',2,'1',1,0)
+		,('303','3','Budget Assignment','bi bi-dot','/budget/assignment','budget-assignment',3,'1',1,0)
+		,('304','3','Budget Approval','bi bi-dot','/budget/approval','budget-approval',4,'1',0,1)
+		,('305','3','Budget History','bi bi-dot','/budget/history','budget-history',5,'0',0,0)
+		,('306','3','SS/PS Input','bi bi-dot','','budget-ss-input',6,'0',0,0)
+		,('30601','306','Conversion Rate','bi bi-dot','/budget/ss-input/conversion-rate','budget-ss-input-conversion-rate',1,'0',1,0)
+		,('30602','306','SS Input','bi bi-dot','/budget/ss-input/volume','budget-ss-input-volume',2,'0',1,0)
+		,('30603','306','PS Input','bi bi-dot','/budget/ss-input/ps-input','budget-ss-input-ps-input',3,'0',1,0)
+		,('307','3','TT Consol','bi bi-dot','/budget/tt-console','budget-tt-console',7,'0',1,0)
+		,('308','3','Budget Mass Approval','bi bi-dot','/budget/approval-request ','budget-request-approval',8,'1',1,0)
+		,('4','0','Promo','fab fa-first-order','','promo',5,'0',0,0)
+		,('401','4','Promo Creation','bi bi-dot','/promo/creation','promo-creation',2,'1',1,0)
+		,('402','4','Promo Approval','bi bi-dot','/promo/approval','promo-approval',6,'1',0,1)
+		,('403','4','Promo Approval Reconcile','bi bi-dot','/promo/approval-recon','promo-reconcile-approval',7,'1',0,1)
+		,('404','6','Listing Promo Reporting','bi bi-dot','/rpt/listing-promo-reporting','rpt-listing-promo-reporting',8,'0',0,0)
+		,('405','4','Promo Send Back','bi bi-dot','/promo/send-back','promo-send-back',4,'1',1,0)
+		,('406','4','Promo Cancel Request','bi bi-dot','/promo/cancel-request','promo-cancel-request',8,'1',1,0)
+		,('407','4','Listing Promo Cancel','bi bi-dot','/promo/listing-promo-cancel','promo-listing-promo-cancel',9,'0',0,0)
+		,('408','4','Promo Display','bi bi-dot','/promo/display','promo-display',10,'0',0,0)
+		,('409','4','Multi Print Promo','bi bi-dot','/promo/multi-print','promo-multi-print',11,'0',0,0)
+		,('411','4','Promo Closure','bi bi-dot','/promo/closure','promo-closure',12,'1',1,0)
+		,('412','4','SKP Validation','bi bi-dot','/promo/skp-validation','promo-skp-validation',13,'1',0,1)
+		,('413','4','Promo Reconciliation','bi bi-dot','/promo/recon','promo-reconciliation',3,'1',1,0)
+		,('414','4','Promo Send Back Reconciliation','bi bi-dot','/promo/recon-send-back','promo-recon-send-back',5,'1',1,0)
+		,('415','4','Promo ID Workflow','bi bi-dot','/promo/workflow','promo-workflow',16,'0',0,0)
+		,('5','0','Debit Note','fa fa-ticket-alt','','dn',6,'0',0,0)
+		,('500','5','Listing Promo Distributor','bi bi-dot','/dn/rpt-listing-promo-distributor','dn-rpt-listing-promo-distributor',0,'0',0,0)
+		,('501','5','DN Creation','bi bi-dot','/dn/creation','dn-creation',1,'1',1,0)
+		,('502','5','DN Creation HO','bi bi-dot','/dn/creation-ho','dn-ho-creation',2,'1',1,0)
+		,('503','5','Send to HO','bi bi-dot','/dn/send-to-ho','dn-send-to-ho',3,'1',1,0)
+		,('504','5','DN Received & Approved','bi bi-dot','/dn/validate-by-ho','dn-validate-by-ho',5,'1',0,1)
+		,('505','5','Send to Danone','bi bi-dot','/dn/send-to-danone','dn-send-to-danone',6,'1',1,0)
+		,('506','5','Surat Jalan dan Tanda Terima to HO','bi bi-dot','/dn/surat-jalan-ho','dn-ho-surat-jalan',4,'0',0,0)
+		,('507','5','DN Validation by Finance','bi bi-dot','/dn/validate-by-finance','dn-validate-by-finance',9,'1',1,1)
+		,('508','5','Invoice Notification by Danone','bi bi-dot','/dn/invoice-notif','dn-notif-invoice',11,'1',1,0)
+		,('509','5','Create Invoice','bi bi-dot','/dn/invoice','dn-invoice',12,'1',1,0)
+		,('512','5','Confirm DN Paid','bi bi-dot','/dn/paid','dn-paid',13,'1',1,0)
+		,('513','5','Multi Print DN','bi bi-dot','/dn/multi-print','dn-multi-print',14,'0',0,0)
+		,('514','5','DN Reassignment','bi bi-dot','/dn/reassignment','dn-reassignment',15,'1',1,0)
+		,('515','5','DN Assignment','bi bi-dot','/dn/assignment','dn-assignment',16,'1',1,0)
+		,('516','5','Surat Jalan dan Tanda Terima to Danone','bi bi-dot','/dn/surat-jalan-danone','dn-danone-surat-jalan',7,'0',0,0)
+		,('517','5','DN Upload','bi bi-dot','/dn/upload','dn-upload',18,'1',1,0)
+		,('518','5','DN Received by Danone','bi bi-dot','/dn/received-by-danone','dn-received-by-danone',7,'1',0,1)
+		,('519','5','Listing DN Over Budget','bi bi-dot','/dn/listing-over-budget','dn-listing-over-budget',17,'0',0,0)
+		,('520','5','DN Validation by Sales','bi bi-dot','/dn/validate-by-sales','dn-validate-by-sales',10,'1',1,1)
+		,('521','5','DN Reassignment By Finance','bi bi-dot','/dn/reassignment-by-finance','dn-finance-by-reassignment',20,'1',1,0)
+		,('522','5','DN Send back','bi bi-dot','/dn/send-back','dn-send-back',21,'1',1,0)
+		,('523','5','DN Overbudget','bi bi-dot','/dn/over-budget','dn-over-budget',22,'1',1,0)
+		,('524','5','Upload Faktur','bi bi-dot','/dn/upload-faktur','dn-faktur-upload',23,'0',0,0)
+		,('525','5','VAT Expired Checklist','bi bi-dot','/dn/vat-expired','dn-vat-expired',24,'0',0,0)
+		,('527','5','DN Workflow','bi bi-dot','/dn/workflow','dn-workflow',26,'0',0,0)
+		,('528','5','Promo Display','bi bi-dot','/dn/promo-display','dn-promo-display',27,'0',0,0)
+		,('529','5','Multi Print Promo','bi bi-dot','/dn/multi-print-promo','dn-multi-print-promo',28,'0',0,0)
+		,('6','0','Report','fa fa-file-archive','','rpt',7,'0',0,0)
+		,('601','6','Investment Report','bi bi-dot','/rpt/investment','rpt-investment',5,'0',0,0)
+		,('603','6','Matrix Approval Listing','bi bi-dot','/rpt/matrix-approval-listing','rpt-matrix-approval-listing',9,'0',0,0)
+		,('604','6','Promo Historical Movement','bi bi-dot','/rpt/promo-historical-movement','rpt-promo-historical-movement',10,'0',0,0)
+		,('605','6','Summary Aging Approval','bi bi-dot','/rpt/summary-aging-approval','rpt-summary-aging-approval',13,'0',0,0)
+		,('606','6','Accrual Report','bi bi-dot','/rpt/accrual','rpt-accrual',1,'0',0,0)
+		,('607','6','Listing DN','bi bi-dot','/rpt/listing-dn','rpt-listing-dn',6,'0',0,0)
+		,('608','6','DN Detail Reporting','bi bi-dot','/rpt/dn-detail-reporting','rpt-dn-detail-reporting',2,'0',0,0)
+		,('609','6','DN Display','bi bi-dot','/rpt/dn-display','rpt-dn-display',3,'0',0,0)
+		,('610','6','Listing Promo Reconciliation Reporting','bi bi-dot','/rpt/listing-promo-recon-reporting','rpt-listing-promo-recon-reporting',7,'0',0,0)
+		,('611','6','Promo Planning Reporting','bi bi-dot','/rpt/promo-planning-reporting','rpt-promo-planning-reporting',11,'0',0,0)
+		,('614','6','SKP Validation Report','bi bi-dot','/rpt/skp-validation','rpt-skp-validation',12,'0',0,0)
+		,('615','6','Document Completeness','bi bi-dot','/rpt/doc-completeness','rpt-doc-completeness',4,'0',0,0)
+		,('616','6','Listing Promo Reporting by Mechanism','bi bi-dot','/rpt/listing-promo-reporting-by-mechanism ','rpt-by-mechanism-listing-promo-reporting',16,'0',0,0)
+		,('617','6','Listing Promo Reporting Post Recon','bi bi-dot','/rpt/listing-promo-reporting-post-recon ','rpt-post-recon-listing-promo-reporting',17,'0',0,0)
+		,('618','6','Channel Summary','bi bi-dot','/rpt/channel-summary','rpt-channel-summary',18,'0',0,0)
+		,('619','6','DN Outstanding Report','bi bi-dot','/rpt/dn-outstanding','rpt-dn-outstanding',19,'0',0,0)
+		,('7','0','Finance Report','fa fa-file-archive','','fin-rpt',8,'0',0,0)
+		,('700','7','Listing Promo Reporting','bi bi-dot','/fin-rpt/listing-promo-reporting','fin-rpt-listing-promo-reporting',8,'1',0,0)
+		,('701','7','Investment Report','bi bi-dot','/fin-rpt/investment','fin-rpt-investment',5,'0',0,0)
+		,('704','7','Promo Historical Movement','bi bi-dot','/fin-rpt/promo-historical-movement','fin-rpt-promo-historical-movement',12,'0',0,0)
+		,('705','7','Summary Aging Approval','bi bi-dot','/fin-rpt/summary-aging-approval','fin-rpt-summary-aging-approval',16,'0',0,0)
+		,('706','7','Accrual Report','bi bi-dot','/fin-rpt/accrual','fin-rpt-accrual',1,'0',0,0)
+		,('707','7','Listing DN','bi bi-dot','/fin-rpt/listing-dn','fin-rpt-listing-dn',6,'1',0,0)
+		,('708','7','Promo Display','bi bi-dot','/fin-rpt/promo-display','fin-rpt-promo-display',11,'0',0,0)
+		,('709','7','DN Detail Reporting','bi bi-dot','/fin-rpt/dn-detail-reporting','fin-rpt-dn-detail-reporting',2,'1',0,0)
+		,('710','7','Promo Approval Aging Report','bi bi-dot','/fin-rpt/promo-approval-aging','fin-rpt-promo-approval-aging',10,'0',0,0)
+		,('711','7','Matrix Approval Listing','bi bi-dot','/fin-rpt/matrix-approval-listing','fin-rpt-matrix-approval-listing',9,'0',0,0)
+		,('712','7','DN Display','bi bi-dot','/fin-rpt/dn-display','fin-rpt-dn-display',3,'0',0,0)
+		,('713','7','Promo Planning Reporting','bi bi-dot','/fin-rpt/promo-planning-reporting','fin-rpt-promo-planning-reporting',13,'0',0,0)
+		,('717','7','SKP Validation Report','bi bi-dot','/fin-rpt/skp-validation','fin-rpt-skp-validation',14,'0',0,0)
+		,('718','7','Document Completeness','bi bi-dot','/fin-rpt/doc-completeness','fin-rpt-doc-completeness',4,'0',0,0)
+		,('720','7','Submission Report','bi bi-dot','/fin-rpt/submission','fin-rpt-submission',15,'0',0,0)
+		,('721','7','Listing Promo Reporting by Mechanism','bi bi-dot','/fin-rpt/listing-promo-reporting-by-mechanism ','fin-rpt-by-mechanism-listing-promo-reporting',21,'0',0,0)
+		,('722','7','Listing Promo Reporting Post Recon','bi bi-dot','/fin-rpt/listing-promo-reporting-post-recon ','fin-rpt-post-recon-listing-promo-reporting',22,'0',0,0)
+		,('723','7','Channel Summary','bi bi-dot','/fin-rpt/tt-control','fin-rpt-tt-control',23,'0',0,0)
+		,('725','7','DN Ready To Pay','bi bi-dot','/fin-rpt/dn-ready-to-pay','fin-rpt-dn-ready-to-pay',25,'0',0,0)
+		,('726','7','Summary Budgeting','bi bi-dot','/fin-rpt/summary-budget','fin-rpt-summary-budget',26,'0',0,0)
+		,('727','7','DN Outstanding Report','bi bi-dot','/fin-rpt/dn-outstanding','fin-rpt-dn-outstanding',27,'0',0,0)
+		,('9','0','Tools','fa fa-tools','','tools',11,'0',0,0)
+		,('901','9','Upload Master Region','bi bi-dot','/tools/upload-region','tools-upload-region',1,'1',0,0)
+		,('902','9','Upload Master Entity','bi bi-dot','/tools/upload-entity','tools-upload-entity',2,'1',0,0)
+		,('903','9','Upload Master Distributor','bi bi-dot','/tools/upload-distributor','tools-upload-distributor',3,'1',0,0)
+		,('904','9','Upload Master Brand','bi bi-dot','/tools/upload-brand','tools-upload-brand',4,'1',0,0)
+		,('905','9','Upload Master Channel','bi bi-dot','/tools/upload-channel','tools-upload-channel',5,'1',0,0)
+		,('906','9','Upload Master Sub Activity Type','bi bi-dot','/tools/upload-sub-activity-type','tools-upload-sub-activity-type',6,'1',0,0)
+		,('907','9','Upload Master Activity','bi bi-dot','/tools/upload-activity','tools-upload-activity',7,'1',0,0)
+		,('908','9','Budget Upload','bi bi-dot','/tools/upload-budget','tools-upload-budget',8,'1',0,0)
+		,('909','9','Upload Matrix Approval','bi bi-dot','/tools/upload-matrix-approval','tools-upload-matrix-approval',9,'1',0,0)
+		,('910','9','Transfer To SAP - Payment','bi bi-dot','/tools/sap-payment','tools-sap-payment',10,'1',0,0)
+		,('911','5','DN Upload Attachment','bi bi-dot','/dn/upload-attachment','dn-attachment-upload',19,'0',0,0)
+		,('912','9','Promo Upload Attachment by Creator','bi bi-dot','/tools/upload-attachment-promo-creator','tools-upload-promo-attachment-creator',12,'0',0,0)
+		,('913','9','Promo Upload Attachment by Admin','bi bi-dot','/tools/upload-attachment-promo-admin','tools-upload-promo-attachment-admin',13,'0',0,0)
+		,('914','9','BLITZ Calculation','bi bi-dot','/tools/blitz-rawdata','tools-blitz-rawdata',14,'0',0,0)
+		,('915','9','Budget Adjustment','bi bi-dot','/tools/budget-adjustment','tools-budget-adjustment',15,'0',0,0)
+		,('916','9','Transfer to SAP - Accrual','bi bi-dot','/tools/sap-accrual','tools-sap-accrual',16,'0',0,0)
+		,('917','9','XML Payment Reset','bi bi-dot','/tools/xml-payment-reset','tools-xml-payment-reset',17,'0',0,0)
+		,('918','9','Promo Approval Reminder','bi bi-dot','/tools/promo_approval_reminder','tools-promo-approval-reminder',18,'0',0,0)
+		,('919','9','Update Promo Recon Status','bi bi-dot','/tools/update-promo-recon-status','tools-update-promo-recon-status',19,'0',0,0)
+GO
+
+/* Init data master group menu */
+INSERT INTO [dbo].[tbset_usergroup]
+           ([usergroupid]
+           ,[usergroupname]
+           ,[userinput]
+           ,[dateinput]
+           ,[useredit]
+           ,[dateedit]
+           ,[groupmenupermission]
+           ,[CreatedEmail]
+           ,[ModifiedEmail]
+           ,[DeleteEmail])
+     VALUES
+           ('999.999', 'Developer', 'xvamain', @utcDate123,	NULL, NULL, 0, NULL, NULL, NULL)
+GO
+
+/* Init data user level access */
+INSERT INTO tbset_userlevel (userlevel, levelname, usergroupid, userinput, dateinput)
+VALUES ('99999', 'Developer', '999.999' , 'xvamain', @utcDate123)
+GO
+
+/* Init data menu akses */
+INSERT INTO tbset_userrights (usergroupid, menuid)
+VALUES 
+('999.999', '#')
+,('999.999', '10')
+,('999.999', '1002')
+,('999.999', '1003')
+,('999.999', '1004')
+,('999.999', '1006')
+,('999.999', '1007')
+,('999.999', '11')
+,('999.999', '1101')
+,('999.999', '1102')
+,('999.999', '1103')
+,('999.999', '1104')
+,('999.999', '1105')
+,('999.999', '1107')
+,('999.999', '1108')
+,('999.999', '13')
+,('999.999', '1301')
+,('999.999', '1302')
+,('999.999', '1303')
+,('999.999', '1304')
+,('999.999', '1305')
+,('999.999', '1314')
+,('999.999', '1315')
+,('999.999', '1319')
+,('999.999', '14')
+,('999.999', '1401')
+,('999.999', '2')
+,('999.999', '201')
+,('999.999', '202')
+,('999.999', '203')
+,('999.999', '204')
+,('999.999', '205')
+,('999.999', '206')
+,('999.999', '207')
+,('999.999', '208')
+,('999.999', '209')
+,('999.999', '210')
+,('999.999', '211')
+,('999.999', '212')
+,('999.999', '213')
+,('999.999', '214')
+,('999.999', '215')
+,('999.999', '216')
+,('999.999', '217')
+,('999.999', '218')
+,('999.999', '219')
+,('999.999', '220')
+,('999.999', '3')
+,('999.999', '301')
+,('999.999', '302')
+,('999.999', '303')
+,('999.999', '304')
+,('999.999', '305')
+,('999.999', '306')
+,('999.999', '30601')
+,('999.999', '30602')
+,('999.999', '30603')
+,('999.999', '307')
+,('999.999', '308')
+,('999.999', '309')
+,('999.999', '4')
+,('999.999', '40010')
+,('999.999', '40020')
+,('999.999', '401')
+,('999.999', '402')
+,('999.999', '403')
+,('999.999', '404')
+,('999.999', '405')
+,('999.999', '406')
+,('999.999', '407')
+,('999.999', '408')
+,('999.999', '409')
+,('999.999', '411')
+,('999.999', '412')
+,('999.999', '413')
+,('999.999', '414')
+,('999.999', '415')
+,('999.999', '5')
+,('999.999', '500')
+,('999.999', '501')
+,('999.999', '502')
+,('999.999', '503')
+,('999.999', '504')
+,('999.999', '505')
+,('999.999', '506')
+,('999.999', '507')
+,('999.999', '508')
+,('999.999', '509')
+,('999.999', '512')
+,('999.999', '513')
+,('999.999', '514')
+,('999.999', '515')
+,('999.999', '516')
+,('999.999', '517')
+,('999.999', '518')
+,('999.999', '519')
+,('999.999', '520')
+,('999.999', '521')
+,('999.999', '522')
+,('999.999', '523')
+,('999.999', '524')
+,('999.999', '525')
+,('999.999', '527')
+,('999.999', '528')
+,('999.999', '529')
+,('999.999', '6')
+,('999.999', '601')
+,('999.999', '603')
+,('999.999', '604')
+,('999.999', '605')
+,('999.999', '606')
+,('999.999', '607')
+,('999.999', '608')
+,('999.999', '609')
+,('999.999', '610')
+,('999.999', '611')
+,('999.999', '614')
+,('999.999', '615')
+,('999.999', '616')
+,('999.999', '617')
+,('999.999', '7')
+,('999.999', '700')
+,('999.999', '701')
+,('999.999', '704')
+,('999.999', '705')
+,('999.999', '706')
+,('999.999', '707')
+,('999.999', '708')
+,('999.999', '709')
+,('999.999', '710')
+,('999.999', '711')
+,('999.999', '712')
+,('999.999', '713')
+,('999.999', '717')
+,('999.999', '718')
+,('999.999', '720')
+,('999.999', '721')
+,('999.999', '722')
+,('999.999', '723')
+,('999.999', '725')
+,('999.999', '726')
+,('999.999', '727')
+,('999.999', '9')
+,('999.999', '901')
+,('999.999', '902')
+,('999.999', '903')
+,('999.999', '904')
+,('999.999', '905')
+,('999.999', '906')
+,('999.999', '907')
+,('999.999', '908')
+,('999.999', '909')
+,('999.999', '910')
+,('999.999', '911')
+,('999.999', '912')
+,('999.999', '913')
+,('999.999', '914')
+,('999.999', '915')
+,('999.999', '916')
+,('999.999', '917')
+,('999.999', '919')
+GO
+
+/* Init data akses menu CRUD */
+INSERT INTO tbset_userlevel_access(userlevel, usergroupid, menuid, create_rec, read_rec, update_rec, delete_rec)
+VALUES
+('99999', '999.999', '1002', 1, 0, 1, 1)
+,('99999', '999.999', '1003', 1, 0, 1, 1)
+,('99999', '999.999', '1004', 1, 0, 1, 1)
+,('99999', '999.999', '1005', 0, 0, 0, 0)
+,('99999', '999.999', '1007', 1, 0, 1, 1)
+,('99999', '999.999', '1101', 0, 0, 1, 0)
+,('99999', '999.999', '1102', 1, 0, 1, 1)
+,('99999', '999.999', '1106', 1, 0, 1, 0)
+,('99999', '999.999', '1301', 1, 0, 1, 1)
+,('99999', '999.999', '1302', 1, 0, 1, 1)
+,('99999', '999.999', '1303', 1, 0, 1, 1)
+,('99999', '999.999', '1304', 1, 0, 1, 1)
+,('99999', '999.999', '1305', 1, 0, 1, 1)
+,('99999', '999.999', '1314', 1, 0, 1, 1)
+,('99999', '999.999', '201', 0, 1, 0, 0)
+,('99999', '999.999', '202', 0, 1, 0, 0)
+,('99999', '999.999', '203', 1, 0, 1, 0)
+,('99999', '999.999', '204', 1, 0, 1, 0)
+,('99999', '999.999', '205', 1, 0, 1, 0)
+,('99999', '999.999', '206', 1, 0, 1, 0)
+,('99999', '999.999', '207', 0, 1, 0, 0)
+,('99999', '999.999', '208', 1, 0, 1, 1)
+,('99999', '999.999', '209', 0, 1, 0, 0)
+,('99999', '999.999', '210', 1, 1, 1, 1)
+,('99999', '999.999', '211', 1, 1, 1, 1)
+,('99999', '999.999', '212', 1, 1, 1, 1)
+,('99999', '999.999', '213', 1, 1, 1, 1)
+,('99999', '999.999', '214', 1, 0, 1, 1)
+,('99999', '999.999', '215', 0, 1, 0, 0)
+,('99999', '999.999', '216', 0, 1, 0, 0)
+,('99999', '999.999', '217', 0, 1, 0, 0)
+,('99999', '999.999', '218', 0, 1, 0, 0)
+,('99999', '999.999', '219', 1, 1, 1, 0)
+,('99999', '999.999', '220', 1, 1, 1, 0)
+,('99999', '999.999', '301', 0, 1, 0, 0)
+,('99999', '999.999', '302', 0, 1, 0, 0)
+,('99999', '999.999', '303', 0, 1, 0, 0)
+,('99999', '999.999', '30601', 1, 1, 1, 0)
+,('99999', '999.999', '30602', 1, 1, 1, 0)
+,('99999', '999.999', '30603', 1, 1, 1, 0)
+,('99999', '999.999', '307', 1, 1, 1, 0)
+,('99999', '999.999', '40010', 1, 0, 1, 1)
+,('99999', '999.999', '401', 1, 0, 1, 1)
+,('99999', '999.999', '411', 1, 0, 1, 0)
+,('99999', '999.999', '413', 0, 0, 1, 0)
+,('99999', '999.999', '414', 0, 0, 1, 0)
+,('99999', '999.999', '501', 1, 0, 1, 1)
+,('99999', '999.999', '502', 1, 0, 1, 1)
+,('99999', '999.999', '507', 0, 0, 0, 0)
+,('99999', '999.999', '509', 1, 0, 1, 1)
+,('99999', '999.999', '514', 0, 0, 1, 0)
+,('99999', '999.999', '517', 0, 0, 1, 0)
+,('99999', '999.999', '520', 0, 0, 0, 0)
+,('99999', '999.999', '521', 0, 0, 1, 0)
+,('99999', '999.999', '522', 0, 0, 1, 0)
+,('99999', '999.999', '523', 0, 0, 1, 0)
+,('99999', '999.999', '526', 0, 0, 1, 0)
+GO
+
+/* Init data profile */
+INSERT INTO [dbo].[tbset_user]
+           ([id]
+           ,[username]
+           ,[email]
+           ,[password]
+           ,[usergroupid]
+           ,[userlevel]
+           ,[department]
+           ,[jobtitle]
+           ,[contactinfo]
+           ,[distributorid]
+           ,[registered]
+           ,[code]
+           ,[password_change]
+           ,[token]
+           ,[token_date]
+           ,[userinput]
+           ,[dateinput]
+           ,[useredit]
+           ,[dateedit]
+           ,[isdeleted]
+           ,[deletedby]
+           ,[deletedon]
+           ,[lastLogin]
+           ,[isLogin]
+           ,[usernew]
+           ,[loginFailedCount]
+           ,[loginFailedLastTime]
+           ,[CreatedEmail]
+           ,[ModifiedEmail]
+           ,[DeleteEmail])
+     VALUES
+           ('xvamain', 'Developer', 'lukman.handrianto@xvautomation.com', NULL, '999.999', '99999', 'xva', 'xva', '085732270663', NULL, 1, '', NULL, NULL, NULL, 'xvamain', @utcDate123, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, 0, NULL, NULL, NULL, NULL)
+GO
+
+
+/* Init data login */
+INSERT INTO [dbo].[tbset_user_login]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[usergroupid]
+           ,[userlevel]
+           ,[department]
+           ,[jobtitle]
+           ,[contactinfo]
+           ,[distributorid]
+           ,[registered]
+           ,[code]
+           ,[password_change]
+           ,[token]
+           ,[token_date]
+           ,[userinput]
+           ,[dateinput]
+           ,[useredit]
+           ,[dateedit]
+           ,[isdeleted]
+           ,[deletedby]
+           ,[deletedon]
+           ,[lastLogin]
+           ,[isLogin]
+           ,[usernew]
+           ,[loginFailedCount]
+           ,[loginFailedLastTime]
+           ,[pictureprofilefile])
+     VALUES
+		('Developer', 'edy.jumantoro@xvautomation.com', '100e4a56eb30e44f76379e2cfc0b2b0a10dc3cdaea957161f760bf5144871e1b', NULL, NULL, NULL, NULL, '999', NULL, '1', NULL, @utcDate123, NULL, NULL, 'xvamain', @utcDate123, NULL, NULL, 0, NULL, NULL, @utcDate123, 0, 0, 0, @utcDate123, NULL)
+
+DECLARE @id INT
+
+SET @id=(SELECT SCOPE_IDENTITY())
+INSERT INTO tbset_user_login_profile(id, profileid) VALUES (@id, 'xvamain')
+
+INSERT INTO [dbo].[tbset_user_login]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[usergroupid]
+           ,[userlevel]
+           ,[department]
+           ,[jobtitle]
+           ,[contactinfo]
+           ,[distributorid]
+           ,[registered]
+           ,[code]
+           ,[password_change]
+           ,[token]
+           ,[token_date]
+           ,[userinput]
+           ,[dateinput]
+           ,[useredit]
+           ,[dateedit]
+           ,[isdeleted]
+           ,[deletedby]
+           ,[deletedon]
+           ,[lastLogin]
+           ,[isLogin]
+           ,[usernew]
+           ,[loginFailedCount]
+           ,[loginFailedLastTime]
+           ,[pictureprofilefile])
+     VALUES
+		('XVA Maintenance', 'lukman.handrianto@xvautomation.com', '9ea85a014fd97a260647796e5ce02954bd32b29410e3f70e9f0dbd46ef1cefe1', NULL, NULL, NULL, NULL, '999', NULL, '1', NULL, @utcDate123, NULL, NULL, 'xvamain', @utcDate123, NULL, NULL, 0, NULL, NULL, @utcDate123, 0, 0, 0, @utcDate123, NULL)
+		
+SET @id=(SELECT SCOPE_IDENTITY())
+INSERT INTO tbset_user_login_profile(id, profileid) VALUES (@id, 'xvamain')		
+GO
+
+INSERT INTO [dbo].[tbset_user_login]
+           ([username]
+           ,[email]
+           ,[password]
+           ,[usergroupid]
+           ,[userlevel]
+           ,[department]
+           ,[jobtitle]
+           ,[contactinfo]
+           ,[distributorid]
+           ,[registered]
+           ,[code]
+           ,[password_change]
+           ,[token]
+           ,[token_date]
+           ,[userinput]
+           ,[dateinput]
+           ,[useredit]
+           ,[dateedit]
+           ,[isdeleted]
+           ,[deletedby]
+           ,[deletedon]
+           ,[lastLogin]
+           ,[isLogin]
+           ,[usernew]
+           ,[loginFailedCount]
+           ,[loginFailedLastTime]
+           ,[pictureprofilefile])
+     VALUES
+		('XVA Maintenance', 'andrie.isharyono@xvautomation.com', '4eaeade88cdae300ff0c7e2bbb124e0dc22c75763d2126aa65b5b78942acd2fe', NULL, NULL, NULL, NULL, '999', NULL, '1', NULL, @utcDate123, NULL, NULL, 'xvamain', @utcDate123, NULL, NULL, 0, NULL, NULL, @utcDate123, 0, 0, 0, @utcDate123, NULL)
+
+SET @id=(SELECT SCOPE_IDENTITY())
+INSERT INTO tbset_user_login_profile(id, profileid) VALUES (@id, 'xvamain')				
+GO
+
+/* Init data coverage ditributor */
+
+/* Init data dropdown */
+INSERT INTO tbset_config_dropdown (id, category, name, nourut, description)
+VALUES
+(0,'groupmenupermission', 'Super User', 0,NULL)
+,(1,'groupmenupermission', 'Administrator', 1,NULL)
+,(2,'groupmenupermission', 'User', 2,NULL)
+,(100,'remindertype', 'promoapproval', 0,NULL)
+,(201,'remindercategory', 'Pre-caution', 1,NULL)
+,(202,'remindercategory', 'Warning', 2,NULL)
+,(203,'remindercategory', 'Critical', 3,NULL)
+,(301,'reminderoption', 'Less than', 0,'<')
+,(302,'reminderoption', 'Less than or equal to', 1,'<=')
+,(303,'reminderoption', 'More than', 2,'>')
+,(304,'reminderoption', 'More than or equal to', 3,'>=')
+GO
+
+/* Init data email submit cancel */
+INSERT INTO tbset_config_email(id, email)
+VALUES ('cancel submit', '')
+GO
+
+/* Init Data Config reminder */
+INSERT INTO tbset_config_reminder(id, remindertype, category, Description, daysfrom, daysto, frequency, useredit, dateinput)
+VALUES
+	(1, 100, 201, 'Precaution', 0, 2, 2, 'xvamain', @utcDate123)
+	,(1, 100, 202, 'Warning', 0, 2, 2, 'xvamain', @utcDate123)
+	,(1, 100, 203, 'Critical', 0, 2, 2, 'xvamain', @utcDate123)
+	,(501, 500, 501, 'Late Promo Planning', 0, 0, 0, 'xvamain', @utcDate123)
+	,(502, 500, 502, 'Late Promo Creation', 1, 0, 0, 'xvamain', @utcDate123)
+GO
