@@ -1,0 +1,67 @@
+# ansible/roles/ssl/tasks/main.yml
+# Complete implementation for your existing SSL role
+
+---
+- name: Install certbot and nginx plugin
+  apt:
+    name:
+      - certbot
+      - python3-certbot-nginx
+    state: present
+
+- name: Stop nginx for certificate generation
+  systemd:
+    name: nginx
+    state: stopped
+
+- name: Check if SSL certificate already exists
+  stat:
+    path: /etc/letsencrypt/live/{{ ui_subdomain }}.{{ domain_base }}/fullchain.pem
+  register: cert_exists
+
+- name: Obtain Let's Encrypt certificate
+  command: >
+    certbot certonly
+    --standalone
+    --email support@{{ domain_base }}
+    --agree-tos
+    --no-eff-email
+    --expand
+    -d {{ ui_subdomain }}.{{ domain_base }}
+  when: not cert_exists.stat.exists
+
+- name: Start nginx after certificate generation
+  systemd:
+    name: nginx
+    state: started
+
+- name: Update nginx configuration with SSL
+  template:
+    src: nginx-ssl.conf.j2
+    dest: /etc/nginx/sites-available/optima
+    backup: yes
+  notify: restart nginx
+
+- name: Set up automatic certificate renewal
+  cron:
+    name: "Renew Let's Encrypt certificates"
+    minute: "0"
+    hour: "12"
+    job: "/usr/bin/certbot renew --quiet --nginx"
+    user: root
+
+- name: Test nginx configuration
+  command: nginx -t
+  changed_when: false
+
+- name: Verify SSL certificate
+  command: >
+    openssl x509 -in /etc/letsencrypt/live/{{ ui_subdomain }}.{{ domain_base }}/fullchain.pem 
+    -text -noout
+  register: ssl_cert_info
+  changed_when: false
+
+- name: Display SSL certificate info
+  debug:
+    msg: "SSL certificate successfully configured for {{ ui_subdomain }}.{{ domain_base }}"
+  when: ssl_cert_info.rc == 0

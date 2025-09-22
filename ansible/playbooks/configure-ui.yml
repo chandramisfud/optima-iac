@@ -1,4 +1,4 @@
----
+# ansible/playbooks/configure-ui.yml
 - name: Configure Optima UI Server for Laravel
   hosts: ui_servers
   become: true
@@ -13,18 +13,20 @@
         repo: "ppa:ondrej/php"
         state: present
         
-    - name: Install PHP 8.0 and extensions
+    - name: Install PHP 8.2 and extensions
       apt:
         name:
-          - php8.0
-          - php8.0-fpm
-          - php8.0-mysql
-          - php8.0-curl
-          - php8.0-gd
-          - php8.0-mbstring
-          - php8.0-xml
-          - php8.0-zip
-          - nginx
+            - php8.2
+            - php8.2-fpm
+            - php8.2-mysql
+            - php8.2-curl
+            - php8.2-gd
+            - php8.2-mbstring
+            - php8.2-xml
+            - php8.2-zip
+            - nginx
+            - unzip
+            - git
         state: present
         
     - name: Start and enable services
@@ -41,3 +43,113 @@
         curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
       args:
         creates: /usr/local/bin/composer
+
+    # NEW: Laravel Application Deployment
+    - name: Create Laravel application directory
+      file:
+        path: /var/www/optima
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: '0755'
+
+    - name: Remove default nginx site
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+      notify: restart nginx
+
+    - name: Copy Laravel application files using rsync
+      synchronize:
+        src: "../../applications/ui/"
+        dest: /var/www/optima/
+        archive: yes
+        rsync_opts:
+          - "--exclude=vendor/"
+          - "--exclude=node_modules/"
+          - "--exclude=.git/"
+          - "--exclude=storage/logs/*"
+          - "--exclude=storage/framework/cache/*"
+
+    - name: Set correct ownership for Laravel files
+      file:
+        path: /var/www/optima
+        owner: www-data
+        group: www-data
+        recurse: yes
+
+    - name: Create Laravel environment file
+      template:
+        src: ../roles/ui-server/templates/laravel.env.j2
+        dest: /var/www/optima/.env
+        owner: www-data
+        group: www-data
+        mode: '0644'
+      notify: restart php-fpm
+
+    - name: Set Laravel storage and cache permissions
+      file:
+        path: /var/www/optima/{{ item }}
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: '0775'
+        recurse: yes
+      loop:
+        - storage
+        - bootstrap/cache
+
+    - name: Install Composer dependencies
+      composer:
+        command: install
+        working_dir: /var/www/optima
+        optimize_autoloader: yes
+        no_dev: yes
+      become_user: www-data
+
+    - name: Generate Laravel application key
+      shell: php artisan key:generate --force
+      args:
+        chdir: /var/www/optima
+      become_user: www-data
+      when: not ansible_check_mode
+
+    - name: Clear Laravel caches
+      shell: |
+        php artisan config:clear
+        php artisan cache:clear
+        php artisan route:clear
+        php artisan view:clear
+      args:
+        chdir: /var/www/optima
+      become_user: www-data
+      when: not ansible_check_mode
+
+    - name: Create nginx configuration for Laravel
+      template:
+        src: ../roles/ui-server/templates/nginx.conf.j2
+        dest: /etc/nginx/sites-available/optima
+        backup: yes
+      notify: restart nginx
+
+    - name: Enable Laravel site
+      file:
+        src: /etc/nginx/sites-available/optima
+        dest: /etc/nginx/sites-enabled/optima
+        state: link
+      notify: restart nginx
+
+    - name: Test nginx configuration
+      command: nginx -t
+      changed_when: false
+
+  handlers:
+    - name: restart nginx
+      systemd:
+        name: nginx
+        state: restarted
+
+    - name: restart php-fpm
+      systemd:
+        name: php8.2-fpm
+        state: restarted

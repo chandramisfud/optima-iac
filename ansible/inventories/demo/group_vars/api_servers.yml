@@ -1,4 +1,4 @@
----
+#ansible/inventories/demo/group_vars/api_servers.yml
 # API Server specific variables
 dotnet_version: "7.0"
 web_server: iis

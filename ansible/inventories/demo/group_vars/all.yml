@@ -1,4 +1,6 @@
 ---
+#ansible/inventories/demo/group_vars/all.yml
+
 # Global variables for demo environment
 country_code: jp
 env_name: demo

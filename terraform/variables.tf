@@ -115,3 +115,15 @@ variable "db_password" {
   type        = string
   sensitive   = true
 }
+
+variable "domain_name" {
+  description = "Base domain name for the application"
+  type        = string
+  default     = "xva-rnd.com"
+}
+
+variable "dns_ttl" {
+  description = "DNS record TTL in seconds"
+  type        = number
+  default     = 300
+}

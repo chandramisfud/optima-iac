@@ -55,3 +55,21 @@ module "compute" {
 #   api_server_ip = module.compute.api_server_public_ip
 #   rds_endpoint  = module.compute.rds_endpoint
 # }
+
+module "dns" {
+  source = "./modules/dns"
+
+  # Domain configuration
+  domain_name   = var.domain_name
+  country_code  = var.country_code
+  environment   = var.environment
+
+  # Server IPs from compute module
+  ui_server_ip  = module.compute.ui_server_public_ip
+  api_server_ip = module.compute.api_server_public_ip
+
+  # Optional: Custom TTL
+  ttl = var.dns_ttl
+
+  depends_on = [module.compute]
+}
