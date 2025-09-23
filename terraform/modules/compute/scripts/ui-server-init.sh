@@ -46,5 +46,6 @@ systemctl enable nginx
 ufw --force enable
 ufw allow 80/tcp
 ufw allow 22/tcp
+ufw allow 443/tcp
 
 echo "Optima UI Server $COUNTRY_CODE - $ENVIRONMENT initialized successfully!"

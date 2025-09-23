@@ -1,0 +1,16 @@
+---
+# handlers file for api-server
+
+- name: Restart API Service
+  listen: "restart api service" # Handlers are often triggered by a name like this
+  win_service: # <-- 1. ADDED THE MISSING MODULE
+    name: "YourApiService" # <-- Replace with the actual service name
+    state: restarted
+  become: true # <-- 2. CORRECTED THE VALUE TO A BOOLEAN
+
+- name: Restart another service if needed
+  listen: "restart another service"
+  win_service: # <-- 1. ADDED THE MISSING MODULE
+    name: "AnotherWindowsService"
+    state: restarted
+  become: true # <-- 2. CORRECTED THE VALUE TO A BOOLEAN

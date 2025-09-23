@@ -1,0 +1,30 @@
+---
+- name: Setup SSL certificates for Optima UI
+  hosts: ui_servers
+  become: true
+  
+  tasks:
+    - name: Apply SSL role
+      include_role:
+        name: ssl
+      tags: [ssl]
+      
+  post_tasks:
+      - name: Verify HTTPS is working
+        uri:
+          url: "https://{{ ui_subdomain }}.{{ domain_base }}"
+          method: GET
+          status_code: [200, 302]
+          validate_certs: yes
+          timeout: 30
+        delegate_to: localhost
+        become: false
+        retries: 3
+        delay: 10
+        
+      - name: Display SSL deployment results
+        debug:
+          msg:
+            - "SSL certificate deployed for {{ ui_subdomain }}.{{ domain_base }}"
+            - "HTTPS should now be accessible"
+        become: false
