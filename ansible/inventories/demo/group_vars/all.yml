@@ -26,4 +26,4 @@ timezone: Asia/Tokyo
 php_version: "8.0"
 dotnet_version: "7.0"
 node_version: "18"
-vault_windows_password: ".P69MG%pniZ3xon?RmF6XN2sFIzoV"
+# vault_windows_password: ".P69MG%pniZ3xon?RmF6XN2sFIzoV"

@@ -288,6 +288,7 @@ resource "aws_instance" "api_server" {
     db_name     = aws_db_instance.optima.db_name
     db_user     = var.db_username
     db_password = var.db_password
+    admin_password = var.windows_password
   }))
   
   root_block_device {

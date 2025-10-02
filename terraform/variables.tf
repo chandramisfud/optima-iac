@@ -127,3 +127,9 @@ variable "dns_ttl" {
   type        = number
   default     = 300
 }
+
+variable "windows_password" {
+  description = "The administrator password for the Windows server."
+  type        = string
+  sensitive   = true
+}

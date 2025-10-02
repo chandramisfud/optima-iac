@@ -81,3 +81,9 @@ variable "domain_base" {
   type        = string
   default     = "xva-rnd.com"
 }
+
+variable "windows_password" {
+  description = "The administrator password for the Windows server."
+  type        = string
+  sensitive   = true
+}

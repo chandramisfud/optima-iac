@@ -47,7 +47,7 @@ resource "aws_route53_health_check" "ui_server" {
   resource_path                   = "/"
   failure_threshold               = 5
   request_interval                = 30
-  insufficient_data_health_status = "LastKnownStatus"
+#   insufficient_data_health_status = "LastKnownStatus"
 
   tags = {
     Name        = "${var.environment}-${var.country_code}-ui-health"
@@ -65,7 +65,7 @@ resource "aws_route53_health_check" "api_server" {
   resource_path                   = "/health"
   failure_threshold               = 5
   request_interval                = 30
-  insufficient_data_health_status = "LastKnownStatus"
+#   insufficient_data_health_status = "LastKnownStatus"
 
   tags = {
     Name        = "${var.environment}-${var.country_code}-api-health"

@@ -36,6 +36,7 @@ module "compute" {
   db_allocated_storage = var.db_allocated_storage
   db_username         = var.db_username
   db_password         = var.db_password
+  windows_password    = var.windows_password
   
   # Domain
   domain_base = var.domain_base
