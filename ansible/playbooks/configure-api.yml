@@ -1,0 +1,224 @@
+---
+# ansible/playbooks/configure-api.yml
+- name: Configure Optima API Server (.NET 7 on Windows)
+  hosts: api_servers
+  gather_facts: true
+  
+  vars:
+    dotnet_download_url: "https://download.visualstudio.microsoft.com/download/pr/9d6b6b34-44b5-4cf4-b924-79a00deb9795/2f17c30bdf7c8dd3e5d0c89c7c2d3d1b/dotnet-hosting-7.0.20-win.exe"
+    api_source_path: "../../applications/api/"
+    api_deploy_path: "C:\\inetpub\\optima-api"
+    iis_site_name: "OptimaAPI"
+    iis_app_pool_name: "OptimaAPIPool"
+    
+  tasks:
+    # ============================================
+    # 1. Prerequisites Installation
+    # ============================================
+    - name: Install IIS and required features
+      win_feature:
+        name:
+          - Web-Server
+          - Web-WebServer
+          - Web-Common-Http
+          - Web-Default-Doc
+          - Web-Dir-Browsing
+          - Web-Http-Errors
+          - Web-Static-Content
+          - Web-Health
+          - Web-Http-Logging
+          - Web-Performance
+          - Web-Stat-Compression
+          - Web-Dyn-Compression
+          - Web-Security
+          - Web-Filtering
+          - Web-App-Dev
+          - Web-Net-Ext45
+          - Web-Asp-Net45
+          - Web-ISAPI-Ext
+          - Web-ISAPI-Filter
+          - Web-Mgmt-Tools
+          - Web-Mgmt-Console
+        state: present
+      register: iis_install
+
+    - name: Reboot if IIS installation requires it
+      win_reboot:
+        reboot_timeout: 600
+      when: iis_install.reboot_required
+
+    # ============================================
+    # 2. .NET 7 Hosting Bundle Installation
+    # ============================================
+    - name: Check if .NET 7 Hosting Bundle is installed
+      win_shell: |
+        $dotnet = Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" | 
+                  Where-Object { $_.DisplayName -like "*NET 7*Hosting Bundle*" }
+        if ($dotnet) { Write-Output "installed" } else { Write-Output "not_installed" }
+      register: dotnet_check
+      changed_when: false
+
+    - name: Download .NET 7 Hosting Bundle
+      win_get_url:
+        url: "{{ dotnet_download_url }}"
+        dest: "C:\\temp\\dotnet-hosting-7.exe"
+      when: dotnet_check.stdout.strip() == "not_installed"
+
+    - name: Install .NET 7 Hosting Bundle
+      win_package:
+        path: "C:\\temp\\dotnet-hosting-7.exe"
+        arguments: "/quiet /norestart"
+        state: present
+      when: dotnet_check.stdout.strip() == "not_installed"
+      register: dotnet_install
+
+    - name: Restart IIS after .NET installation
+      win_shell: |
+        net stop was /y
+        net start w3svc
+      when: dotnet_install is changed
+
+    # ============================================
+    # 3. Application Deployment
+    # ============================================
+    - name: Create API deployment directory
+      win_file:
+        path: "{{ api_deploy_path }}"
+        state: directory
+
+    - name: Copy API application files
+      win_copy:
+        src: "{{ api_source_path }}"
+        dest: "{{ api_deploy_path }}"
+        force: yes
+
+    - name: Create appsettings.json from template
+      win_template:
+        src: ../roles/api-server/templates/appsettings.json.j2
+        dest: "{{ api_deploy_path }}\\appsettings.json"
+
+    - name: Create web.config from template
+      win_template:
+        src: ../roles/api-server/templates/web.config.j2
+        dest: "{{ api_deploy_path }}\\web.config"
+
+    # ============================================
+    # 4. IIS Configuration
+    # ============================================
+    - name: Stop default website
+      win_iis_website:
+        name: "Default Web Site"
+        state: stopped
+
+    - name: Create IIS Application Pool
+      win_iis_webapppool:
+        name: "{{ iis_app_pool_name }}"
+        state: started
+        attributes:
+          managedRuntimeVersion: ""  # No Managed Code for .NET Core
+          managedPipelineMode: "Integrated"
+          startMode: "AlwaysRunning"
+          idleTimeout: "00:00:00"
+          processModel:
+            identityType: "ApplicationPoolIdentity"
+
+    - name: Create IIS Website
+      win_iis_website:
+        name: "{{ iis_site_name }}"
+        physical_path: "{{ api_deploy_path }}"
+        application_pool: "{{ iis_app_pool_name }}"
+        state: started
+        bindings:
+          - protocol: http
+            port: 80
+            ip: "*"
+          - protocol: https
+            port: 443
+            ip: "*"
+            certificateHash: "{{ ssl_cert_thumbprint | default('') }}"
+            certificateStoreName: "MY"
+
+    # ============================================
+    # 5. Firewall Configuration
+    # ============================================
+    - name: Configure Windows Firewall for HTTP
+      win_firewall_rule:
+        name: "Optima API - HTTP"
+        localport: 80
+        action: allow
+        direction: in
+        protocol: tcp
+        state: present
+        enabled: yes
+
+    - name: Configure Windows Firewall for HTTPS
+      win_firewall_rule:
+        name: "Optima API - HTTPS"
+        localport: 443
+        action: allow
+        direction: in
+        protocol: tcp
+        state: present
+        enabled: yes
+
+    # ============================================
+    # 6. Application Permissions
+    # ============================================
+    - name: Set folder permissions for IIS
+      win_shell: |
+        $acl = Get-Acl "{{ api_deploy_path }}"
+        $identity = "IIS AppPool\{{ iis_app_pool_name }}"
+        $fileSystemRights = "ReadAndExecute"
+        $type = "Allow"
+        $fileSystemAccessRuleArgumentList = $identity, $fileSystemRights, $type
+        $fileSystemAccessRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $fileSystemAccessRuleArgumentList
+        $acl.SetAccessRule($fileSystemAccessRule)
+        Set-Acl -Path "{{ api_deploy_path }}" -AclObject $acl
+
+    # ============================================
+    # 7. Create logs directory
+    # ============================================
+    - name: Create logs directory
+      win_file:
+        path: "{{ api_deploy_path }}\\logs"
+        state: directory
+
+    - name: Set logs directory permissions
+      win_shell: |
+        $acl = Get-Acl "{{ api_deploy_path }}\\logs"
+        $identity = "IIS AppPool\{{ iis_app_pool_name }}"
+        $fileSystemRights = "Modify"
+        $type = "Allow"
+        $fileSystemAccessRuleArgumentList = $identity, $fileSystemRights, $type
+        $fileSystemAccessRule = New-Object -TypeName System.Security.AccessControl.FileSystemAccessRule -ArgumentList $fileSystemAccessRuleArgumentList
+        $acl.SetAccessRule($fileSystemAccessRule)
+        Set-Acl -Path "{{ api_deploy_path }}\\logs" -AclObject $acl
+
+    # ============================================
+    # 8. Restart Application
+    # ============================================
+    - name: Restart IIS Application Pool
+      win_iis_webapppool:
+        name: "{{ iis_app_pool_name }}"
+        state: restarted
+
+    - name: Verify API is responding
+      win_uri:
+        url: "http://localhost/health"
+        method: GET
+        status_code: 200
+        timeout: 30
+      register: health_check
+      retries: 5
+      delay: 10
+      until: health_check is succeeded
+      ignore_errors: true
+
+    - name: Display deployment results
+      debug:
+        msg:
+          - "API deployment completed!"
+          - "Site Name: {{ iis_site_name }}"
+          - "App Pool: {{ iis_app_pool_name }}"
+          - "Path: {{ api_deploy_path }}"
+          - "Health Check: {{ 'PASSED' if health_check is succeeded else 'NEEDS VERIFICATION' }}"

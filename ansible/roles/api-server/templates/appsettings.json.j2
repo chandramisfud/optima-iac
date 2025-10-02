@@ -1,0 +1,59 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information",
+      "Microsoft.EntityFrameworkCore": "{{ 'Information' if env_name == 'demo' else 'Warning' }}"
+    },
+    "File": {
+      "Path": "logs/optima-api-.log",
+      "Append": true,
+      "MinLevel": "Information",
+      "FileSizeLimitBytes": 10485760,
+      "MaxRollingFiles": 10
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server={{ db_host }};Database=optima_{{ country_code }};User Id={{ db_username }};Password={{ db_password }};TrustServerCertificate=True;MultipleActiveResultSets=true;Connection Timeout=30;"
+  },
+  "AppSettings": {
+    "Environment": "{{ env_name | upper }}",
+    "CountryCode": "{{ country_code | upper }}",
+    "ApiVersion": "1.0",
+    "CorsOrigins": [
+      "https://{{ ui_subdomain }}.{{ domain_base }}",
+      "http://{{ ui_subdomain }}.{{ domain_base }}"
+    ],
+    "JwtSettings": {
+      "SecretKey": "{{ vault_jwt_secret | default('YOUR-256-BIT-SECRET-KEY-CHANGE-THIS-IN-PRODUCTION') }}",
+      "Issuer": "OptimaAPI",
+      "Audience": "OptimaUI",
+      "ExpirationMinutes": 60
+    },
+    "Features": {
+      "EnableSwagger": {{ 'true' if env_name == 'demo' else 'false' }},
+      "EnableDetailedErrors": {{ 'true' if env_name == 'demo' else 'false' }},
+      "EnableCaching": true
+    }
+  },
+  "Kestrel": {
+    "Endpoints": {
+      "Http": {
+        "Url": "http://0.0.0.0:80"
+      }
+    },
+    "Limits": {
+      "MaxRequestBodySize": 52428800,
+      "RequestHeadersTimeout": "00:00:30"
+    }
+  },
+  "HealthChecks": {
+    "Enabled": true,
+    "Database": {
+      "Enabled": true,
+      "Timeout": 5
+    }
+  }
+}
