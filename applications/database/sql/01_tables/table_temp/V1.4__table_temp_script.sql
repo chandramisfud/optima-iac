@@ -1,18 +1,13 @@
 /****** Object:  Table [dbo].[_temp_ApprovalPlanType]    Script Date: 10/6/2025 10:41:10 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[_temp_ApprovalPlanType](
 	[PromoPlanRefId] [varchar](50) NOT NULL,
 	[TSCode] [varchar](50) NOT NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[_tempPromo]    Script Date: 10/6/2025 10:41:10 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[_tempPromo](
 	[PromoId] [int] NULL,
 	[Periode] [int] NOT NULL,
@@ -48,12 +43,9 @@ CREATE TABLE [dbo].[_tempPromo](
 	[CreatedEmail] [varchar](100) NULL,
 	[ModifReason] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_mapping_pricecondition_temp]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_mapping_pricecondition_temp](
 	[Category] [varchar](255) NULL,
 	[Sub Category] [varchar](255) NULL,
@@ -65,13 +57,10 @@ CREATE TABLE [dbo].[tbset_mapping_pricecondition_temp](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 
 /****** Object:  Table [dbo].[tbtemp_blitz]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_blitz](
 	[Distributor_Id] [nvarchar](50) NULL,
 	[Distributor_Name] [nvarchar](50) NULL,
@@ -98,12 +87,9 @@ CREATE TABLE [dbo].[tbtemp_blitz](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbtemp_blitz_optima]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_blitz_optima](
 	[Distributor_Id] [nvarchar](50) NULL,
 	[Distributor_Name] [nvarchar](50) NULL,
@@ -130,12 +116,9 @@ CREATE TABLE [dbo].[tbtemp_blitz_optima](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbtemp_blitz_optima_map_check]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_blitz_optima_map_check](
 	[id] [bigint] IDENTITY(1,1) NOT NULL,
 	[type] [varchar](50) NULL,
@@ -152,24 +135,18 @@ CREATE TABLE [dbo].[tbtemp_blitz_optima_map_check](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbtemp_DebetNoteFPType]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_DebetNoteFPType](
 	[Type] [varchar](50) NULL,
 	[RefId] [varchar](255) NULL,
 	[FPNumber] [varchar](50) NULL,
 	[FPDate] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbtemp_kpi_scoring]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_kpi_scoring](
 	[DistributorId] [int] NOT NULL,
 	[DistributorShortDesc] [varchar](50) NULL,
@@ -254,12 +231,9 @@ CREATE TABLE [dbo].[tbtemp_kpi_scoring](
 	[PromoPlanID] [int] NOT NULL,
 	[PromoPlanRefID] [varchar](50) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbtemp_promo_submission_exception]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_promo_submission_exception](
 	[Idx] [varchar](200) NOT NULL,
 	[PromoId] [int] NOT NULL,
@@ -273,12 +247,9 @@ CREATE TABLE [dbo].[tbtemp_promo_submission_exception](
 	[PromoId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbtemp_tbtrx_blitz]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_tbtrx_blitz](
 	[Distributor_Id] [int] NULL,
 	[Distributor_Name] [varchar](100) NULL,
@@ -300,12 +271,9 @@ CREATE TABLE [dbo].[tbtemp_tbtrx_blitz](
 	[Created_At] [datetime] NULL,
 	[Updated_At] [datetime] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbtemp_validate_array]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbtemp_validate_array](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[keyid] [int] NULL,
@@ -317,22 +285,16 @@ CREATE TABLE [dbo].[tbtemp_validate_array](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[temp_ApprovalPlanType]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[temp_ApprovalPlanType](
 	[PromoPlanRefId] [varchar](50) NOT NULL,
 	[TSCode] [varchar](50) NOT NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[temp_investment]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[temp_investment](
 	[Entity] [varchar](50) NULL,
 	[EntityShortDesc] [varchar](50) NULL,
@@ -351,12 +313,9 @@ CREATE TABLE [dbo].[temp_investment](
 	[GapPromoCreatedvsDNClaimed] [numeric](38, 0) NULL,
 	[GapDNClaimedvsDNPaid] [numeric](38, 0) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[temp_tbset_user]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[temp_tbset_user](
 	[id] [varchar](max) NULL,
 	[password] [varchar](max) NULL,
@@ -365,23 +324,17 @@ CREATE TABLE [dbo].[temp_tbset_user](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempAccount4]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempAccount4](
 	[ParentId] [int] NULL,
 	[Id] [varchar](50) NULL,
 	[IsActive] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempActivityType]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempActivityType](
 	[Category] [varchar](50) NULL,
 	[SubCategory] [varchar](50) NULL,
@@ -389,56 +342,41 @@ CREATE TABLE [dbo].[TempActivityType](
 	[SubActivity] [varchar](50) NULL,
 	[SubActivityType] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempBrand4]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempBrand4](
 	[ParentId] [int] NULL,
 	[Id] [varchar](50) NULL,
 	[IsActive] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempBudgetAssignmentDetailUpdateType]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempBudgetAssignmentDetailUpdateType](
 	[Id] [int] NOT NULL,
 	[OwnId] [varchar](50) NOT NULL,
 	[Desc] [varchar](255) NOT NULL,
 	[BudgetAmount] [numeric](19, 0) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[Tempcekbudget]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[Tempcekbudget](
 	[Budget] [varchar](255) NULL,
 	[Remain] [numeric](19, 0) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempChannel4]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempChannel4](
 	[ParentId] [int] NULL,
 	[Id] [varchar](50) NULL,
 	[IsActive] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempDCBudgetUploadType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempDCBudgetUploadType](
 	[BudgetYear] [varchar](50) NULL,
 	[Category] [varchar](255) NULL,
@@ -484,12 +422,9 @@ CREATE TABLE [dbo].[TempDCBudgetUploadType](
 	[UserAccess35] [varchar](255) NULL,
 	[ProfileId] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempDebetnoteFailed]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempDebetnoteFailed](
 	[Periode] [varchar](50) NULL,
 	[Entity] [varchar](255) NULL,
@@ -513,12 +448,9 @@ CREATE TABLE [dbo].[TempDebetnoteFailed](
 	[FPDate] [varchar](50) NULL,
 	[TaxLevel] [varchar](100) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempDebetnoteType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempDebetnoteType](
 	[Periode] [varchar](50) NULL,
 	[Entity] [varchar](255) NULL,
@@ -542,12 +474,9 @@ CREATE TABLE [dbo].[TempDebetnoteType](
 	[FPDate] [varchar](50) NULL,
 	[TaxLevel] [varchar](100) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempDebetnoteType_tes]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempDebetnoteType_tes](
 	[Periode] [varchar](50) NULL,
 	[Entity] [varchar](255) NULL,
@@ -571,12 +500,9 @@ CREATE TABLE [dbo].[TempDebetnoteType_tes](
 	[FPDate] [varchar](50) NULL,
 	[TaxLevel] [varchar](100) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempDebetNoteTypeProd]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempDebetNoteTypeProd](
 	[Periode] [varchar](50) NULL,
 	[Entity] [varchar](255) NULL,
@@ -591,12 +517,9 @@ CREATE TABLE [dbo].[TempDebetNoteTypeProd](
 	[FeeAmount] [varchar](255) NULL,
 	[DNType] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempFailedRec]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempFailedRec](
 	[Activity] [varchar](255) NULL,
 	[TotalClaim] [varchar](255) NULL,
@@ -605,12 +528,9 @@ CREATE TABLE [dbo].[TempFailedRec](
 	[Entity] [varchar](255) NULL,
 	[Distributor] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempGetbaseline]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempGetbaseline](
 	[p_promoid] [int] NULL,
 	[p_period] [int] NULL,
@@ -621,12 +541,9 @@ CREATE TABLE [dbo].[TempGetbaseline](
 	[p_startpromo] [date] NULL,
 	[p_endpromo] [date] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportAccountType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportAccountType](
 	[Allocation] [varchar](255) NULL,
 	[Derivative] [varchar](255) NULL,
@@ -701,12 +618,9 @@ CREATE TABLE [dbo].[TempImportAccountType](
 	[69] [varchar](50) NULL,
 	[70] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportAllocationType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportAllocationType](
 	[Periode] [varchar](4) NULL,
 	[BudgetDesc] [varchar](255) NULL,
@@ -719,12 +633,9 @@ CREATE TABLE [dbo].[TempImportAllocationType](
 	[SubActivity] [varchar](255) NULL,
 	[BudgetAmount] [numeric](19, 2) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportAllocationUserType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportAllocationUserType](
 	[Allocation] [varchar](255) NULL,
 	[1] [varchar](50) NULL,
@@ -778,12 +689,9 @@ CREATE TABLE [dbo].[TempImportAllocationUserType](
 	[49] [varchar](50) NULL,
 	[50] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportBrandType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportBrandType](
 	[Allocation] [varchar](255) NULL,
 	[Derivative] [varchar](255) NULL,
@@ -818,12 +726,9 @@ CREATE TABLE [dbo].[TempImportBrandType](
 	[29] [varchar](50) NULL,
 	[30] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportDerivativeType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportDerivativeType](
 	[BudgetParent] [varchar](255) NULL,
 	[TotalAssignmentAmount] [numeric](19, 2) NULL,
@@ -836,12 +741,9 @@ CREATE TABLE [dbo].[TempImportDerivativeType](
 	[SubActivity] [varchar](255) NULL,
 	[approve] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportDerivativeUserType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportDerivativeUserType](
 	[Derivative] [varchar](255) NULL,
 	[1] [varchar](50) NULL,
@@ -895,12 +797,9 @@ CREATE TABLE [dbo].[TempImportDerivativeUserType](
 	[49] [varchar](50) NULL,
 	[50] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportPromoPlanAccountType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportPromoPlanAccountType](
 	[Activity] [varchar](255) NULL,
 	[1] [varchar](50) NULL,
@@ -974,12 +873,9 @@ CREATE TABLE [dbo].[TempImportPromoPlanAccountType](
 	[69] [varchar](50) NULL,
 	[70] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportPromoPlanBrandType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportPromoPlanBrandType](
 	[ImportId] [varchar](255) NOT NULL,
 	[Id] [int] NOT NULL,
@@ -1015,12 +911,9 @@ CREATE TABLE [dbo].[TempImportPromoPlanBrandType](
 	[29] [varchar](50) NULL,
 	[30] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportPromoPlanRegionType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportPromoPlanRegionType](
 	[ImportId] [varchar](255) NOT NULL,
 	[Id] [int] NOT NULL,
@@ -1046,12 +939,9 @@ CREATE TABLE [dbo].[TempImportPromoPlanRegionType](
 	[19] [varchar](50) NULL,
 	[20] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportPromoPlanSkuType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportPromoPlanSkuType](
 	[ImportId] [varchar](255) NOT NULL,
 	[Id] [int] NOT NULL,
@@ -1205,12 +1095,9 @@ CREATE TABLE [dbo].[TempImportPromoPlanSkuType](
 	[147] [varchar](50) NULL,
 	[148] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportRegionType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportRegionType](
 	[Allocation] [varchar](255) NULL,
 	[Derivative] [varchar](255) NULL,
@@ -1235,12 +1122,9 @@ CREATE TABLE [dbo].[TempImportRegionType](
 	[19] [varchar](50) NULL,
 	[20] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempImportUserType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempImportUserType](
 	[Allocation] [varchar](255) NULL,
 	[Derivative] [varchar](255) NULL,
@@ -1295,12 +1179,9 @@ CREATE TABLE [dbo].[TempImportUserType](
 	[49] [varchar](50) NULL,
 	[50] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tempmap_promorecon_period_subactivity]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tempmap_promorecon_period_subactivity](
 	[Sub Activity ID] [varchar](max) NULL,
 	[Category] [varchar](max) NULL,
@@ -1310,12 +1191,9 @@ CREATE TABLE [dbo].[tempmap_promorecon_period_subactivity](
 	[Long Desc] [varchar](max) NULL,
 	[Action] [varchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempMapDistributorAccount]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempMapDistributorAccount](
 	[Channel] [varchar](255) NULL,
 	[SubChannel] [varchar](255) NULL,
@@ -1327,12 +1205,9 @@ CREATE TABLE [dbo].[TempMapDistributorAccount](
 	[Dist4] [varchar](255) NULL,
 	[Dist5] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempMatrixDnManualType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempMatrixDnManualType](
 	[Channel] [varchar](255) NULL,
 	[SubChannel] [varchar](255) NULL,
@@ -1341,12 +1216,9 @@ CREATE TABLE [dbo].[TempMatrixDnManualType](
 	[Pic1] [varchar](50) NULL,
 	[Pic2] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempMechanism4]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempMechanism4](
 	[Id] [int] NULL,
 	[Mechanism] [varchar](max) NULL,
@@ -1356,12 +1228,9 @@ CREATE TABLE [dbo].[TempMechanism4](
 	[BrandId] [int] NULL,
 	[Brand] [varchar](255) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tempMechanismType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tempMechanismType](
 	[Id] [int] NULL,
 	[Mechanism] [varchar](255) NULL,
@@ -1371,12 +1240,9 @@ CREATE TABLE [dbo].[tempMechanismType](
 	[BrandId] [int] NULL,
 	[Brand] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempMstMechanismType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempMstMechanismType](
 	[Entity] [varchar](max) NULL,
 	[SubCategory] [varchar](max) NULL,
@@ -1390,24 +1256,18 @@ CREATE TABLE [dbo].[TempMstMechanismType](
 	[StartPromo] [varchar](max) NULL,
 	[EndPromo] [varchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempPromoApproval]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempPromoApproval](
 	[promoid] [int] NULL,
 	[statuscode] [varchar](3) NULL,
 	[notes] [varchar](255) NULL,
 	[approvaldate] [datetime] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempPromoApproverType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempPromoApproverType](
 	[Periode] [varchar](4) NULL,
 	[PrincipalId] [varchar](255) NOT NULL,
@@ -1425,12 +1285,9 @@ CREATE TABLE [dbo].[TempPromoApproverType](
 	[Approver4] [varchar](255) NULL,
 	[Approver5] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempPromoPlanningImport]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempPromoPlanningImport](
 	[ImportId] [varchar](255) NULL,
 	[id] [int] NOT NULL,
@@ -1454,12 +1311,9 @@ CREATE TABLE [dbo].[TempPromoPlanningImport](
 	[account] [varchar](255) NULL,
 	[subaccount] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tempPromoPlanningType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tempPromoPlanningType](
 	[PromoPlanId] [int] NULL,
 	[Periode] [varchar](4) NULL,
@@ -1489,12 +1343,9 @@ CREATE TABLE [dbo].[tempPromoPlanningType](
 	[initiator_notes] [varchar](255) NULL,
 	[createdEmail] [varchar](100) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tempPromoPlanningV4Type]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tempPromoPlanningV4Type](
 	[PromoPlanId] [int] NULL,
 	[Periode] [varchar](4) NULL,
@@ -1525,12 +1376,9 @@ CREATE TABLE [dbo].[tempPromoPlanningV4Type](
 	[createdEmail] [varchar](100) NULL,
 	[ModifReason] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempPromoReconType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempPromoReconType](
 	[PromoId] [int] NULL,
 	[PromoPlanId] [int] NULL,
@@ -1563,12 +1411,9 @@ CREATE TABLE [dbo].[TempPromoReconType](
 	[initiator_notes] [varchar](255) NULL,
 	[actual_sales] [numeric](19, 2) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempPromoSKPType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempPromoSKPType](
 	[PromoId] [int] NOT NULL,
 	[SKPDraftAvail] [bit] NULL,
@@ -1637,12 +1482,9 @@ CREATE TABLE [dbo].[TempPromoSKPType](
 	[skpstatus] [int] NULL,
 	[skp_notes] [text] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempPromoType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempPromoType](
 	[PromoId] [int] NULL,
 	[PromoPlanId] [int] NULL,
@@ -1674,12 +1516,9 @@ CREATE TABLE [dbo].[TempPromoType](
 	[CreateBy] [varchar](50) NULL,
 	[initiator_notes] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempPromoV4ReconType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempPromoV4ReconType](
 	[PromoId] [int] NULL,
 	[PromoPlanId] [int] NULL,
@@ -1714,12 +1553,9 @@ CREATE TABLE [dbo].[TempPromoV4ReconType](
 	[CreatedEmail] [varchar](100) NULL,
 	[ModifReason] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tempPromoV4Type]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tempPromoV4Type](
 	[PromoId] [int] NULL,
 	[PromoPlanId] [int] NULL,
@@ -1753,34 +1589,25 @@ CREATE TABLE [dbo].[tempPromoV4Type](
 	[CreatedEmail] [varchar](100) NULL,
 	[ModifReason] [varchar](255) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempRegion4]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempRegion4](
 	[ParentId] [int] NULL,
 	[Id] [varchar](50) NULL,
 	[IsActive] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempSku4]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempSku4](
 	[ParentId] [int] NULL,
 	[Id] [varchar](50) NULL,
 	[IsActive] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tempSSVolumeType]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tempSSVolumeType](
 	[period] [varchar](4) NOT NULL,
 	[channel] [varchar](255) NOT NULL,
@@ -1802,34 +1629,25 @@ CREATE TABLE [dbo].[tempSSVolumeType](
 	[m11] [float] NULL,
 	[m12] [float] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempSubAccount4]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempSubAccount4](
 	[ParentId] [int] NULL,
 	[Id] [varchar](50) NULL,
 	[IsActive] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempSubChannel4]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempSubChannel4](
 	[ParentId] [int] NULL,
 	[Id] [varchar](50) NULL,
 	[IsActive] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[TempTemplateDebetNote]    Script Date: 10/6/2025 10:41:12 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[TempTemplateDebetNote](
 	[RefId] [varchar](255) NULL,
 	[PromoRefId] [varchar](255) NULL,
@@ -1838,4 +1656,3 @@ CREATE TABLE [dbo].[TempTemplateDebetNote](
 	[LastStatus] [varchar](255) NULL,
 	[LastUpdate] [varchar](255) NULL
 ) ON [PRIMARY]
-GO

@@ -5,7 +5,6 @@
 *****************************/
 
 USE [dboptimaiac]
-GO
 /* Init data app */
 INSERT INTO [dbo].[appsetting]
            ([setname]
@@ -19,7 +18,6 @@ INSERT INTO [dbo].[appsetting]
 		   , ('budgetApprovalSummaryEmail', NULL)
 		   , ('budgetApprovalSummaryEmailCC', 'lukman.handrianto@xvautomation.com,andrie.isharyono@xvautomation.com,yogy.rachmad@xvautomation.com')
 		   , ('budgetApprovalSummaryEmailBCC', NULL)
-GO
 
 DECLARE @utcDate123 DATETIME
 SET @utcDate123 = dbo.getUTCDateConversion()
@@ -202,7 +200,6 @@ INSERT INTO [dbo].[tbset_menu_v4]
 		,('917','9','XML Payment Reset','bi bi-dot','/tools/xml-payment-reset','tools-xml-payment-reset',17,'0',0,0)
 		,('918','9','Promo Approval Reminder','bi bi-dot','/tools/promo_approval_reminder','tools-promo-approval-reminder',18,'0',0,0)
 		,('919','9','Update Promo Recon Status','bi bi-dot','/tools/update-promo-recon-status','tools-update-promo-recon-status',19,'0',0,0)
-GO
 
 /* Init data master group menu */
 INSERT INTO [dbo].[tbset_usergroup]
@@ -218,12 +215,10 @@ INSERT INTO [dbo].[tbset_usergroup]
            ,[DeleteEmail])
      VALUES
            ('999.999', 'Developer', 'xvamain', @utcDate123,	NULL, NULL, 0, NULL, NULL, NULL)
-GO
 
 /* Init data user level access */
 INSERT INTO tbset_userlevel (userlevel, levelname, usergroupid, userinput, dateinput)
 VALUES ('99999', 'Developer', '999.999' , 'xvamain', @utcDate123)
-GO
 
 /* Init data menu akses */
 INSERT INTO tbset_userrights (usergroupid, menuid)
@@ -389,7 +384,6 @@ VALUES
 ,('999.999', '916')
 ,('999.999', '917')
 ,('999.999', '919')
-GO
 
 /* Init data akses menu CRUD */
 INSERT INTO tbset_userlevel_access(userlevel, usergroupid, menuid, create_rec, read_rec, update_rec, delete_rec)
@@ -451,7 +445,6 @@ VALUES
 ,('99999', '999.999', '522', 0, 0, 1, 0)
 ,('99999', '999.999', '523', 0, 0, 1, 0)
 ,('99999', '999.999', '526', 0, 0, 1, 0)
-GO
 
 /* Init data profile */
 INSERT INTO [dbo].[tbset_user]
@@ -487,7 +480,6 @@ INSERT INTO [dbo].[tbset_user]
            ,[DeleteEmail])
      VALUES
            ('xvamain', 'Developer', 'lukman.handrianto@xvautomation.com', NULL, '999.999', '99999', 'xva', 'xva', '085732270663', NULL, 1, '', NULL, NULL, NULL, 'xvamain', @utcDate123, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, 0, NULL, NULL, NULL, NULL)
-GO
 
 
 /* Init data login */
@@ -560,7 +552,6 @@ INSERT INTO [dbo].[tbset_user_login]
 		
 SET @id=(SELECT SCOPE_IDENTITY())
 INSERT INTO tbset_user_login_profile(id, profileid) VALUES (@id, 'xvamain')		
-GO
 
 INSERT INTO [dbo].[tbset_user_login]
            ([username]
@@ -595,19 +586,16 @@ INSERT INTO [dbo].[tbset_user_login]
 
 SET @id=(SELECT SCOPE_IDENTITY())
 INSERT INTO tbset_user_login_profile(id, profileid) VALUES (@id, 'xvamain')				
-GO
 
 /* Init data master category */
 INSERT INTO tbmst_category(LongDesc, ShortDesc, IsActive, CreateOn, CreateBy)
 VALUES 
 	('Retailer Cost', 'RC', 1, @utcDate123, 'xvamain')
 	, ('Distributor Cost', 'DC', 1, @utcDate123, 'xvamain')
-GO
 
 /* Init data profile category */
 INSERT INTO tbset_map_profile_category (ProfileID, CategoryID, CreatedOn, CreatedBy)
 SELECT 'xvamain', id, @utcDate123, 'xvamain' FROM tbmst_category
-GO
 
 /* Init data coverage ditributor */
 
@@ -625,12 +613,10 @@ VALUES
 ,(302,'reminderoption', 'Less than or equal to', 1,'<=')
 ,(303,'reminderoption', 'More than', 2,'>')
 ,(304,'reminderoption', 'More than or equal to', 3,'>=')
-GO
 
 /* Init data email submit cancel */
 INSERT INTO tbset_config_email(id, email)
 VALUES ('cancel submit', '')
-GO
 
 /* Init Data Config reminder */
 INSERT INTO tbset_config_reminder(id, remindertype, category, Description, daysfrom, daysto, frequency, useredit, dateinput)
@@ -640,7 +626,6 @@ VALUES
 	,(1, 100, 203, 'Critical', 0, 2, 2, 'xvamain', @utcDate123)
 	,(501, 500, 501, 'Late Promo Planning', 0, 0, 0, 'xvamain', @utcDate123)
 	,(502, 500, 502, 'Late Promo Creation', 1, 0, 0, 'xvamain', @utcDate123)
-GO
 
 /* Init data general parameter */
 INSERT INTO tbset_general_parameter(id, ParameterName, Sequence, ParameterValue, IsActive, ParameterDesc)
@@ -658,7 +643,6 @@ VALUES
 	, (11,	'DNFLOW', 8, 'ready_to_invoice', 1, 'Invoice Notification')
 	, (12,	'DNFLOW', 9, 'invoice', 1, 'Create Invoice')
 	, (13,	'DNFLOW', 10, 'confirm_paid', 1, 'Confirm Paid')
-GO
 
 /* Init data general parameter paralel */
 INSERT INTO tbset_general_parameter_paralel(id, ParameterName, Sequence, ParameterValue, IsActive, ParameterDesc)
@@ -675,7 +659,6 @@ VALUES
 	, (10,	'DNFLOW', 7, 'ready_to_invoice', 1, 'Invoice Notification')
 	, (11,	'DNFLOW', 8, 'invoice', 1, 'Create Invoice')
 	, (12,	'DNFLOW', 9, 'confirm_paid', 1, 'Confirm Paid')
-GO
 
 /* Init data config promo item RC */
 INSERT INTO tbset_config_promo_items (
@@ -712,7 +695,6 @@ INSERT INTO tbset_config_promo_items (
 )
 SELECT id, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, @utcDate123, 'xvamain'
 FROM tbmst_category WHERE ShortDesc = 'RC'
-GO
 
 /* Init data config promo item DC */
 INSERT INTO tbset_config_promo_items (
@@ -749,7 +731,6 @@ INSERT INTO tbset_config_promo_items (
 )
 SELECT id, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, @utcDate123, 'xvamain'		   
 FROM tbmst_category WHERE ShortDesc = 'DC'
-GO
 
 /* Init data config promo item disabled RC */
 INSERT INTO tbset_config_promo_items_disabled (
@@ -784,7 +765,6 @@ INSERT INTO tbset_config_promo_items_disabled (
 )
 SELECT id, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
 FROM tbmst_category WHERE ShortDesc = 'RC'
-GO
 
 /* Init data config promo item disabled DC */
 INSERT INTO tbset_config_promo_items_disabled (
@@ -819,7 +799,6 @@ INSERT INTO tbset_config_promo_items_disabled (
 )
 SELECT id, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1
 FROM tbmst_category WHERE ShortDesc = 'DC'
-GO
 
 /* Init data major changes */
 /* RC */
@@ -856,7 +835,6 @@ INSERT INTO tbset_major_changes (
 )
 SELECT id, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, @utcDate123, 'xvamain'
 FROM tbmst_category WHERE ShortDesc = 'RC'
-GO
 
 /* DC */
 INSERT INTO tbset_major_changes (
@@ -892,7 +870,6 @@ INSERT INTO tbset_major_changes (
 )
 SELECT id, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, NULL, 0, 1, 1, 1, 0, 0, 1, @utcDate123, 'xvamain'
 FROM tbmst_category WHERE ShortDesc = 'DC'
-GO
 
 /* Init data config promo calculator default*/
 INSERT INTO tbset_config_promo_calculator (
@@ -921,7 +898,6 @@ VALUES
 	(1, 0, 2, 0, 0, 0, 0, 2, 2, 0, 2, 0, 0, 0, 0, 0, 2, 99999, @utcDate123, 'xvamain')
 	, (2, 2, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 0, 0, 2, 0, 1, 99999, @utcDate123, 'xvamain')
 	, (3, 0, 1, 0, 0, 0, 0, 2, 1, 0, 1, 0, 0, 0, 0, 2, 1, 99999, @utcDate123, 'xvamain')
-GO
 
 
 --select * from tbmst_main_activity

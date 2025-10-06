@@ -1,8 +1,6 @@
 /****** Object:  Table [dbo].[tbset_app]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_app](
 	[license] [varchar](100) NULL,
 	[ppn] [numeric](20, 2) NULL,
@@ -10,12 +8,9 @@ CREATE TABLE [dbo].[tbset_app](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_brand_group]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_brand_group](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[BrandId] [int] NOT NULL,
@@ -38,12 +33,9 @@ CREATE TABLE [dbo].[tbset_brand_group](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_config_dropdown]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_config_dropdown](
 	[id] [int] NOT NULL,
 	[category] [varchar](30) NOT NULL,
@@ -58,12 +50,9 @@ CREATE TABLE [dbo].[tbset_config_dropdown](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_config_email]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_config_email](
 	[id] [varchar](50) NOT NULL,
 	[email] [varchar](255) NULL,
@@ -72,12 +61,9 @@ CREATE TABLE [dbo].[tbset_config_email](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_config_promo_calculator]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_config_promo_calculator](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[mainActivityId] [int] NULL,
@@ -112,12 +98,9 @@ CREATE TABLE [dbo].[tbset_config_promo_calculator](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_config_promo_items]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_config_promo_items](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[categoryId] [int] NULL,
@@ -163,12 +146,9 @@ CREATE TABLE [dbo].[tbset_config_promo_items](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_config_promo_items_disabled]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_config_promo_items_disabled](
 	[categoryId] [int] NULL,
 	[budgetYear] [bit] NULL,
@@ -199,12 +179,9 @@ CREATE TABLE [dbo].[tbset_config_promo_items_disabled](
 	[ROI] [bit] NULL,
 	[CR] [bit] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_config_reminder]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_config_reminder](
 	[id] [int] NOT NULL,
 	[remindertype] [int] NOT NULL,
@@ -230,12 +207,9 @@ CREATE TABLE [dbo].[tbset_config_reminder](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_distributor_wht]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_distributor_wht](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[distributor] [varchar](50) NOT NULL,
@@ -250,12 +224,9 @@ CREATE TABLE [dbo].[tbset_distributor_wht](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_general_parameter]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_general_parameter](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ParameterName] [varchar](50) NOT NULL,
@@ -278,12 +249,9 @@ CREATE TABLE [dbo].[tbset_general_parameter](
 	[Sequence] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_general_parameter_paralel]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_general_parameter_paralel](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ParameterName] [varchar](50) NOT NULL,
@@ -303,12 +271,9 @@ CREATE TABLE [dbo].[tbset_general_parameter_paralel](
 	[Sequence] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_major_changes]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_major_changes](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Activity] [bit] NULL,
@@ -353,12 +318,9 @@ CREATE TABLE [dbo].[tbset_major_changes](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_brand_distributor]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_brand_distributor](
 	[brandId] [int] NOT NULL,
 	[distributorId] [int] NOT NULL,
@@ -378,12 +340,9 @@ CREATE TABLE [dbo].[tbset_map_brand_distributor](
 	[distributorId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_brand_subacc_dist_ts]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_brand_subacc_dist_ts](
 	[BrandId] [int] NOT NULL,
 	[SubAccountId] [int] NOT NULL,
@@ -408,12 +367,9 @@ CREATE TABLE [dbo].[tbset_map_brand_subacc_dist_ts](
 	[GroupBrandDesc] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_channel_brand_distributor]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_channel_brand_distributor](
 	[channelId] [int] NOT NULL,
 	[brandId] [int] NOT NULL,
@@ -435,12 +391,9 @@ CREATE TABLE [dbo].[tbset_map_channel_brand_distributor](
 	[distributorId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_channel_head]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_channel_head](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ChannelId] [int] NOT NULL,
@@ -460,12 +413,9 @@ CREATE TABLE [dbo].[tbset_map_channel_head](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_channel_subactivity_skp_draft]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_channel_subactivity_skp_draft](
 	[ChannelId] [int] NOT NULL,
 	[SubActivityId] [int] NOT NULL,
@@ -487,12 +437,9 @@ CREATE TABLE [dbo].[tbset_map_channel_subactivity_skp_draft](
 	[SubActivityId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_distributor_account]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_distributor_account](
 	[DistributorId] [int] NOT NULL,
 	[ChannelId] [int] NOT NULL,
@@ -516,12 +463,9 @@ CREATE TABLE [dbo].[tbset_map_distributor_account](
 	[SubAccountId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_investment_type]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_investment_type](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[SubactivityId] [int] NULL,
@@ -538,12 +482,9 @@ CREATE TABLE [dbo].[tbset_map_investment_type](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_investment_type_deleted]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_investment_type_deleted](
 	[Id] [int] NULL,
 	[SubactivityId] [int] NULL,
@@ -559,12 +500,9 @@ CREATE TABLE [dbo].[tbset_map_investment_type_deleted](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_product_sap]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_product_sap](
 	[ProductId] [int] NOT NULL,
 	[SAPCode] [varchar](20) NOT NULL,
@@ -585,12 +523,9 @@ CREATE TABLE [dbo].[tbset_map_product_sap](
 	[SAPCode] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_profile_category]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_profile_category](
 	[ProfileID] [varchar](50) NOT NULL,
 	[CategoryID] [int] NOT NULL,
@@ -603,12 +538,9 @@ CREATE TABLE [dbo].[tbset_map_profile_category](
 	[CategoryID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_promorecon_period_subactivity]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_promorecon_period_subactivity](
 	[SubActivityId] [int] NOT NULL,
 	[AllowEdit] [tinyint] NULL,
@@ -627,12 +559,9 @@ CREATE TABLE [dbo].[tbset_map_promorecon_period_subactivity](
 	[SubActivityId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_subaccount_region]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_subaccount_region](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[subAccountId] [int] NOT NULL,
@@ -653,12 +582,9 @@ CREATE TABLE [dbo].[tbset_map_subaccount_region](
 	[regionId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_subaccount_sap]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_subaccount_sap](
 	[subaccountid] [int] NULL,
 	[sapcode] [varchar](20) NULL,
@@ -677,12 +603,9 @@ CREATE TABLE [dbo].[tbset_map_subaccount_sap](
 	[channelid] [int] NULL,
 	[subchannelid] [int] NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_subactivity_salesamount]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_subactivity_salesamount](
 	[SubActivityID] [int] NULL,
 	[SalesAmount] [varchar](5) NULL,
@@ -698,12 +621,9 @@ CREATE TABLE [dbo].[tbset_map_subactivity_salesamount](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_subcategory_channel]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_subcategory_channel](
 	[subCategoryId] [int] NOT NULL,
 	[channelId] [int] NOT NULL,
@@ -723,12 +643,9 @@ CREATE TABLE [dbo].[tbset_map_subcategory_channel](
 	[channelId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_user_channel]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_user_channel](
 	[userid] [varchar](50) NOT NULL,
 	[channelid] [int] NOT NULL,
@@ -749,12 +666,9 @@ CREATE TABLE [dbo].[tbset_map_user_channel](
 	[channelid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_user_profitcenter]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_user_profitcenter](
 	[UserId] [varchar](50) NULL,
 	[ProfitCenter] [varchar](10) NULL,
@@ -770,12 +684,9 @@ CREATE TABLE [dbo].[tbset_map_user_profitcenter](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_map_user_subaccount_skp_draft]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_map_user_subaccount_skp_draft](
 	[id] [int] NOT NULL,
 	[longdesc] [varchar](50) NULL,
@@ -790,12 +701,9 @@ CREATE TABLE [dbo].[tbset_map_user_subaccount_skp_draft](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_mapping_material]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_mapping_material](
 	[MaterialNumber] [varchar](20) NULL,
 	[Description] [varchar](255) NULL,
@@ -818,12 +726,9 @@ CREATE TABLE [dbo].[tbset_mapping_material](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_mapping_pricecondition]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_mapping_pricecondition](
 	[CategoryId] [int] NOT NULL,
 	[SubCategoryId] [int] NOT NULL,
@@ -849,13 +754,10 @@ CREATE TABLE [dbo].[tbset_mapping_pricecondition](
 	[ActivityId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 
 /****** Object:  Table [dbo].[tbset_matrix_approval_process]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_approval_process](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Date] [datetime] NOT NULL,
@@ -867,12 +769,9 @@ CREATE TABLE [dbo].[tbset_matrix_approval_process](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_approval_process_detail]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_approval_process_detail](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ProcessId] [int] NOT NULL,
@@ -883,12 +782,9 @@ CREATE TABLE [dbo].[tbset_matrix_approval_process_detail](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_budget_approval]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_budget_approval](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Periode] [varchar](4) NULL,
@@ -917,12 +813,9 @@ CREATE TABLE [dbo].[tbset_matrix_budget_approval](
 	[MaxInvestment] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_budget_approver]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_budget_approver](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ParentId] [int] NOT NULL,
@@ -943,12 +836,9 @@ CREATE TABLE [dbo].[tbset_matrix_budget_approver](
 	[SeqApproval] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_dn_approval]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_dn_approval](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Periode] [varchar](4) NULL,
@@ -973,12 +863,9 @@ CREATE TABLE [dbo].[tbset_matrix_dn_approval](
 	[DistributorId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_dn_flow]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_dn_flow](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ParentId] [int] NOT NULL,
@@ -999,12 +886,9 @@ CREATE TABLE [dbo].[tbset_matrix_dn_flow](
 	[SeqApproval] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_dnmanual_assignment]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_dnmanual_assignment](
 	[ChannelId] [int] NOT NULL,
 	[UserId] [varchar](50) NOT NULL,
@@ -1014,12 +898,9 @@ CREATE TABLE [dbo].[tbset_matrix_dnmanual_assignment](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_dnmanual_assignment_new]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_dnmanual_assignment_new](
 	[ChannelId] [varchar](255) NULL,
 	[SubChannelId] [varchar](255) NULL,
@@ -1045,12 +926,9 @@ CREATE TABLE [dbo].[tbset_matrix_dnmanual_assignment_new](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_promo_approval]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_promo_approval](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Periode] [varchar](4) NULL,
@@ -1083,12 +961,9 @@ CREATE TABLE [dbo].[tbset_matrix_promo_approval](
 	[MaxInvestment] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_matrix_promo_approver]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_matrix_promo_approver](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[ParentId] [int] NOT NULL,
@@ -1109,12 +984,9 @@ CREATE TABLE [dbo].[tbset_matrix_promo_approver](
 	[SeqApproval] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_menu]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_menu](
 	[id] [varchar](10) NOT NULL,
 	[parent] [varchar](10) NULL,
@@ -1130,12 +1002,9 @@ CREATE TABLE [dbo].[tbset_menu](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_menu_v4]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_menu_v4](
 	[id] [varchar](10) NOT NULL,
 	[parent] [varchar](10) NULL,
@@ -1152,12 +1021,9 @@ CREATE TABLE [dbo].[tbset_menu_v4](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_principal_distributor]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_principal_distributor](
 	[PrincipalId] [int] NOT NULL,
 	[DistributorId] [int] NOT NULL,
@@ -1182,12 +1048,9 @@ CREATE TABLE [dbo].[tbset_principal_distributor](
 	[DistributorId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_promo_budget_approval]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_promo_budget_approval](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[LongDesc] [varchar](100) NULL,
@@ -1209,12 +1072,9 @@ CREATE TABLE [dbo].[tbset_promo_budget_approval](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_promo_mechanism_input_method]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_promo_mechanism_input_method](
 	[subActivityId] [int] NOT NULL,
 	[inputMethod] [bit] NULL,
@@ -1223,12 +1083,9 @@ CREATE TABLE [dbo].[tbset_promo_mechanism_input_method](
 	[subActivityId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_register]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_register](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Email] [varchar](50) NOT NULL,
@@ -1250,12 +1107,9 @@ CREATE TABLE [dbo].[tbset_register](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_roi_cr]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_roi_cr](
 	[id] [int] NOT NULL,
 	[SubActivityID] [varchar](max) NULL,
@@ -1279,24 +1133,18 @@ CREATE TABLE [dbo].[tbset_roi_cr](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_roi_cr_xls]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_roi_cr_xls](
 	[Sub Activity ID] [varchar](max) NULL,
 	[Sub Activity] [varchar](max) NULL,
 	[Minimum ROI] [varchar](max) NULL,
 	[Maksimum Cost Ratio] [varchar](max) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_tools_promo_approval_reminder]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_tools_promo_approval_reminder](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Dt1] [int] NOT NULL,
@@ -1319,12 +1167,9 @@ CREATE TABLE [dbo].[tbset_tools_promo_approval_reminder](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_tools_promo_approval_reminder_email]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_tools_promo_approval_reminder_email](
 	[Id] [int] NOT NULL,
 	[email] [varchar](50) NOT NULL,
@@ -1347,12 +1192,9 @@ CREATE TABLE [dbo].[tbset_tools_promo_approval_reminder_email](
 	[email] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_tools_promo_approval_reminder_email_send]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_tools_promo_approval_reminder_email_send](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[email] [varchar](50) NOT NULL,
@@ -1375,12 +1217,9 @@ CREATE TABLE [dbo].[tbset_tools_promo_approval_reminder_email_send](
 	[email] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_tscode_mapping]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_tscode_mapping](
 	[ACTIVITY] [varchar](255) NULL,
 	[TSCodeMap] [varchar](255) NULL,
@@ -1396,12 +1235,9 @@ CREATE TABLE [dbo].[tbset_tscode_mapping](
 	[ModifiedEmail] [varchar](50) NULL,
 	[DeleteEmail] [varchar](50) NULL
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_user]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_user](
 	[id] [varchar](50) NOT NULL,
 	[username] [varchar](50) NULL,
@@ -1438,12 +1274,9 @@ CREATE TABLE [dbo].[tbset_user](
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_user_channel_sstt]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_user_channel_sstt](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[userId] [varchar](36) NOT NULL,
@@ -1468,12 +1301,9 @@ CREATE TABLE [dbo].[tbset_user_channel_sstt](
 	[channelId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_user_distributor]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_user_distributor](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[UserId] [varchar](36) NOT NULL,
@@ -1495,12 +1325,9 @@ CREATE TABLE [dbo].[tbset_user_distributor](
 	[DistributorId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_user_login]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_user_login](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[username] [varchar](50) NULL,
@@ -1535,12 +1362,9 @@ CREATE TABLE [dbo].[tbset_user_login](
 	[Id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_user_login_profile]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_user_login_profile](
 	[id] [int] NOT NULL,
 	[profileid] [varchar](50) NOT NULL,
@@ -1557,12 +1381,9 @@ CREATE TABLE [dbo].[tbset_user_login_profile](
 	[profileid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_user_principal]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_user_principal](
 	[UserId] [varchar](36) NOT NULL,
 	[PrincipalId] [varchar](36) NOT NULL,
@@ -1583,12 +1404,9 @@ CREATE TABLE [dbo].[tbset_user_principal](
 	[PrincipalId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_user_subaccount]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_user_subaccount](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[UserId] [varchar](36) NOT NULL,
@@ -1616,12 +1434,9 @@ CREATE TABLE [dbo].[tbset_user_subaccount](
 	[SubAccountId] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_usergroup]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_usergroup](
 	[usergroupid] [varchar](15) NOT NULL,
 	[usergroupname] [varchar](50) NOT NULL,
@@ -1638,12 +1453,9 @@ CREATE TABLE [dbo].[tbset_usergroup](
 	[usergroupid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_userlevel]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_userlevel](
 	[userlevel] [int] NOT NULL,
 	[levelname] [varchar](30) NOT NULL,
@@ -1660,12 +1472,9 @@ CREATE TABLE [dbo].[tbset_userlevel](
 	[userlevel] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_userlevel_access]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_userlevel_access](
 	[userlevel] [int] NOT NULL,
 	[usergroupid] [varchar](15) NOT NULL,
@@ -1684,12 +1493,9 @@ CREATE TABLE [dbo].[tbset_userlevel_access](
 	[menuid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
 /****** Object:  Table [dbo].[tbset_userrights]    Script Date: 10/6/2025 10:41:11 AM ******/
 SET ANSI_NULLS ON
-GO
 SET QUOTED_IDENTIFIER ON
-GO
 CREATE TABLE [dbo].[tbset_userrights](
 	[usergroupid] [varchar](15) NOT NULL,
 	[menuid] [varchar](10) NOT NULL,
@@ -1706,4 +1512,3 @@ CREATE TABLE [dbo].[tbset_userrights](
 	[menuid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
-GO
