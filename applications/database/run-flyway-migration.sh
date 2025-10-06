@@ -18,6 +18,7 @@ fi
 if ! command -v sqlcmd &> /dev/null; then
     echo "Error: sqlcmd is not installed or not in PATH."
     echo "This script requires the SQL Server command-line tools to ensure the database exists."
+    echo "Install via: brew install mssql-tools18"
     exit 1
 fi
 
@@ -59,30 +60,31 @@ case $COMMAND in
         echo "⚠ This will ensure the database exists and apply migrations. Continue? (y/n)"
         read -r confirm
         if [ "$confirm" = "y" ]; then
-            
-            # (The rest of your database creation and migration logic goes here...)
-            
-            echo ""
-            echo "--- Ensuring database exists ---"
-            
-            DB_NAME=$(grep "flyway.url" flyway.conf | sed -E 's/.*databaseName=([^;]+).*/\1/')
-            DB_HOST=$(grep "flyway.url" flyway.conf | sed -E 's/.*:\/\/(.*):.*/\1/')
-            DB_PORT=$(grep "flyway.url" flyway.conf | sed -E 's/.*:([0-9]+);.*/\1/')
-            DB_USER=$(grep "flyway.user" flyway.conf | cut -d'=' -f2)
-            DB_PASSWORD=${FLYWAY_PASSWORD}
+            # Parse flyway.conf for connection details (robust parsing)
+            DB_URL=$(grep "flyway.url=" flyway.conf | cut -d'=' -f2- | tr -d ' ')
+            DB_HOST_PORT=$(echo "$DB_URL" | sed -E 's/.*:\/\/([^:]+):([0-9]+);.*/\1,\2/')
+            DB_NAME=$(echo "$DB_URL" | sed -E 's/.*databaseName=([^;]+).*/\1/')
+            DB_USER=$(grep "flyway.user=" flyway.conf | cut -d'=' -f2- | tr -d ' ')
+            DB_PASSWORD=${FLYWAY_PASSWORD:-$(grep "flyway.password=" flyway.conf | cut -d'=' -f2- | tr -d ' ')}
 
             if [ -z "$DB_PASSWORD" ]; then
                 echo "Error: FLYWAY_PASSWORD environment variable is not set."
+                echo "Set it: export FLYWAY_PASSWORD='A#nd007.'"
                 exit 1
             fi
             
-            echo "Checking for database '$DB_NAME' on host '$DB_HOST:$DB_PORT'..."
-            CREATE_DB_SCRIPT="IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'${DB_NAME}') BEGIN CREATE DATABASE [${DB_NAME}]; END"
-            sqlcmd -S "${DB_HOST},${DB_PORT}" -U "${DB_USER}" -P "${DB_PASSWORD}" -d "master" -Q "${CREATE_DB_SCRIPT}"
+            echo ""
+            echo "--- Ensuring database exists ---"
+            echo "Checking for database '$DB_NAME' on host '$DB_HOST_PORT'..."
+            
+            # SSL flags for self-signed certs: -N (trust server), -C (trust chain)
+            CREATE_DB_SCRIPT="IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'${DB_NAME}') BEGIN CREATE DATABASE [${DB_NAME}]; PRINT 'Database ${DB_NAME} created.'; END ELSE BEGIN PRINT 'Database ${DB_NAME} already exists.'; END"
+            sqlcmd -S "$DB_HOST_PORT" -U "$DB_USER" -P "$DB_PASSWORD" -d "master" -N -C -Q "$CREATE_DB_SCRIPT"
             
             echo "Database is ready."
             echo "------------------------------------"
             
+            # Run migration
             flyway -configFiles=flyway.conf migrate
             echo ""
             echo "✓ Migration completed successfully"
@@ -90,6 +92,17 @@ case $COMMAND in
             echo "Migration cancelled"
         fi
         ;;
-    # (rest of your script: baseline, repair, etc.)
-esac
+    baseline)
+        flyway -configFiles=flyway.conf baseline
+        echo "✓ Baselines applied"
+        ;;
+    repair)
+        flyway -configFiles=flyway.conf repair
+        echo "✓ Repair completed"
+        ;;
+    *)
+        echo "Error: Unknown command '$COMMAND'"
+        echo "Run without args for usage."
+        exit 1
+        ;;
 esac
