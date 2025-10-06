@@ -617,6 +617,9 @@ VALUES
 	,(501, 500, 501, 'Late Promo Planning', 0, 0, 0, 'xvamain', @utcDate123)
 	,(502, 500, 502, 'Late Promo Creation', 1, 0, 0, 'xvamain', @utcDate123)
 
+SET IDENTITY_INSERT dbo.tbset_general_parameter ON;
+BEGIN TRANSACTION;
+
 /* Init data general parameter */
 INSERT INTO tbset_general_parameter(id, ParameterName, Sequence, ParameterValue, IsActive, ParameterDesc)
 VALUES 
@@ -633,6 +636,12 @@ VALUES
 	, (11,	'DNFLOW', 8, 'ready_to_invoice', 1, 'Invoice Notification')
 	, (12,	'DNFLOW', 9, 'invoice', 1, 'Create Invoice')
 	, (13,	'DNFLOW', 10, 'confirm_paid', 1, 'Confirm Paid')
+COMMIT TRANSACTION;
+SET IDENTITY_INSERT dbo.tbset_general_parameter OFF;
+
+
+SET IDENTITY_INSERT dbo.tbset_general_parameter_paralel ON;
+BEGIN TRANSACTION;
 
 /* Init data general parameter paralel */
 INSERT INTO tbset_general_parameter_paralel(id, ParameterName, Sequence, ParameterValue, IsActive, ParameterDesc)
@@ -649,6 +658,9 @@ VALUES
 	, (10,	'DNFLOW', 7, 'ready_to_invoice', 1, 'Invoice Notification')
 	, (11,	'DNFLOW', 8, 'invoice', 1, 'Create Invoice')
 	, (12,	'DNFLOW', 9, 'confirm_paid', 1, 'Confirm Paid')
+
+COMMIT TRANSACTION;
+SET IDENTITY_INSERT dbo.tbset_general_parameter_paralel OFF;
 
 /* Init data config promo item RC */
 INSERT INTO tbset_config_promo_items (
