@@ -1,5 +1,7 @@
 # Main Terraform configuration for Optima
-
+data "http" "my_ip" {
+  url = "http://ipv4.icanhazip.com"
+}
 # VPC and Networking
 module "networking" {
   source = "./modules/networking"
@@ -40,6 +42,8 @@ module "compute" {
   
   # Domain
   domain_base = var.domain_base
+
+  my_personal_ip = chomp(data.http.my_ip.response_body)
 }
 
 # DNS configuration (we'll create this module later)

@@ -40,3 +40,8 @@ Thumbs.db
 
 # Logs
 *.log
+ansible/inventories/demo/hosts.yml.backup-20251008-184207
+ansible/inventories/demo/hosts.yml.backup-20251024-172522
+ansible/inventories/demo/hosts.yml.backup-20251024-222457
+terraform/terraform.tfstate.backup
+terraform/.terraform.lock.hcl

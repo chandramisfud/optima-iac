@@ -15,10 +15,10 @@ api_subdomain = "api-optima-jp"
 # Network Configuration
 vpc_cidr        = "10.0.0.0/16"
 public_subnets  = ["10.0.1.0/24", "10.0.2.0/24"]
-private_subnets = ["10.0.10.0/24", "10.0.11.0/24"]  # Add this for RDS
+private_subnets = ["10.0.10.0/24", "10.0.11.0/24"]  
 
 # Instance Configuration (Updated for our stack)
-api_instance_type = "t3.medium"  # Windows needs more resources
+api_instance_type = "t3.medium" 
 ui_instance_type  = "t3.small"
 
 # RDS Configuration (Add these)
@@ -27,7 +27,10 @@ db_engine           = "sqlserver-ex"
 db_engine_version   = "15.00.4316.3.v1"
 db_allocated_storage = 20
 db_username         = "optima_admin"
-db_password         = "OptimaDemo2024!"  # Change this to something secure
+db_password         = "A#nd007."  
+
+# Windows Server Configuration
+windows_password = "A#nd007.XVA"
 
 # Key pair for SSH access
 key_pair_name = "optima-demo"

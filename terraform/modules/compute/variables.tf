@@ -87,3 +87,8 @@ variable "windows_password" {
   type        = string
   sensitive   = true
 }
+
+variable "my_personal_ip" {
+  description = "The IP address of the developer for SSH/WinRM access."
+  type        = string
+}
