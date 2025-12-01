@@ -115,16 +115,25 @@
         state: stopped
 
     - name: Create IIS Application Pool
-      win_iis_webapppool:
-        name: "{{ iis_app_pool_name }}"
-        state: started
-        attributes:
-          managedRuntimeVersion: ""  # No Managed Code for .NET Core
-          managedPipelineMode: "Integrated"
-          startMode: "AlwaysRunning"
-          processModel:
-            identityType: "ApplicationPoolIdentity"
-            idleTimeout: "00:00:00"
+      win_shell: |
+        Import-Module WebAdministration
+        
+        # Create app pool if it doesn't exist
+        if (-not (Test-Path "IIS:\AppPools\{{ iis_app_pool_name }}")) {
+            New-WebAppPool -Name "{{ iis_app_pool_name }}"
+        }
+        
+        # Configure app pool settings
+        Set-ItemProperty "IIS:\AppPools\{{ iis_app_pool_name }}" -Name managedRuntimeVersion -Value ""
+        Set-ItemProperty "IIS:\AppPools\{{ iis_app_pool_name }}" -Name managedPipelineMode -Value "Integrated"
+        Set-ItemProperty "IIS:\AppPools\{{ iis_app_pool_name }}" -Name startMode -Value "AlwaysRunning"
+        Set-ItemProperty "IIS:\AppPools\{{ iis_app_pool_name }}" -Name processModel.idleTimeout -Value ([TimeSpan]::FromSeconds(0))
+        Set-ItemProperty "IIS:\AppPools\{{ iis_app_pool_name }}" -Name processModel.identityType -Value "ApplicationPoolIdentity"
+        
+        # Start the app pool
+        Start-WebAppPool -Name "{{ iis_app_pool_name }}" -ErrorAction SilentlyContinue
+        
+        Write-Output "App pool configured successfully"
 
     - name: Create IIS Website
       win_iis_website:
