@@ -56,7 +56,11 @@
                   Where-Object { $_.DisplayName -like "*NET 7*Hosting Bundle*" }
         if ($dotnet) { Write-Output "installed" } else { Write-Output "not_installed" }
       register: dotnet_check
-      changed_when: false
+ 
+    - name: Create temp directory
+      win_file:
+        path: "C:\\temp"
+        state: directory
 
     - name: Download .NET 7 Hosting Bundle
       win_get_url:
