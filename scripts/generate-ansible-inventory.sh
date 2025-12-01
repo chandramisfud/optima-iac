@@ -160,7 +160,7 @@ domain_base: "xva-rnd.com"
 ui_subdomain: "optima-jp"
 
 # JWT Secret (from vault)
-vault_jwt_secret: "{{ vault_jwt_secret | default('OptimaJWT2024SecretKeyForDemoEnvironment256Bit!!') }}"
+vault_jwt_secret: "OptimaJWT2024SecretKeyForDemoEnvironment256Bit!!"
 API_VARS_EOF
 
 echo -e "${GREEN}✅ API server group variables updated!${NC}"
