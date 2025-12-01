@@ -5,7 +5,7 @@
   gather_facts: true
   
   vars:
-    dotnet_download_url: "https://download.visualstudio.microsoft.com/download/pr/9d6b6b34-44b5-4cf4-b924-79a00deb9795/2f17c30bdf7c8dd3e5d0c89c7c2d3d1b/dotnet-hosting-7.0.20-win.exe"
+    dotnet_download_url: "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/7.0.20/dotnet-hosting-7.0.20-win.exe"
     api_source_path: "../../applications/api/"
     api_deploy_path: "C:\\inetpub\\optima-api"
     iis_site_name: "OptimaAPI"
