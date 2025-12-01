@@ -61,7 +61,7 @@
 
     - name: Copy Laravel application files using rsync
       synchronize:
-        src: "../../applications/ui/"
+        src: "{{ playbook_dir }}/../../applications/ui/"
         dest: /var/www/optima/
         archive: yes
         private_key: /home/ubuntu/optima-iac/terraform/optima-jp-demo.pem
