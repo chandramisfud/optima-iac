@@ -81,7 +81,7 @@ fi
 # From: ansible/inventories/demo/hosts.yml
 # To:   terraform/optima-jp-demo.pem
 # Path: ../../../terraform/optima-jp-demo.pem
-SSH_KEY_PATH="../terraform/${SSH_KEY}"
+SSH_KEY_PATH="terraform/${SSH_KEY}"
 
 echo ""
 echo "📝 Generating inventory..."
