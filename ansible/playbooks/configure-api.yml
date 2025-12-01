@@ -122,9 +122,9 @@
           managedRuntimeVersion: ""  # No Managed Code for .NET Core
           managedPipelineMode: "Integrated"
           startMode: "AlwaysRunning"
-          idleTimeout: "00:00:00"
           processModel:
             identityType: "ApplicationPoolIdentity"
+            idleTimeout: "00:00:00"
 
     - name: Create IIS Website
       win_iis_website:
