@@ -134,6 +134,10 @@
         Start-WebAppPool -Name "{{ iis_app_pool_name }}" -ErrorAction SilentlyContinue
         
         Write-Output "App pool configured successfully"
+      register: apppool_result
+    - name: Display app pool configuration result
+      debug:
+        var: apppool_result.stdout_lines
 
     - name: Create IIS Website
       win_iis_website:
