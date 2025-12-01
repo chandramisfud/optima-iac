@@ -58,7 +58,7 @@ fi
 
 echo -e "${GREEN}✓${NC} UI Server IP: $UI_IP"
 echo -e "${GREEN}✓${NC} API Server IP (public): $API_IP"
-echo -e "${GREEN}✓${NC} API Server IP (private): $API_PRIVATE_IP"
+echo -e "${GREEN}✓${NC} API Server IP (private): $API_IP"
 echo -e "${GREEN}✓${NC} SSH Key: $SSH_KEY"
 
 # Get Windows password from vault
@@ -81,7 +81,7 @@ fi
 # From: ansible/inventories/demo/hosts.yml
 # To:   terraform/optima-jp-demo.pem
 # Path: ../../../terraform/optima-jp-demo.pem
-SSH_KEY_PATH="../../../terraform/${SSH_KEY}"
+SSH_KEY_PATH="../terraform/${SSH_KEY}"
 
 echo ""
 echo "📝 Generating inventory..."
@@ -106,7 +106,7 @@ all:
     api_servers:
       hosts:
         api-server:
-          ansible_host: ${API_PRIVATE_IP}
+          ansible_host: ${API_IP}
           ansible_user: Administrator  
           ansible_password: '${WINDOWS_PASSWORD}'
           ansible_connection: winrm
@@ -120,4 +120,4 @@ echo ""
 echo "📄 File: $INVENTORY_FILE"
 echo ""
 echo "🔍 Preview:"
-cat "$INVENTORY_FILE"
+cat "$INVENTORY_FILE"xw
