@@ -77,7 +77,6 @@ if [ -f "$INVENTORY_FILE" ]; then
     echo -e "${GREEN}✓${NC} Backed up to: $(basename $BACKUP_FILE)"
 fi
 
-
 # SSH key path relative to inventory file location
 # From: ansible/inventories/demo/hosts.yml
 # To:   terraform/optima-jp-demo.pem
@@ -107,7 +106,7 @@ all:
     api_servers:
       hosts:
         api-server:
-          ansible_host: ${API_HOST}
+          ansible_host: ${API_PRIVATE_IP}
           ansible_user: Administrator  
           ansible_password: '${WINDOWS_PASSWORD}'
           ansible_connection: winrm
