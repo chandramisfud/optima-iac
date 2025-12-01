@@ -1,3 +1,4 @@
+<powershell>
 # terraform/modules/compute/scripts/api-server-init.ps1
 # Variables from Terraform
 $CountryCode = "${country_code}"
@@ -44,3 +45,4 @@ New-Item -ItemType Directory -Path "C:\inetpub\wwwroot" -Force
 $htmlContent | Out-File -FilePath "C:\inetpub\wwwroot\index.html" -Encoding UTF8
 
 Write-Host "Optima API Server $CountryCode - $Environment initialized successfully!"
+</powershell>
