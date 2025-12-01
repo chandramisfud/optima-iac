@@ -106,13 +106,22 @@
         working_dir: /var/www/optima
         optimize_autoloader: yes
         no_dev: yes
-      become_user: www-data
+      environment:
+        COMPOSER_ALLOW_SUPERUSER: "1"
+
+    - name: Fix vendor directory ownership after Composer
+      file:
+        path: /var/www/optima/vendor
+        owner: www-data
+        group: www-data
+        recurse: yes
 
     - name: Generate Laravel application key
       shell: php artisan key:generate --force
       args:
         chdir: /var/www/optima
-      become_user: www-data
+      environment:
+        HOME: /var/www/optima
       when: not ansible_check_mode
 
     - name: Clear Laravel caches
@@ -123,8 +132,16 @@
         php artisan view:clear
       args:
         chdir: /var/www/optima
-      become_user: www-data
+      environment:
+        HOME: /var/www/optima
       when: not ansible_check_mode
+
+    - name: Fix all Laravel permissions after artisan commands
+      file:
+        path: /var/www/optima
+        owner: www-data
+        group: www-data
+        recurse: yes
 
     - name: Create nginx configuration for Laravel
       template:
