@@ -16,7 +16,7 @@ dotnet_urls: "http://*:80"
 # Database configuration (reference vault variables)
 db_host: "optima-jp-demo.c5abvkexample.ap-northeast-1.rds.amazonaws.com"  # Update with your actual RDS endpoint
 db_username: "admin"
-db_password: "{{ vault_db_password }}"
+db_password: "OptimaDemo2024!"
 country_code: "jp"
 env_name: "demo"
 
