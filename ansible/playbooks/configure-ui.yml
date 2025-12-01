@@ -64,6 +64,7 @@
         src: "../../applications/ui/"
         dest: /var/www/optima/
         archive: yes
+        private_key: /home/ubuntu/optima-iac/terraform/optima-jp-demo.pem
         rsync_opts:
           - "--exclude=vendor/"
           - "--exclude=node_modules/"
